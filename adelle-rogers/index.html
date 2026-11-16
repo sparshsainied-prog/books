@@ -71,7 +71,13 @@ h2{font:800 clamp(2rem,7vw,3.2rem)/1 var(--display);color:var(--navy);margin:0 0
 .close p{max-width:52ch;margin:0 0 1.3rem}
 .close .links{display:flex;flex-wrap:wrap;gap:.7rem}
 .close .btn.line{border-color:var(--navy)}
-footer{background:var(--navy);color:#cfd5e1;font-size:.95rem;padding:1.3rem 16px 2rem;text-align:center}
+footer{background:var(--navy);color:#cfd5e1;font-size:.95rem;padding:1.3rem 16px 6rem;text-align:center}
+.bar{position:fixed;z-index:8;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 16px calc(.6rem + env(safe-area-inset-bottom));background:var(--navy);color:#fff;transform:translate3d(0,110%,0);transition:transform .25s ease-out}
+.bar.on{transform:none}
+.bar span{font:800 1rem/1.1 var(--display);white-space:nowrap}
+.bar .btn{min-height:44px;white-space:nowrap;padding:.6rem 1rem .5rem}
+@media (min-width:820px){.bar{left:auto;right:24px;bottom:24px;padding:.6rem .6rem .6rem 1.2rem}}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
 
 @media (min-width:820px){
   .first{left:6vw;right:auto;top:auto;bottom:16vh;max-width:22ch}
@@ -147,6 +153,8 @@ footer{background:var(--navy);color:#cfd5e1;font-size:.95rem;padding:1.3rem 16px
 </section>
 </main>
 
+<div class="bar" id="bar"><span>Waiting for the Sun</span><a class="btn" href="https://www.amazon.com.au/Waiting-Sun-Adelle-Woods/dp/1644343134" tabindex="-1" id="barlink">Buy on Amazon</a></div>
+
 <footer>A preview made by Lamplit Studio for Adelle Woods. Not affiliated, not live.</footer>
 
 <script>
@@ -199,6 +207,10 @@ footer{background:var(--navy);color:#cfd5e1;font-size:.95rem;padding:1.3rem 16px
     title.style.opacity = t.toFixed(3);
     title.style.transform = `translate3d(0,${((1 - out(t)) * 18).toFixed(1)}px,0)`;
   }
+  // after the sunrise, a buy bar comes up within thumb reach
+  const bar = $('bar'), barlink = $('barlink');
+  function barState() { const on = hero.getBoundingClientRect().bottom < innerHeight * .4; bar.classList.toggle('on', on); barlink.tabIndex = on ? 0 : -1; }
+  addEventListener('scroll', barState, { passive: true }); barState();
   layout();
   if (reduce.matches) { addEventListener('resize', layout); return; }
   document.documentElement.classList.add('anim');
