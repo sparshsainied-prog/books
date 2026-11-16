@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>My Harimau King by Annie McCann</title>
+<meta name="description" content="A homepage idea for My Harimau King, the middle grade fantasy by Annie McCann. Made by Lamplit Studio, not her official site.">
+<meta property="og:title" content="My Harimau King by Annie McCann">
+<meta property="og:description" content="A homepage idea made by Lamplit Studio. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/annie-mccann/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/annie-mccann/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --jungle:#0c2e24; --jungle-2:#123d31; --teal:#0e5f66; --mist:#e4f4ef; --mist-soft:#b9d6cd;
+  --gold:#e6bb49; --gold-deep:#b98a1f; --poppy:#e0603e; --ink:#0a231c;
+  --display:"Lilita One", "Arial Black", sans-serif; --text:"Andika", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--jungle);color:var(--mist);font:400 1.0625rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.book a:focus-visible{outline-color:var(--teal)}
+.close a:focus-visible{outline-color:var(--ink)}
+.strip{position:relative;z-index:5;background:var(--ink);color:var(--mist-soft);font-size:.8125rem;line-height:1.4;padding:.55rem 16px;text-align:center}
+.strip strong{color:var(--mist);font-weight:700}
+
+/* hero */
+.hero{position:relative}
+.stage{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;background:var(--jungle)}
+.anim .hero{height:360vh}
+.anim .stage{position:sticky;top:0;height:100vh;height:100svh;min-height:0}
+.far{position:absolute;inset:-12% -6%;background:url(img/jungle.jpg) center/cover no-repeat;will-change:transform}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,35,28,.82) 0%,rgba(10,35,28,.25) 38%,rgba(10,35,28,.15) 70%,rgba(10,35,28,.7) 100%)}
+.copy{position:absolute;left:16px;right:16px;top:clamp(18px,4svh,40px);z-index:5}
+.copy h1{font:400 clamp(2.6rem,11vw,5.6rem)/.92 var(--display);color:var(--gold);margin:0;text-shadow:0 3px 0 var(--gold-deep),0 6px 18px rgba(0,0,0,.45);letter-spacing:.01em}
+.copy h1 span{display:block}
+.copy .by{font:400 1.05rem/1.2 var(--display);color:var(--mist);margin:.5rem 0 0;letter-spacing:.02em}
+.lines{position:relative;margin-top:.9rem;min-height:5.2em;max-width:30ch}
+.line{position:absolute;inset:0 auto auto 0;margin:0;font-size:1.06rem;line-height:1.45;color:var(--mist);text-shadow:0 1px 8px rgba(0,0,0,.6);will-change:opacity,transform}
+.line b{color:var(--gold);font-weight:700}
+.cover{position:absolute;z-index:2;will-change:transform,opacity;box-shadow:0 18px 40px rgba(0,0,0,.5),0 2px 0 rgba(0,0,0,.3);border-radius:3px}
+.cover img{width:100%;height:auto;border-radius:3px}
+.tiger{display:none;position:absolute;left:0;top:0;z-index:4;width:200px;transform-origin:0 0;will-change:transform,opacity;pointer-events:none}
+.tiger img{width:100%;height:auto}
+.paws{display:none;position:absolute;inset:0;z-index:1;pointer-events:none}
+.line.l1{opacity:0}
+.anim .tiger,.anim .paws{display:block}
+.anim .cover,.anim .line.l2{opacity:0}
+.anim .line.l1{opacity:1}
+.no-js-cover{left:50%;bottom:5svh;width:min(60vw,300px);transform:translateX(-50%)}
+.paw{position:absolute;width:26px;height:26px;opacity:0;color:var(--gold)}
+
+/* sections */
+section{padding:clamp(56px,10vw,120px) 16px}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font:400 clamp(2rem,7vw,3.4rem)/1 var(--display);color:var(--gold);margin:0 0 1.1rem}
+.book{background:var(--mist);color:var(--ink)}
+.book h2{color:var(--teal)}
+.book .grid{display:grid;gap:2rem}
+.blurb p{margin:0 0 1rem;max-width:62ch}
+.blurb p:first-child{font:400 1.45rem/1.25 var(--display);color:var(--ink)}
+.facts{list-style:none;padding:0;margin:1.4rem 0;display:flex;flex-wrap:wrap;gap:.5rem}
+.facts li{border:2px solid var(--teal);color:var(--teal);border-radius:3px;padding:.2rem .6rem;font-weight:700;font-size:.92rem}
+.buy{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.6rem 1.3rem;font:400 1.15rem/1 var(--display);letter-spacing:.02em;text-decoration:none;border-radius:4px;background:var(--gold);color:var(--ink);box-shadow:0 3px 0 var(--gold-deep)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--gold-deep)}
+.btn.plain{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+.praise{margin:0;padding:1.2rem 0 0;border-top:2px solid rgba(14,95,102,.25)}
+.praise blockquote{margin:0 0 1rem;font-size:1rem}
+.praise cite{display:block;font-style:normal;font-weight:700;color:var(--teal);font-size:.92rem;margin-top:.2rem}
+.side img{max-width:300px;border-radius:3px;box-shadow:0 14px 30px rgba(10,35,28,.35)}
+
+.worlds{background:var(--jungle)}
+.pair{display:grid;gap:1.2rem;margin-top:1.4rem}
+.place{padding:1.4rem 1.2rem;border-radius:4px}
+.place h3{font:400 1.7rem/1 var(--display);margin:0 0 .6rem}
+.place p{margin:0}
+.place.home{background:var(--teal)}
+.place.home h3{color:var(--mist)}
+.place.old{background:var(--jungle-2);box-shadow:inset 0 0 0 2px var(--gold)}
+.place.old h3{color:var(--gold)}
+.note{margin-top:1.4rem;color:var(--mist-soft);max-width:60ch}
+
+.about{background:var(--ink)}
+.about .grid{display:grid;gap:1.6rem;align-items:start}
+.about img{width:150px;border-radius:50%;border:4px solid var(--gold)}
+.about p{max-width:62ch;margin:0 0 1rem}
+.pull{font:400 1.6rem/1.15 var(--display);color:var(--gold);margin:0 0 1.2rem}
+.stories{margin:1.2rem 0 0;padding:0;list-style:none}
+.stories li{padding:.55rem 0;border-top:1px solid rgba(228,244,239,.15)}
+.stories em{color:var(--mist);font-style:normal;font-weight:700}
+
+.close{background:var(--poppy);color:var(--ink)}
+.close h2{color:var(--ink)}
+.close p{max-width:56ch;margin:0 0 1.2rem;font-size:1.12rem}
+.close .btn{background:var(--ink);color:var(--gold);box-shadow:0 3px 0 #000}
+
+footer{background:var(--ink);color:var(--mist-soft);font-size:.85rem;padding:1.4rem 16px 2rem;text-align:center}
+
+@media (orientation:landscape) and (max-width:819px){
+  .copy{right:auto;width:48vw}
+  .copy h1{font-size:min(11vw,14svh)}
+  .lines{margin-top:.5rem}
+}
+@media (min-width:820px){
+  .copy{left:7vw;right:auto;width:44vw;top:12vh}
+  .lines{max-width:34ch}
+  .line{font-size:1.2rem}
+  .book .grid{grid-template-columns:1.5fr 1fr;gap:3.5rem}
+  .pair{grid-template-columns:1fr 1fr}
+  .about .grid{grid-template-columns:180px 1fr}
+  .about img{width:180px}
+}
+</style>
+</head>
+<body>
+<p class="strip"><strong>A website idea made by Lamplit Studio for Annie McCann.</strong> Not her official site.</p>
+
+<main>
+<div class="hero" id="hero">
+  <div class="stage">
+    <div class="far" id="far" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="paws" id="paws" aria-hidden="true"></div>
+    <div class="copy">
+      <h1><span>My Harimau</span><span>King</span></h1>
+      <p class="by">Annie McCann</p>
+      <div class="lines">
+        <p class="line l1" id="l1"><b>Parramatta.</b> Sumaiyah Jackson is 13 and living her best life, until loved ones begin to disappear.</p>
+        <p class="line l2" id="l2"><b>Pajajaran, Indonesia.</b> An ancient king, a modern-day kid, and a life-changing prophecy that binds them.</p>
+      </div>
+    </div>
+    <div class="cover no-js-cover" id="cover"><img src="img/cover.jpg" width="900" height="1440" alt="The cover of My Harimau King: a girl in a hijab holds up a burning blade in a jungle beside a white tiger, with temples behind them." fetchpriority="high"></div>
+    <div class="tiger" id="tiger" aria-hidden="true"><img src="img/tiger.png" width="473" height="320" alt=""></div>
+  </div>
+</div>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <div class="blurb">
+      <h2>The book</h2>
+      <p>13-year-old Sumaiyah Jackson is living her best life in Parramatta until a family drama spirals out of control, mysterious events start happening, and loved ones begin to disappear.</p>
+      <p>Suddenly, Sumaiyah and her friends find themselves trapped in the ancient kingdom of Pajajaran, Indonesia, where Sumaiyah discovers she is ‘the chosen one’ from descendants of ancient royalty.</p>
+      <ul class="facts">
+        <li>Middle grade fantasy</li>
+        <li>Melby Rose Publishing</li>
+        <li>293 pages</li>
+      </ul>
+      <div class="buy">
+        <a class="btn" href="https://www.amazon.com.au/My-Harimau-King-Annie-McCann/dp/1763686027">Order on Amazon AU</a>
+        <a class="btn plain" href="https://www.goodreads.com/book/show/228796329-my-harimau-king">Add it on Goodreads</a>
+      </div>
+    </div>
+    <div class="side">
+      <figure class="praise">
+        <blockquote>“A truly unique and enthralling world, rendered in exquisite detail so that the non-stop action and evocative characters leap off the page.”<cite>Wai Chim</cite></blockquote>
+        <blockquote>“A fresh new fantasy with fascinating insights into West Javanese culture and history.”<cite>Leanne Yong</cite></blockquote>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="worlds" id="worlds">
+  <div class="wrap">
+    <h2>Two worlds</h2>
+    <div class="pair">
+      <div class="place home">
+        <h3>Parramatta</h3>
+        <p>Where Sumaiyah lives and goes to school, and where the story starts.</p>
+      </div>
+      <div class="place old">
+        <h3>Pajajaran</h3>
+        <p>The ancient kingdom where Sumaiyah and her friends end up trapped, and where legends like the harimau come to life.</p>
+      </div>
+    </div>
+    <p class="note">Some Sundanese and Indonesian phrases are left untranslated, so you learn them from the story, and a glossary at the back explains the historical and cultural words.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <img src="img/annie.jpg" width="400" height="400" alt="Annie McCann, smiling, in a dark hijab.">
+    <div>
+      <h2>Annie McCann</h2>
+      <p class="pull">“You can’t be what you can’t see.”</p>
+      <p>Annie is an Indonesian Australian Muslim author and emcee. She grew up loving fantasy drawn from myths and legends around the world, but never found one built on Indonesian mythology. So she wrote it, checking the history with family who knew it.</p>
+      <p>It began as a short story, became a novella, then a novel. In her words, “I actually had a book in me all this time.”</p>
+      <p>She started the readers’ network Read3r’z Re-Vu in 2009, co-founded The Right Pen Collective for Australian Muslim writers, and hosted the Garth Nix and Jay Kristoff spotlight panel at Book Fair Australia 2026.</p>
+      <ul class="stories">
+        <li><em>Rolling Gunung Tampomas</em>, in The Mythic Circle</li>
+        <li><em>Tale of a Cursed Mountain</em>, in Journals of Love and Literature</li>
+        <li><em>Twisted Elegance of the Deep Green Sea</em>, in This Fresh Hell</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="close" id="visits">
+  <div class="wrap">
+    <h2>Schools and events</h2>
+    <p>Annie visits schools and hosts author events as an emcee. To ask about a visit or a panel, message her on Instagram.</p>
+    <a class="btn" href="https://www.instagram.com/nenganniemenulis/">@nenganniemenulis</a>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lamplit Studio for Annie McCann. Not affiliated, not live.</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const hero = document.getElementById('hero'), far = document.getElementById('far');
+  const cover = document.getElementById('cover'), tiger = document.getElementById('tiger');
+  const l1 = document.getElementById('l1'), l2 = document.getElementById('l2'), pawsBox = document.getElementById('paws');
+  // where the white tiger sits on the printed cover (pixels of the 1638x2621 original)
+  const T = { x: 110 / 1638, y: 1631 / 2621, w: 473 / 1638 };
+  const TR = 320 / 473; // tiger height / width
+  const N = 7; // paw prints
+  const pawSVG = '<svg viewBox="0 0 26 26" width="26" height="26"><path fill="currentColor" d="M13 12.2c3.6 0 6.6 3.3 6.6 6.4 0 2.7-2.4 3.7-4 3.2-1-.3-1.7-.8-2.6-.8s-1.6.5-2.6.8c-1.6.5-4-.5-4-3.2 0-3.1 3-6.4 6.6-6.4z"/><ellipse fill="currentColor" cx="5" cy="10.2" rx="2.3" ry="3" transform="rotate(-20 5 10.2)"/><ellipse fill="currentColor" cx="9.6" cy="5.6" rx="2.3" ry="3.1" transform="rotate(-6 9.6 5.6)"/><ellipse fill="currentColor" cx="16.4" cy="5.6" rx="2.3" ry="3.1" transform="rotate(6 16.4 5.6)"/><ellipse fill="currentColor" cx="21" cy="10.2" rx="2.3" ry="3" transform="rotate(20 21 10.2)"/></svg>';
+  const paws = [];
+  for (let i = 0; i < N; i++) { const s = document.createElement('span'); s.className = 'paw'; s.innerHTML = pawSVG; pawsBox.appendChild(s); paws.push(s); }
+
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  let L = null;
+
+  function layout() {
+    const W = innerWidth, H = document.querySelector('.stage').clientHeight;
+    const wide = W >= 820 || W > H;
+    let cw = wide ? Math.min(H * 0.74 / 1.6, W * 0.32) : Math.min(W * 0.6, (H * 0.5) / 1.6);
+    const ch = cw * 1600 / 1000;
+    const cx = wide ? W * 0.6 : (W - cw) / 2;
+    const cy = wide ? (H - ch) / 2 : H - ch - H * 0.05;
+    cover.style.width = cw + 'px'; cover.style.left = cx + 'px'; cover.style.top = cy + 'px';
+    const ch2 = cw * 2621 / 1638; // real image ratio
+    const end = { x: cx + T.x * cw, y: cy + T.y * ch2, w: T.w * cw };
+    const walkW = Math.min(wide ? Math.min(W * 0.3, 420) : W * 0.62, H * 0.3 / TR);
+    const walkY = H - walkW * TR - H * (wide ? 0.07 : 0.05);
+    tiger.style.width = walkW + 'px';
+    const startX = -walkW * 0.5, stopX = wide ? W * 0.3 : W * 0.5 - walkW / 2;
+    paws.forEach((s, i) => {
+      const x = startX + walkW * 0.55 + (stopX - startX) * ((i + 0.6) / N);
+      s.style.left = x + 'px'; s.style.top = (walkY + walkW * TR - 18 + (i % 2 ? 9 : -2)) + 'px';
+      s.dataset.at = (i + 0.9) / N;
+    });
+    L = { W, H, walkW, walkY, startX, stopX, end };
+  }
+
+  function frame() {
+    if (!L) layout();
+    const r = hero.getBoundingClientRect();
+    const travel = hero.offsetHeight - L.H;
+    const p = clamp(-r.top / travel);
+    far.style.transform = `translate3d(0,${(-p * 6).toFixed(2)}%,0) scale(${(1.08 - p * .06).toFixed(4)})`;
+    // walk in five strides
+    const w = seg(p, 0, .55), strides = 5, f = w * strides, k = Math.floor(Math.min(f, strides - 1e-6)), frac = f - k;
+    const wp = (k + ease(frac)) / strides;
+    const bob = Math.sin(Math.PI * frac) * (w < 1 ? 1 : 0) * L.walkW * 0.025;
+    let x = L.startX + (L.stopX - L.startX) * wp, y = L.walkY - bob, s = 1;
+    // then into its own place on the cover
+    const g = ease(seg(p, .6, .86));
+    x += (L.end.x - x) * g; y += (L.end.y - y) * g; s = 1 + (L.end.w / L.walkW - 1) * g;
+    tiger.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) scale(${s.toFixed(4)})`;
+    tiger.style.opacity = (1 - seg(p, .88, .96)).toFixed(3);
+    const c = ease(seg(p, .55, .82));
+    cover.style.opacity = c.toFixed(3);
+    cover.style.transform = `translate3d(0,${((1 - c) * 24).toFixed(1)}px,0) scale(${(1.04 - .04 * c).toFixed(4)})`;
+    paws.forEach(el => { const on = seg(w, +el.dataset.at - .04, +el.dataset.at + .06) * (1 - seg(p, .6, .78)); el.style.opacity = (on * .85).toFixed(3); });
+    const t1 = seg(p, .24, .3), t2 = seg(p, .31, .38);
+    l1.style.opacity = (1 - t1).toFixed(3); l1.style.transform = `translate3d(0,${(-t1 * 12).toFixed(1)}px,0)`;
+    l2.style.opacity = t2.toFixed(3); l2.style.transform = `translate3d(0,${((1 - t2) * 12).toFixed(1)}px,0)`;
+  }
+
+  let ticking = false;
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; frame(); }); } };
+  function start() {
+    reduce.addEventListener('change', () => location.reload());
+    cover.classList.remove('no-js-cover');
+    if (reduce.matches) { layout(); addEventListener('resize', layout); return; }
+    document.documentElement.classList.add('anim');
+    layout(); frame();
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', () => { layout(); frame(); });
+  }
+  start();
+})();
+</script>
+</body>
+</html>
