@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Heart of the Human by C K Scott</title>
+<meta name="description" content="A homepage idea for Heart of the Human by C K Scott. Made by Lamplit Studio, not her official site.">
+<meta property="og:title" content="Heart of the Human by C K Scott">
+<meta property="og:description" content="A homepage idea made by Lamplit Studio. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/ck-scott/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/ck-scott/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 3c-6 0-9 5-9 11 0 4 1 7 1 15h16c0-8 1-11 1-15 0-6-3-11-9-11z%22 fill=%22%232e5656%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Josefin+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#dddbd1; --paper-lt:#e6e4da; --ink:#1e3b37; --teal:#457d79; --teal-deep:#2e5656;
+  --forest:#12201c; --cream:#fdfbe2; --amber:#c98a3a; --muted:#4a5a55;
+  --display:"Cinzel Decorative", Georgia, serif; --text:"Josefin Sans", "Gill Sans", sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0,"dlig" 0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal-deep);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.strip{position:relative;z-index:6;margin:0;background:var(--forest);color:#cfd8d3;font-size:.95rem;line-height:1.4;padding:.6rem 16px .5rem;text-align:center}
+.strip strong{color:#fff;font-weight:600}
+
+/* hero: the cover itself by default (no JS, reduced motion) */
+.hero{position:relative}
+.stage{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--paper)}
+.anim .hero{height:320vh}
+.anim .stage{position:sticky;top:0;min-height:0}
+.dark{position:absolute;inset:0;background:var(--forest);opacity:0;will-change:opacity}
+.box{position:absolute;left:0;top:0;width:1620px;height:2560px;transform-origin:0 0;pointer-events:none}
+.plane{position:absolute;left:0;top:0;width:1620px;height:2560px;transform-origin:0 0;will-change:transform,opacity}
+.plane img{width:100%;height:100%;max-width:none}
+#paperP{-webkit-mask-image:radial-gradient(ellipse 62% 56% at 50% 50%,#000 58%,transparent 94%);mask-image:radial-gradient(ellipse 62% 56% at 50% 50%,#000 58%,transparent 94%)}
+.dim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,32,28,.15),rgba(18,32,28,.55) 70%,rgba(18,32,28,.8));opacity:0;will-change:opacity}
+.title{position:absolute;left:34px;top:831px;width:1413px;margin:0;transform-origin:50% 50%;will-change:transform}
+.title img{width:100%;height:auto}
+.line{position:absolute;z-index:4;left:16px;right:16px;bottom:clamp(28px,8svh,90px);margin:0 auto;max-width:22ch;text-align:center;font:400 clamp(1.4rem,5.8vw,2.1rem)/1.3 var(--text);font-style:italic;color:var(--cream);opacity:0;display:none;will-change:opacity,transform}
+.anim .line{display:block}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+section{padding:clamp(56px,10vw,120px) 16px}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font:700 clamp(1.9rem,6.4vw,3rem)/1.08 var(--display);color:var(--ink);margin:0 0 1.2rem}
+.book{background:var(--paper-lt)}
+.book .grid{display:grid;gap:2.2rem;align-items:start}
+.book .cover{width:min(320px,74vw);box-shadow:0 2px 0 rgba(30,59,55,.08),0 20px 36px rgba(30,59,55,.25)}
+.book p{max-width:58ch;margin:0 0 1rem}
+.series{font-weight:600;color:var(--teal-deep);margin:-.6rem 0 1.2rem !important}
+.meta{color:var(--muted);font-size:1rem}
+.buy{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.75rem 1.2rem .55rem;font:600 1rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--cream);background:var(--ink);border:2px solid var(--ink)}/* slop-ok unslop-ignore: spaced caps copy the cover's C K SCOTT lettering */
+.btn.line2{background:transparent;color:var(--ink)}
+
+.world{background:var(--forest);color:#dfe6e1;position:relative;overflow:hidden}
+.world h2{color:var(--cream)}
+.world p{max-width:56ch;margin:0 0 1rem}
+.world .tag{font:400 clamp(.92rem,3.4vw,1.3rem)/1.9 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--cream);margin:2rem 0 0}/* slop-ok unslop-ignore: the cover's own tagline, set as on the cover */
+.world a{color:#9fd0c9}
+
+.events ul{list-style:none;padding:0;margin:1.4rem 0 1.6rem;display:grid;gap:.2rem}
+.events li{font:400 clamp(1.25rem,4.6vw,1.6rem)/1.4 var(--display);color:var(--ink);padding:.55rem 0;border-bottom:1px solid rgba(30,59,55,.25)}
+.events p{max-width:58ch;margin:0 0 1rem}
+
+.about{background:var(--paper-lt)}
+.about p{max-width:58ch;margin:0 0 1rem}
+.about .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+
+footer{background:var(--forest);color:#b9c6c0;font-size:.95rem;padding:1.4rem 16px 6rem;text-align:center}
+.bar{position:fixed;z-index:8;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 16px calc(.6rem + env(safe-area-inset-bottom));background:var(--ink);color:var(--cream);transform:translate3d(0,110%,0);transition:transform .25s ease-out}
+.bar.on{transform:none}
+.bar span{font:700 1rem/1.1 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .btn{min-height:44px;white-space:nowrap;padding:.65rem 1rem .5rem;background:var(--cream);color:var(--ink);border-color:var(--cream)}
+@media (min-width:820px){.bar{left:auto;right:24px;bottom:24px;padding:.6rem .6rem .6rem 1.2rem}}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+@media (min-width:820px){
+  .book .grid{grid-template-columns:320px 1fr;gap:4rem}
+  .events .wrap,.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+}
+</style>
+</head>
+<body>
+<p class="strip"><strong>A website idea made by Lamplit Studio for C K Scott.</strong> Not her official site.</p>
+
+<main>
+<div class="hero" id="hero">
+  <div class="stage" id="stage">
+    <div class="dark" id="dark" aria-hidden="true"></div>
+    <div class="box" id="box" aria-hidden="true">
+      <div class="plane" id="paperP"><img src="img/paper.webp" width="1620" height="2560" alt="" fetchpriority="high"></div>
+      <div class="plane" id="forestP"><img src="img/forest.webp" width="1620" height="2560" alt="" fetchpriority="high"></div>
+      <div class="title" id="title"><img src="img/title.webp" width="1413" height="1068" alt=""></div>
+    </div>
+    <div class="dim" id="dim" aria-hidden="true"></div>
+    <h1 class="vh">Heart of the Human, by C K Scott</h1>
+    <p class="line" id="line">All Josephine wanted was an ordinary life.</p>
+  </div>
+</div>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <img class="cover" src="img/cover.jpg" width="700" height="1106" alt="Cover of Heart of the Human by C K Scott: the silhouette of a woman with long hair, a forest inside her, framed by dark teal vines on pale paper.">
+    <div>
+      <h2>Heart of the Human</h2>
+      <p class="series">The Eternal Souls, book one</p>
+      <p>All Josephine wanted was an ordinary life. A widowed mother fighting to keep her children safe, she never expected to be torn from Earth and hurled into another world, one ruled by magic and mythical creatures.</p>
+      <p>Kohlvar has always been an outcast, part man, part myth, feared as a monster yet determined to protect others like him. The last thing he needs is another person to care for with an impossible mission.</p>
+      <p>Together, they are drawn into a labyrinth of power and betrayal, where every choice could tip kingdoms into chaos. To find a way home, Josephine must trust a man who is anything but human.</p>
+      <p class="meta">Romantasy. Paperback and Kindle, November 2025. 356 pages in paperback.</p>
+      <div class="buy">
+        <a class="btn" href="https://www.amazon.com.au/dp/B0FSCTM8BR">Kindle on Amazon</a>
+        <a class="btn line2" href="https://www.booktopia.com.au/heart-of-the-human-c-k-scott/book/9781764304917.html">Paperback at Booktopia</a>
+        <a class="btn line2" href="https://www.thenile.com.au/books/ck-scott/heart-of-the-human/9781764304917">The Nile</a>
+        <a class="btn line2" href="https://www.goodreads.com/book/show/242007570-heart-of-the-human">Goodreads</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="world" id="world">
+  <div class="wrap">
+    <h2>Torn from Earth</h2>
+    <p>Josephine lands in a world of magic and mythical creatures, where every choice could tip kingdoms into chaos. To get home, she has to trust Kohlvar, the outcast everyone fears as a monster.</p>
+    <p class="tag">She fell into his world<br>He fell for her first<br>Neither meant to fall in love</p>
+  </div>
+</section>
+
+<section class="events" id="events">
+  <div class="wrap">
+    <div>
+      <h2>Find her in 2027</h2>
+      <p>C K calls 2027 her biggest year yet. She has four book events lined up, and she plans to have the prequel novella, <em>Fire of the Forgotten</em>, ready for all of them.</p>
+    </div>
+    <div>
+      <ul>
+        <li>Readers Unleashed</li>
+        <li>A Romantic Rendezvous</li>
+        <li>Once Upon a Fairytale</li>
+        <li>Secrets in the Pages</li>
+      </ul>
+      <p>Closer to home, paperbacks are on the shelf at <a href="https://mrbsemporium.com/shop/books/heart-of-the-human">Mr B’s Emporium</a> and Elevenses in Cessnock.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>C K Scott</h2>
+    <div>
+      <p>C K Scott is an Australian indie author. Heart of the Human is her debut romantasy novel.</p>
+      <p>She’s a self-declared night owl and writes mostly between 8pm and midnight. Away from the page she grows vegetables, crochets, listens to audiobooks, and cooks “like a medieval witch throwing ingredients willy nilly into a pot”.</p>
+      <div class="links">
+        <a class="btn" href="https://author-ckscott-newsletter.beehiiv.com/">Her newsletter</a>
+        <a class="btn line2" href="https://www.instagram.com/authorckscott/">@authorckscott</a>
+        <a class="btn line2" href="https://www.tiktok.com/@authorckscott">TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lamplit Studio for C K Scott. Not affiliated, not live.</footer>
+
+<div class="bar" id="bar"><span>Heart of the Human</span><a class="btn" href="https://www.amazon.com.au/dp/B0FSCTM8BR">Get the book</a></div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.getElementById('hero'), stage = document.getElementById('stage'), box = document.getElementById('box');
+  var paperP = document.getElementById('paperP'), forestP = document.getElementById('forestP'), title = document.getElementById('title');
+  var dark = document.getElementById('dark'), dim = document.getElementById('dim'), line = document.getElementById('line'), bar = document.getElementById('bar');
+  var W = 1620, H = 2560, AX = 800, AY = 560; /* zoom anchor: the forest inside her hair */
+  if (!reduce) document.documentElement.classList.add('anim');
+  var s0 = 1, ox = 0, oy = 0, kEnd = 2.2, vw = 0, vh = 0;
+  function measure(){
+    vw = stage.clientWidth; vh = stage.clientHeight;
+    s0 = Math.min(vw / W, vh / H) * (vw < 700 ? 1 : 0.96);
+    ox = (vw - W * s0) / 2; oy = (vh - H * s0) / 2;
+    box.style.transform = 'translate3d(' + ox + 'px,' + oy + 'px,0) scale(' + s0 + ')';
+    kEnd = Math.min(2.6, Math.max(2.0, 1.05 * vw / (970 * s0)));
+  }
+  function clamp(x){ return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function ease(t){ return t * t * (3 - 2 * t); }
+  function frame(){
+    var r = hero.getBoundingClientRect();
+    var p = reduce ? 0 : clamp(-r.top / (r.height - vh));
+    var z = ease(clamp(p / 0.75));
+    var k = 1 + (kEnd - 1) * z;
+    forestP.style.transform = 'translate3d(' + (AX * (1 - k)) + 'px,' + (AY * (1 - k)) + 'px,0) scale(' + k + ')';
+    var kp = 1 + 0.18 * z;
+    paperP.style.transform = 'translate3d(' + (W / 2 * (1 - kp)) + 'px,' + (H / 2 * (1 - kp)) + 'px,0) scale(' + kp + ')';
+    paperP.style.opacity = 1 - ease(clamp((p - 0.1) / 0.45));
+    dark.style.opacity = ease(clamp((p - 0.15) / 0.45));
+    dim.style.opacity = 0.9 * ease(clamp((p - 0.35) / 0.4));
+    title.style.transform = 'translate3d(0,' + (-120 * z) + 'px,0) scale(' + (1 + 0.04 * z) + ')';
+    var t = ease(clamp((p - 0.7) / 0.18));
+    line.style.opacity = t;
+    line.style.transform = 'translate3d(0,' + (14 * (1 - t)) + 'px,0)';
+    bar.classList.toggle('on', r.bottom < vh * 0.6 && document.documentElement.scrollHeight - scrollY - innerHeight > 140);
+  }
+  var queued = false;
+  function onScroll(){ if (!queued){ queued = true; requestAnimationFrame(function(){ queued = false; frame(); }); } }
+  measure(); frame();
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', function(){ measure(); frame(); });
+})();
+</script>
+</body>
+</html>
