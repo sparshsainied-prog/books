@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud Mother by Zena Unitt</title>
+<meta name="description" content="Kandy is dead. But death isn't the end. A website idea for Cloud Mother, the debut novel by Zena Unitt.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Cloud Mother by Zena Unitt">
+<meta property="og:description" content="A mother's love never dies... Even when she has.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/zena-unitt/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/zena-unitt/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23162b3c'/%3E%3Cpath d='M3 13c5-3 9-2 13 3 4-5 8-6 13-3-5 0-9 3-12 9h-2c-3-6-7-9-12-9z' fill='%23dfdfe7'/%3E%3C/svg%3E">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#162b3c;--deep:#0f2130;--slate:#46627a;--sky:#a0c0d6;--mist:#dfdfe7;--blush:#e9cfd8;--white:#f7f7fa;
+--display:"Cormorant",Georgia,serif;--text:"Spectral",Georgia,serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--navy);color:var(--navy);font:400 1.0625rem/1.65 var(--text)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--mist)}
+.skip{position:absolute;left:12px;top:-60px;z-index:30;background:var(--white);padding:10px 14px}
+.skip:focus{top:44px}
+.strip{position:relative;z-index:20;margin:0;background:var(--deep);color:var(--mist);font-size:.8125rem;line-height:1.35;padding:9px 16px;text-align:center}
+
+.sky{position:relative;height:460svh;background:var(--sky)}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate}
+.layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#dusk{opacity:0}
+.book{position:absolute;left:50%;top:50%;width:var(--end-w);aspect-ratio:978/1500;margin-left:calc(var(--end-w)/-2);margin-top:calc(var(--end-w)*-.767);will-change:transform;transform-origin:50% 50%}
+.book img{position:absolute;inset:0;width:100%;height:100%}
+#full{opacity:0}
+#trees{will-change:transform}
+.near{position:absolute;width:150%;max-width:none;left:-25%;top:-6%;opacity:.9;will-change:transform,opacity;pointer-events:none}
+#birds{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+#birds use{fill:var(--navy);opacity:0;will-change:transform,opacity}
+.beat{position:absolute;left:20px;right:20px;bottom:calc(env(safe-area-inset-bottom) + 9svh);margin:0;opacity:0;will-change:transform,opacity}
+.beat.first{opacity:1}
+h1,.line{font-family:var(--display);font-weight:600;color:var(--navy);font-size:clamp(2.6rem,12vw,5.4rem);line-height:1;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.count{display:block;margin-top:.5rem;font:italic 500 1.375rem/1.2 var(--display);color:var(--navy)}
+.shelf{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 18px);padding:0 16px;opacity:0;visibility:hidden;text-align:center}
+.tag{font:italic 500 1.5rem/1.15 var(--display);margin:0 0 14px;text-wrap:balance}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;font:600 1.1875rem/1.1 var(--display);text-decoration:none;border:1px solid var(--navy);background:var(--navy);color:var(--white)}
+.btn.alt{background:rgba(247,247,250,.72);color:var(--navy)}
+.btn:hover{background:var(--slate);border-color:var(--slate);color:var(--white)}
+
+.tale{background:var(--navy);color:var(--mist);padding:72px 20px 80px}
+.tale .in{max-width:40rem;margin:0 auto}
+.tale h2,.about h2{font:600 clamp(2.4rem,9vw,4rem)/1.02 var(--display);margin:0 0 1.5rem;text-wrap:balance}
+.tale p{margin:0 0 1.1em;text-wrap:pretty}
+.tale .last{font:italic 500 1.75rem/1.2 var(--display);color:var(--white);margin:1.6em 0 0}
+.buy{background:var(--mist);padding:64px 20px}
+.buy .in{max-width:62rem;margin:0 auto;display:grid;gap:36px}
+.buy figure{margin:0;max-width:250px}
+.buy h2{font:600 2.5rem/1.05 var(--display);margin:0 0 1.25rem}
+.fmt{border-top:1px solid var(--slate);padding:16px 0 20px}
+.fmt h3{font-variant-numeric:tabular-nums;display:flex;justify-content:space-between;gap:16px;font:600 1.5rem/1.2 var(--display);margin:0 0 12px}
+.fmt ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.said{background:var(--sky);padding:72px 20px}
+.said .in{max-width:62rem;margin:0 auto}
+.said blockquote{margin:0}
+.big p{font:500 clamp(2.1rem,8vw,3.75rem)/1.08 var(--display);margin:0 0 .6rem;max-width:17em}
+.said footer{font-size:.9375rem}
+.small{display:grid;gap:28px;margin-top:48px}
+.small p{font:500 1.625rem/1.2 var(--display);margin:0 0 .4rem}
+.about{background:var(--navy);color:var(--mist);padding:72px 20px}
+.about .in{max-width:40rem;margin:0 auto}
+.about p{margin:0 0 1.1em}
+.about a{text-underline-offset:3px;display:inline-block;padding:10px 18px 10px 0;min-height:44px}
+.colophon{background:var(--deep);color:var(--mist);font-size:.875rem;padding:22px 20px calc(env(safe-area-inset-bottom) + 22px);text-align:center;margin:0}
+
+@media (min-width:900px){
+ .buy .in{grid-template-columns:250px 1fr;gap:64px;align-items:start}
+ .small{grid-template-columns:1.2fr 1fr;gap:64px}
+ .tale,.said,.about{padding-top:112px;padding-bottom:112px}
+}
+@media (max-height:560px){
+ h1,.line{font-size:clamp(1.75rem,8vh,2.5rem)}
+ .count{font-size:1.125rem;margin-top:.25rem}
+ .beat{bottom:calc(env(safe-area-inset-bottom) + 12px)}
+ .tag{font-size:1.125rem;margin-bottom:6px}
+ .shelf{bottom:calc(env(safe-area-inset-bottom) + 8px)}
+ .btn{min-height:44px;padding:6px 14px;font-size:1.0625rem}
+}
+@media (max-width:340px){
+ .btn{padding:10px 12px;font-size:1.0625rem}
+ .btns{flex-wrap:nowrap;gap:8px}
+}
+@media (min-width:1180px){
+ .beat{left:7vw;right:auto;bottom:auto;top:50%;max-width:30rem}
+ h1,.line{font-size:clamp(4rem,6vw,6.25rem)}
+ .count{font-size:1.75rem}
+ .shelf{left:7vw;right:auto;top:50%;bottom:auto;width:27rem;padding:0;margin-top:-110px;text-align:left}
+ .tag{font-size:clamp(2.4rem,3.4vw,3.25rem);line-height:1.05;margin-bottom:26px}
+ .btns{justify-content:flex-start}
+}
+html:not(.js) .sky{height:auto}
+html:not(.js) .stage{position:relative;height:auto;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:22px;padding:32px 20px}
+html:not(.js) .layer{position:absolute}
+html:not(.js) .book{position:relative;left:auto;top:auto;margin:0;width:min(66vw,300px);transform:none!important}
+html:not(.js) #full{opacity:1!important}
+html:not(.js) .near,html:not(.js) #birds,html:not(.js) .beat.mid,html:not(.js) .count{display:none}
+html:not(.js) .beat.first{position:relative;left:auto;right:auto;top:auto;bottom:auto;opacity:1!important;transform:none!important;text-align:center;max-width:34rem}
+html:not(.js) .shelf{position:relative;inset:auto;margin:0;opacity:1!important;visibility:visible!important;width:auto;text-align:center}
+html:not(.js) .btns{justify-content:center}
+</style>
+</head>
+<body>
+<a class="skip" href="#story">Skip to the story</a>
+<p class="strip">A website idea made by Lamplit Studio for Zena Unitt. Not their official site.</p>
+<main>
+<section class="sky" id="sky" aria-label="Cloud Mother">
+ <div class="stage" id="stage">
+  <img class="layer" src="img/sky-day.jpg" alt="" width="1600" height="1000">
+  <img class="layer" id="dusk" src="img/sky-dusk.jpg" alt="" width="1600" height="1000" loading="lazy">
+  <div class="book" id="book">
+   <img src="img/plate-back.webp" alt="" width="1400" height="2147" fetchpriority="high">
+   <img id="trees" src="img/plate-trees.webp" alt="" width="1400" height="2147">
+   <img id="full" src="img/cover-full.webp" alt="The cover of Cloud Mother by Zena Unitt: a woman’s silhouette dissolving into clouds and forest, with birds in flight." width="1400" height="2147">
+  </div>
+  <svg id="birds" aria-hidden="true"><defs><path id="b" d="M-15-3C-10-8-5-7 0 0 5-7 10-8 15-3 9-4 4-1 1 6H-1C-4-1-9-4-15-3Z"/></defs></svg>
+  <img class="near" id="near" src="img/cloud-front.webp" alt="" width="1400" height="251">
+  <h1 class="beat first" id="b1">Kandy is dead. But death isn’t the end.</h1>
+  <p class="beat mid line" id="b2">She’s granted ten post-passing privileges.<span class="count" id="count" aria-hidden="true">Ten visits left</span></p>
+  <p class="beat mid line" id="b3">Two lives to change. One impossible choice.</p>
+  <div class="shelf" id="shelf">
+   <p class="tag">A mother’s love never dies… Even when she has</p>
+   <div class="btns">
+    <a class="btn" href="#buy">Get your copy</a>
+    <a class="btn alt" href="#story">Read the story</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="tale on-dark" id="story">
+ <div class="in">
+  <h2>Even from the afterlife, a mother knows best.</h2>
+  <p>Kandy is dead. But death isn’t the end.</p>
+  <p>She’s granted ten post-passing privileges. Ten chances to revisit the world she left behind. She can’t resist meddling in her daughter Eloise’s love life. Especially when Eloise falls for a man Kandy knows is all wrong.</p>
+  <p>But time is running out. And she has another promise to keep. Her best friend Almira has spent years searching for the daughter stolen from her. Kandy may be the only one who can help.</p>
+  <p class="last">A tender and mischievous tale of love, loss and the unbreakable bonds that defy even death.</p>
+ </div>
+</section>
+
+<section class="buy" id="buy">
+ <div class="in">
+  <figure><img src="img/cover.jpg" alt="Cloud Mother by Zena Unitt, front cover." width="640" height="982" loading="lazy"></figure>
+  <div>
+   <h2>Get your copy</h2>
+   <div class="fmt">
+    <h3><span>Paperback</span><span>£9.99</span></h3>
+    <ul>
+     <li><a class="btn" href="https://troubador.co.uk/bookshop/contemporary/cloud-mother">Troubador</a></li>
+     <li><a class="btn alt" href="https://www.amazon.co.uk/dp/180634274X">Amazon</a></li>
+    </ul>
+   </div>
+   <div class="fmt">
+    <h3><span>eBook</span><span>RRP £4.99</span></h3>
+    <ul>
+     <li><a class="btn alt" href="https://www.amazon.co.uk/dp/B0GZVTHZNK">Kindle</a></li>
+     <li><a class="btn alt" href="https://www.kobo.com/gb/en/ebook/cloud-mother">Kobo</a></li>
+     <li><a class="btn alt" href="https://books.apple.com/gb/book/cloud-mother/id6767165102">Apple Books</a></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="said" aria-label="What readers say">
+ <div class="in">
+  <blockquote class="big"><p>Proof that the love of mother to her children continues past death, forever.</p><footer>Kate, reader review on Troubador</footer></blockquote>
+  <div class="small">
+   <blockquote><p>The perfect holiday read.</p><footer>Bridget, reader review on Troubador</footer></blockquote>
+   <blockquote><p>Cloud Mother was a real page-turner.</p><footer>Jackie, reader review on Troubador</footer></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="about on-dark">
+ <div class="in">
+  <h2>Zena Unitt</h2>
+  <p>With many years working in education and the performing arts, Zena has always been inspired by the creative process.</p>
+  <p>Cloud Mother was inspired by the loss of her own mother when she was 21. It explores connection, love and the unseen threads that bind us across time and place.</p>
+  <a href="https://www.instagram.com/righttowrite63/">Instagram</a>
+  <a href="https://www.facebook.com/zenaunitt">Facebook</a>
+ </div>
+</section>
+</main>
+<footer class="colophon">A preview made by Lamplit Studio for Zena Unitt. Not affiliated, not live.</footer>
+<script>
+(function(){
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ reduce.addEventListener('change',function(){location.reload()});
+ if(reduce.matches)return;
+ var $=function(i){return document.getElementById(i)};
+ var sky=$('sky'),stage=$('stage'),book=$('book'),trees=$('trees'),full=$('full'),near=$('near'),dusk=$('dusk'),svg=$('birds'),count=$('count'),shelf=$('shelf');
+ var words=['Ten visits left','Nine visits left','Eight visits left','Seven visits left','Six visits left','Five visits left','Four visits left','Three visits left','Two visits left','One visit left','No visits left'];
+ var flock=[[-.34,.62,1],[.3,.7,.8],[-.14,.78,1.15],[.42,.5,.9],[-.44,.42,.75],[.16,.86,1],[-.28,.88,.85],[.46,.76,1.1],[-.06,.56,.8],[.26,.4,1]];
+ var uses=flock.map(function(){var u=document.createElementNS('http://www.w3.org/2000/svg','use');u.setAttribute('href','#b');svg.appendChild(u);return u});
+ var W,H,endW,startScale,ticking=false,last=-1,shown=0;
+ function clamp(v){return Math.max(0,Math.min(1,v))}
+ function span(p,a,b){return clamp((p-a)/(b-a))}
+ function ease(t){return t*t*(3-2*t)}
+ function fade(el,p,a,b,c,d){var o=Math.min(ease(span(p,a,b)),1-ease(span(p,c,d)));el.style.opacity=o;el.style.transform='translate3d(0,'+((1-ease(span(p,a,b)))*18-ease(span(p,c,d))*18)+'px,0)'}
+ function size(){
+  W=stage.clientWidth;H=stage.clientHeight;
+  var wide=W>=1180;
+  endW=wide?Math.min(H*.6,400):Math.min(W*.66,H<561?H*.34:H<640?H*.36:H*.43);
+  book.style.setProperty('--end-w',endW+'px');
+  startScale=Math.max(W*1.25,H*1.05)/endW;
+  last=-1;draw();
+ }
+ function draw(){
+  ticking=false;
+  var r=sky.getBoundingClientRect(),run=r.height-H,p=clamp(-r.top/run);
+  if(p===last)return;last=p;
+  var wide=W>=1180,pull=ease(span(p,.56,.9)),s=startScale+(1-startScale)*pull;
+  var hs=endW*1.534*startScale,startY=Math.min(H*.34,hs/2-H/2-4)*(1-pull),endY=wide?0:-H*(H<561?.2:.115)*pull;
+  book.style.transform='translate3d('+(wide?W*.14*pull:0)+'px,'+(startY+endY)+'px,0) scale('+s+')';
+  var drift=(1-pull)*endW*.05;
+  trees.style.transform='translate3d('+(-drift*.5)+'px,'+(drift*-.6-span(p,0,.5)*endW*.018)+'px,0)';
+  full.style.opacity=ease(span(p,.78,.94));
+  dusk.style.opacity=ease(span(p,.42,.9))*.85;
+  near.style.transform='translate3d(0,'+(-H*.42*ease(span(p,0,.45)))+'px,0) scale('+(1+p*.5)+')';
+  near.style.opacity=.9*(1-ease(span(p,.2,.46)));
+  var gone=0;
+  flock.forEach(function(f,i){
+   var a=.18+i*.036,t=span(p,a,a+.13);
+   if(p>=a+.05)gone=i+1;
+   var x=wide?W*.6+W*(Math.abs(f[0])+.12)*1.1*t:W*.5+W*f[0]*2*t,y=H*.26+H*f[1]*.38*t-Math.sin(t*3.14)*H*.08;
+   uses[i].style.opacity=t>0&&t<1?Math.min(1,t*6)*Math.min(1,(1-t)*5):0;
+   uses[i].style.transform='translate('+x+'px,'+y+'px) rotate('+(f[0]*28*t)+'deg) scale('+(f[2]*(.7+t*1.1))+','+(f[2]*(.7+t*1.1)*(.7+.3*Math.sin(t*34)))+')';
+  });
+  if(gone!==shown){shown=gone;count.textContent=words[gone]}
+  fade($('b1'),p,-1,-.5,.09,.16);
+  fade($('b2'),p,.16,.21,.58,.62);
+  fade($('b3'),p,.62,.66,.73,.78);
+  var sh=ease(span(p,.9,.97));
+  shelf.style.opacity=sh;shelf.style.visibility=sh>.02?'visible':'hidden';
+ }
+ function ask(){if(!ticking){ticking=true;requestAnimationFrame(draw)}}
+ addEventListener('scroll',ask,{passive:true});
+ addEventListener('resize',size);
+ size();
+})();
+</script>
+</body>
+</html>
