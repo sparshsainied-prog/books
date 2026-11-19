@@ -242,6 +242,8 @@ footer a{color:#f1cf86}
 
 <script>
 (function(){
+  var mq=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(){location.reload()});
   var hero=document.getElementById('hero');
   if(!hero||!document.documentElement.classList.contains('motion'))return;
   var plate=hero.querySelector('.plate'),L=hero.querySelector('.leaves.l'),R=hero.querySelector('.leaves.r'),
