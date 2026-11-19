@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sassy the Green Tree Boa, books by Nancy Hopkins</title>
+<meta name="description" content="A homepage idea for Nancy Hopkins, author of the Sassy the Green Tree Boa picture books. Made by Lamplit Studio. Not her official site.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sassy the Green Tree Boa, books by Nancy Hopkins">
+<meta property="og:description" content="A homepage idea made by Lamplit Studio for Nancy Hopkins. Not her official site.">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/nancy-hopkins/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/nancy-hopkins/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#24412a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2324412a'/%3E%3Cpath d='M10 22c0-6 12-4 12-10 0-3-3-4-5-4' stroke='%236fa34e' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>if(window.matchMedia&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/plate.jpg" imagesrcset="img/plate-s.jpg 772w, img/plate.jpg 1157w" imagesizes="100vw">
+<style>
+:root{
+  --canopy:#24412a;
+  --canopy-deep:#18301d;
+  --mist:#e3efe9;
+  --leaf:#6fa34e;
+  --gold:#d4a23a;
+  --brick:#7b2a19;
+  --ink:#1c2e20;
+  --ink-soft:#3f5a45;
+  --display:"Fredoka",system-ui,sans-serif;
+  --text:"Andika",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,.say span,.close-words p{text-wrap:balance}
+p{text-wrap:pretty}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--canopy-deep);outline-offset:3px}
+.hero :focus-visible,.lady :focus-visible,.close :focus-visible,footer :focus-visible{outline-color:var(--gold)}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--canopy-deep);padding:.6rem 1rem;z-index:50}
+.skip:focus{left:1rem;top:1rem}
+
+.strip{background:var(--canopy-deep);color:#dfeee2;font-size:.875rem;line-height:1.4;padding:.55rem 1rem;text-align:center}
+
+/* hero */
+.hero{position:relative;background:var(--canopy-deep)}
+.stage{position:relative;height:100vh;height:100svh;min-height:520px;overflow:hidden}
+.motion .hero{height:320vh}
+.motion .stage{position:sticky;top:0}
+.plane{position:absolute;will-change:transform}
+.plate{inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 78%;transform-origin:50% 78%}
+.motion .plate{transform:scale(1.32)}
+.leaves{display:none;top:-6%;height:112%;width:auto;max-width:none}
+.motion .leaves{display:block}
+.leaves.l{left:0;transform-origin:0 50%}
+.leaves.r{right:0;transform-origin:100% 50%}
+.bell{top:0;left:69%;width:clamp(70px,9vw,128px);transform-origin:50% 0}
+.motion .bell{transform:translate3d(0,-130%,0)}
+.words{position:absolute;left:0;bottom:0;width:min(100%,46rem);padding:0 clamp(1rem,5vw,4.5rem) clamp(1.5rem,6vh,3.5rem);color:#fff;z-index:5}
+.words::before{content:"";position:absolute;inset:-45% -30% 0 0;background:radial-gradient(ellipse at 0% 100%,rgba(16,34,20,.85) 0%,rgba(16,34,20,.6) 45%,rgba(16,34,20,0) 72%);z-index:-1;pointer-events:none}
+.say{display:grid;align-items:end;margin:0 0 .4rem}
+.say span{grid-area:1/1;font-family:var(--display);font-weight:600;font-size:clamp(1.75rem,4.6vw,3.4rem);line-height:1.08;max-width:11em;text-shadow:0 2px 3px rgba(10,24,13,.55)}
+.say .two{opacity:0;visibility:hidden}
+.motion .say .two{visibility:visible}
+h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.25;color:#dfeee2}
+h1 small{display:block;font-family:var(--text);font-weight:400;font-size:.85em;color:#c6dccb}
+.heroact{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.motion .heroact{opacity:0;visibility:hidden}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.7rem 1.2rem;border-radius:999px;font-family:var(--display);font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid transparent}
+.btn.gold{background:var(--gold);color:var(--canopy-deep);border-color:#8a6418;box-shadow:0 3px 0 #8a6418}
+.btn.gold:hover{background:#e2b24a}
+.btn.ghost{color:#fff;border-color:rgba(255,255,255,.75)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+/* books */
+section{padding:clamp(3.5rem,9vw,7rem) clamp(1rem,5vw,4.5rem)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 1rem;color:var(--canopy)}
+h3{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15;margin:0 0 .5rem;color:var(--canopy)}
+.books{max-width:72rem;margin:0 auto}
+.book{display:grid;gap:1.5rem 3rem;align-items:start}
+.book + .book{margin-top:clamp(3rem,7vw,5.5rem)}
+.book img{width:100%;max-width:340px;border-radius:4px;box-shadow:0 14px 26px -12px rgba(20,40,24,.55)}
+.book.small img{max-width:220px}
+.meta{color:var(--ink-soft);font-size:.95rem;margin:0 0 1rem}
+.blurb{font-size:1.15rem;max-width:34rem;margin:0 0 1.25rem}
+.blurb p{margin:0 0 .35rem}
+.buy{display:flex;flex-wrap:wrap;gap:.6rem}
+.buy a{min-height:44px;display:inline-flex;align-items:center;padding:.55rem 1rem;border-radius:999px;border:2px solid var(--canopy);color:var(--canopy);font-family:var(--display);font-weight:600;text-decoration:none}
+.buy a.main{background:var(--canopy);color:#fff}
+.buy a:hover{background:var(--leaf);border-color:var(--leaf);color:var(--canopy-deep)}
+
+/* snake lady */
+.lady{background:var(--canopy);color:#e8f2ea}
+.lady h2{color:#fff}
+.lady-in{max-width:68rem;margin:0 auto;display:grid;gap:2rem 4rem}
+.lady p{max-width:36rem;margin:0 0 1rem}
+.lady .big{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.3;color:#fff}
+.notes{border-top:2px solid rgba(255,255,255,.25);padding-top:1.25rem}
+.notes p{font-size:1rem}
+.notes q{font-style:italic}
+.notes a{color:#f1cf86}
+
+/* festival */
+.fest{max-width:68rem;margin:0 auto;display:grid;gap:1rem 3rem;align-items:end}
+.fest .when{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--brick);margin:0}
+.fest p{margin:0 0 .75rem;max-width:34rem}
+
+/* close */
+.close{position:relative;overflow:hidden;padding:0;background:var(--canopy-deep);color:#fff}
+.close img{width:100%;height:clamp(420px,80vh,760px);object-fit:cover;object-position:60% 70%}
+.close-words{position:absolute;left:0;right:0;bottom:0;padding:5rem clamp(1rem,5vw,4.5rem) clamp(2rem,6vh,3.5rem);background:linear-gradient(to top,rgba(16,34,20,.88),rgba(16,34,20,0))}
+.close-words p{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,4vw,3rem);line-height:1.1;margin:0 0 1rem;max-width:20ch}
+
+footer{background:var(--canopy-deep);color:#c6dccb;font-size:.9rem;padding:1.5rem clamp(1rem,5vw,4.5rem) 2rem;border-top:1px solid rgba(255,255,255,.12)}
+footer p{margin:0 0 .35rem}
+footer a{color:#f1cf86}
+
+@media (min-width:760px){
+  .book{grid-template-columns:minmax(0,340px) 1fr}
+  .book.small{grid-template-columns:1fr minmax(0,220px)}
+  .book.small .pic{order:2}
+  .lady-in{grid-template-columns:1.2fr 1fr}
+  .fest{grid-template-columns:1fr 1fr}
+}
+@media (max-width:759px){
+  .motion .hero{height:270vh}
+  .bell{left:72%;width:70px}
+  .say{max-width:none}
+  .words{top:0;bottom:auto;width:100%;padding:1.25rem 1rem 2rem}
+  .words::before{inset:0 0 -60% 0;background:linear-gradient(to bottom,rgba(16,34,20,.85) 0%,rgba(16,34,20,.6) 55%,rgba(16,34,20,0) 100%)}
+  .plate{object-position:50% 70%}
+  .bell{top:auto;bottom:52%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#books">Skip to the books</a>
+<div class="strip">A website idea made by Lamplit Studio for Nancy Hopkins. Not her official site.</div>
+
+<header class="hero" id="hero">
+  <div class="stage">
+    <img class="plane plate" src="img/plate.jpg" srcset="img/plate-s.jpg 772w, img/plate.jpg 1157w" sizes="100vw" width="1157" height="872" alt="Sassy the green tree boa hangs head first through the jungle vines, from the cover of Adventure Two." fetchpriority="high">
+    <img class="plane bell" src="img/bell.png" width="294" height="346" alt="">
+    <img class="plane leaves l" src="img/leaves-l.webp" width="330" height="800" alt="">
+    <img class="plane leaves r" src="img/leaves-r.webp" width="330" height="800" alt="">
+    <div class="words">
+      <p class="say" aria-live="off"><span class="one">Hi! I’m Sassy the Snake, you see…</span><span class="two" aria-hidden="true">Are you up for another adventure?</span></p>
+      <h1>Sassy the Green Tree Boa <small>Picture books by Nancy Hopkins, The Snake Lady</small></h1>
+      <div class="heroact" id="heroact">
+        <a class="btn gold" href="https://www.amazon.com/dp/B0FXHV7TPB">Buy Adventure Two</a>
+        <a class="btn ghost" href="#books">See both books</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="books" aria-labelledby="books-h">
+  <div class="books">
+    <h2 id="books-h">Two adventures so far</h2>
+    <article class="book">
+      <div class="pic"><img src="img/cover-two.jpg" width="640" height="830" alt="Cover of Sassy the Green Tree Boa, Adventure Two: The Great Pretender. Sassy hangs from the vines with her body looped into a heart." loading="lazy"></div>
+      <div>
+        <h3>Adventure Two: The Great Pretender</h3>
+        <p class="meta">Austin Macauley, December 2025. 28 pages, for ages 6 to 8.</p>
+        <div class="blurb">
+          <p>“I ended my adventure pretending to be a Christmas tree!!”</p>
+          <p>Sassy is back, and this time she sets out to see what other snakes have fun pretending to be.</p>
+        </div>
+        <div class="buy">
+          <a class="main" href="https://www.amazon.com/dp/B0FXHV7TPB">Paperback on Amazon</a>
+        </div>
+      </div>
+    </article>
+    <article class="book small">
+      <div class="pic"><img src="img/cover-one.jpg" width="640" height="828" alt="Cover of Sassy the Green Tree Boa. Sassy looks up at a gold bell hanging from a red bow in the leaves." loading="lazy"></div>
+      <div>
+        <h3>Sassy the Green Tree Boa</h3>
+        <p class="meta">Austin Macauley, November 2024. 30 pages, for ages 3 to 5. Sixteen ratings on Amazon, all five stars.</p>
+        <div class="blurb">
+          <p>Sassy slithers over rocks, through fields and across streams, making new friends on the way.</p>
+          <p>“We are on a quest, you see… To find the perfect tree for me!”</p>
+        </div>
+        <div class="buy">
+          <a class="main" href="https://www.amazon.com/dp/B0DJDC7V8P">Paperback</a>
+          <a href="https://www.amazon.com/dp/B0DJDD2F8R">Hardcover</a>
+          <a href="https://www.amazon.com/dp/B0DMHF9BN3">Kindle</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="lady" aria-labelledby="lady-h">
+  <div class="lady-in">
+    <div>
+      <h2 id="lady-h">The Snake Lady</h2>
+      <p class="big">Nancy is a mother of three boys in New England, and she has been an outdoors woman and nature lover her whole life.</p>
+      <p>She started her own environmental education program on native New England snakes, and has given talks to every age group about the secret jobs snakes do in an ecosystem.</p>
+      <p>She has retired from rescuing and raising snakes, but plenty of people still call her The Snake Lady. These days she shares her love of snakes through her picture books.</p>
+    </div>
+    <div class="notes">
+      <p>Leroy the chameleon is, in Nancy’s words, <q>still the funniest reptile in my collection</q>.</p>
+      <p>Sassy has found readers from Connecticut all the way to California and New Mexico.</p>
+      <p><a href="https://www.instagram.com/nancy.thesnakelady/">Follow @nancy.thesnakelady on Instagram</a></p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="fest-h">
+  <div class="fest">
+    <div>
+      <h2 id="fest-h">Meet Nancy</h2>
+      <p class="when">Saturday 21 November 2026, 10am to 4pm</p>
+    </div>
+    <div>
+      <p>Nancy is one of the authors at CAPA’s Connecticut Book Festival, at the West Hartford Conference Center, 50 S. Main Street, West Hartford.</p>
+      <p><a href="https://caap.wildapricot.org/Connecticut-Book-Festival">Festival details</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <img src="img/close.jpg" width="1051" height="800" alt="" loading="lazy">
+  <div class="close-words">
+    <p id="close-h">Then come along with me as we set out on another great adventure…</p>
+    <a class="btn gold" href="https://www.amazon.com/dp/B0FXHV7TPB">Buy Adventure Two</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>A preview made by Lamplit Studio for Nancy Hopkins. Not affiliated, not live.</p>
+  <p>The cover art comes from the two Sassy books and is used here only to show the idea.</p>
+</footer>
+
+<script>
+(function(){
+  var hero=document.getElementById('hero');
+  if(!hero||!document.documentElement.classList.contains('motion'))return;
+  var plate=hero.querySelector('.plate'),L=hero.querySelector('.leaves.l'),R=hero.querySelector('.leaves.r'),
+      bell=hero.querySelector('.bell'),one=hero.querySelector('.say .one'),two=hero.querySelector('.say .two'),
+      act=document.getElementById('heroact');
+  var phone=false,ticking=false;
+  function clamp(v){return v<0?0:v>1?1:v}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function frame(){
+    ticking=false;
+    var r=hero.getBoundingClientRect(),span=hero.offsetHeight-window.innerHeight;
+    var p=span>0?clamp(-r.top/span):1;
+    var open=ease(seg(p,.04,.6));
+    var s0=phone?1:1.75,k=phone?1.9:1.8,gap=phone?.38:0;
+    var sx=s0+(open*.5),tx=(gap+open*k)*100;
+    L.style.transform='translate3d('+(-tx)+'%,0,0) scale('+sx+')';
+    R.style.transform='translate3d('+tx+'%,0,0) scale('+sx+')';
+    var z=ease(seg(p,.02,.75));
+    plate.style.transform=phone?'scale('+(1.32-.32*z)+')':'translate3d('+(6*z)+'%,0,0) scale('+(1.32-.2*z)+')';
+    var d=ease(seg(p,.38,.68));
+    var swing=Math.sin(seg(p,.38,.9)*Math.PI*3)*(1-seg(p,.38,.9))*10;
+    bell.style.transform='translate3d(0,'+(-130+130*d)+'%,0) rotate('+swing+'deg)';
+    var x=seg(p,.58,.72);
+    one.style.opacity=String(1-x);
+    two.style.opacity=String(seg(p,.66,.8));
+    var a=seg(p,.7,.84);
+    act.style.opacity=String(a);
+    act.style.visibility=a>.02?'visible':'hidden';
+    var swapped=x>.5;
+    one.setAttribute('aria-hidden',swapped?'true':'false');
+    two.setAttribute('aria-hidden',swapped?'false':'true');
+  }
+  function measure(){phone=window.innerWidth<760;frame()}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+  window.addEventListener('resize',measure);
+  measure();
+})();
+</script>
+</body>
+</html>
