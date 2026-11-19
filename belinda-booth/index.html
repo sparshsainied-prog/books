@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valentina’s Fun Day Out by Belinda Booth</title>
+<meta name="description" content="A website idea for Valentina’s Fun Day Out, the picture book by Belinda Booth. Valentina’s going out with nanny and grandad, and she knows it’s going to be fun.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Valentina’s Fun Day Out by Belinda Booth">
+<meta property="og:description" content="It’s a bright summer’s day and Valentina is excited.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/belinda-booth/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/belinda-booth/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7d87d'/%3E%3Cellipse cx='16' cy='13' rx='9' ry='10.5' fill='%23de516c' stroke='%233f2a22' stroke-width='1.5'/%3E%3Cpath d='M16 24c-2 2 2 3 0 6' stroke='%233f2a22' stroke-width='1.5' fill='none'/%3E%3C/svg%3E">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--sun:#f7d87d;--cloud:#82c9df;--rasp:#de516c;--raspbtn:#c23a55;--raspdeep:#a92c47;--slate:#5d7896;--ink:#3f2a22;--pale:#fbf1c4;
+--display:"Patrick Hand","Comic Sans MS",cursive;--text:"Atkinson Hyperlegible",system-ui,sans-serif;
+--wob:20px 26px 18px 24px/24px 18px 26px 20px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sun);color:var(--ink);font:400 1.0625rem/1.6 var(--text)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--pale)}
+.skip{position:absolute;left:12px;top:-60px;z-index:30;background:var(--pale);padding:10px 14px}
+.skip:focus{top:44px}
+.strip{position:relative;z-index:20;margin:0;background:var(--ink);color:var(--pale);font-size:.8125rem;line-height:1.35;padding:9px 16px;text-align:center}
+
+.day{position:relative;height:440svh;background:var(--sun)}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;background:var(--sun)}
+.book{position:absolute;left:0;top:0;width:var(--w);transform-origin:0 0;will-change:transform}
+.book img{width:100%;height:auto;border:2px solid var(--ink);border-radius:6px 9px 5px 8px}
+#balloons{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+#balloons g{opacity:0;will-change:transform}
+.beat{position:absolute;left:16px;right:16px;bottom:calc(env(safe-area-inset-bottom) + 5svh);margin:0 auto;max-width:30rem;padding:18px 22px 20px;background:var(--cloud);border:2px solid var(--ink);border-radius:var(--wob);opacity:0;will-change:transform,opacity}
+.beat.first{opacity:1}
+h1,.line{font:400 clamp(1.9rem,8vw,3rem)/1.08 var(--display);margin:0;text-wrap:balance}
+.shelf{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 18px);padding:0 16px;opacity:0;visibility:hidden;text-align:center}
+.tag{font:400 1.625rem/1.1 var(--display);margin:0 0 12px;text-wrap:balance}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:8px 22px;font:400 1.4rem/1 var(--display);text-decoration:none;border:2px solid var(--ink);border-radius:var(--wob);background:var(--raspbtn);color:#fff}
+.btn.alt{background:var(--pale);color:var(--ink)}
+.btn:hover{background:var(--raspdeep)}
+.btn.alt:hover{background:var(--cloud)}
+
+.story{background:var(--cloud);padding:72px 20px 80px}
+.in{max-width:40rem;margin:0 auto}
+h2{font:400 clamp(2.3rem,9vw,3.6rem)/1.02 var(--display);margin:0 0 1.25rem;text-wrap:balance}
+.story p{margin:0 0 1.05em;text-wrap:pretty;font-size:1.1875rem}
+.story .end{font:400 1.9rem/1.15 var(--display);margin-top:1.4em}
+.buy{background:var(--sun);padding:64px 20px}
+.buy .in{max-width:62rem;display:grid;gap:32px}
+.buy figure{margin:0;max-width:300px}
+.buy figure img{border:2px solid var(--ink);border-radius:6px 9px 5px 8px}
+.buy figcaption{font-size:.9375rem;margin-top:10px}
+.facts{list-style:none;margin:0 0 24px;padding:0;border-top:2px dashed var(--ink)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:2px dashed var(--ink);font-variant-numeric:tabular-nums}
+.facts span:first-child{font-weight:700}
+.hello{background:var(--raspbtn);color:#fff;padding:64px 20px}
+.hello .when{font:400 clamp(2rem,8vw,3rem)/1.05 var(--display);margin:0 0 .6rem}
+.hello p{margin:0 0 1em}
+.hello a{text-underline-offset:3px}
+.about{background:var(--ink);color:var(--pale);padding:72px 20px}
+.about p{margin:0 0 1.1em}
+.about .next{font:400 1.75rem/1.15 var(--display);color:var(--sun);margin-top:1.6em}
+.about a{display:inline-block;padding:10px 0;min-height:44px;text-underline-offset:3px}
+.colophon{background:var(--ink);color:var(--pale);border-top:2px dashed rgba(251,241,196,.35);font-size:.875rem;padding:22px 20px calc(env(safe-area-inset-bottom) + 22px);text-align:center;margin:0}
+
+@media (min-width:900px){
+ .buy .in{grid-template-columns:300px 1fr;gap:64px;align-items:start}
+ .story,.about{padding-top:112px;padding-bottom:112px}
+ .hello{padding-top:88px;padding-bottom:88px}
+}
+@media (max-height:560px){
+ h1,.line{font-size:clamp(1.4rem,7vh,2rem)}
+ .beat{bottom:calc(env(safe-area-inset-bottom) + 10px);padding:10px 16px}
+ .tag{font-size:1.25rem;margin-bottom:6px}
+ .shelf{bottom:calc(env(safe-area-inset-bottom) + 8px)}
+ .btn{min-height:44px;padding:6px 16px;font-size:1.2rem}
+}
+@media (min-width:1100px){
+ .beat{left:6vw;right:auto;bottom:auto;top:50%;transform:translateY(-50%);max-width:27rem}
+ .shelf{left:7vw;right:auto;top:50%;bottom:auto;width:min(28rem,32vw);padding:0;margin-top:-100px;text-align:left}
+ .tag{font-size:clamp(2.4rem,3.2vw,3.2rem);line-height:1.02;margin-bottom:24px}
+ .btns{justify-content:flex-start}
+}
+html:not(.js) .day{height:auto}
+html:not(.js) .stage{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column;align-items:center;gap:22px;padding:32px 20px}
+html:not(.js) .book{position:relative;width:min(80vw,420px);transform:none!important}
+html:not(.js) #balloons,html:not(.js) .beat.mid{display:none}
+html:not(.js) .beat.first{position:relative;left:auto;right:auto;top:auto;bottom:auto;opacity:1!important;transform:none!important;text-align:center;margin:0}
+html:not(.js) .shelf{position:relative;inset:auto;margin:0;opacity:1!important;visibility:visible!important;width:auto;text-align:center}
+html:not(.js) .btns{justify-content:center}
+</style>
+</head>
+<body>
+<a class="skip" href="#story">Skip to the story</a>
+<p class="strip">A website idea made by Lamplit Studio for Belinda Booth. Not their official site.</p>
+<main>
+<section class="day" id="day" aria-label="Valentina’s Fun Day Out">
+ <div class="stage" id="stage">
+  <div class="book" id="book"><img src="img/cover-full.webp" alt="The cover of Valentina’s Fun Day Out by Belinda Booth, illustrated by Zinelda McDonald: Valentina laughing with an ice cream as a little brown dog licks her cheek, balloons and stars all around." width="1200" height="1267" fetchpriority="high"></div>
+  <svg id="balloons" aria-hidden="true"></svg>
+  <h1 class="beat first" id="b1">It’s a bright summer’s day and Valentina is excited.</h1>
+  <p class="beat mid line" id="b2">She’s going out with nanny and grandad.</p>
+  <p class="beat mid line" id="b3">She cannot wait, because she knows it’s going to be fun.</p>
+  <div class="shelf" id="shelf">
+   <p class="tag">A picture book by Belinda Booth</p>
+   <div class="btns">
+    <a class="btn" href="#buy">Buy the book</a>
+    <a class="btn alt" href="#story">About the story</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="story" id="story">
+ <div class="in">
+  <h2>Valentina’s Fun Day Out</h2>
+  <p>Nanny and grandad take Valentina to Crystal Peaks shopping centre, to a children’s shop called Dog and Gate.</p>
+  <p>Dog and Gate is every child’s dream shop, because you can shop with your dog. There is also a big ice cream parlour in the middle of the shop, which makes the shopping even more magical.</p>
+  <p class="end">Valentina has an amazing time shopping and making new friends.</p>
+ </div>
+</section>
+
+<section class="buy" id="buy">
+ <div class="in">
+  <figure><img src="img/cover.jpg" alt="Valentina’s Fun Day Out by Belinda Booth, front cover." width="640" height="676" loading="lazy"><figcaption>Illustrated by Zinelda McDonald</figcaption></figure>
+  <div>
+   <h2>Get a copy</h2>
+   <ul class="facts">
+    <li><span>Format</span><span>Hardback, 27 pages</span></li>
+    <li><span>Reading age</span><span>3 to 12</span></li>
+    <li><span>Publisher</span><span>ShieldCrest</span></li>
+    <li><span>ISBN</span><span>978-1913839499</span></li>
+   </ul>
+   <div class="btns" style="justify-content:flex-start">
+    <a class="btn" href="https://www.shieldcrest.co.uk/product/valentinas-fun-day-out-by-belinda-booth/">From ShieldCrest</a>
+    <a class="btn alt" href="https://www.amazon.co.uk/dp/1913839494">From Amazon</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="hello dark">
+ <div class="in">
+  <h2>Come and say hello</h2>
+  <p class="when">Sheffield Plate, 12 December, 12 to 4pm</p>
+  <p>Belinda will be sharing her journey from Africa to now, reading her poems and singing traditional African songs, and signing copies of Valentina’s Fun Day Out.</p>
+  <p><a href="https://www.instagram.com/valentinaskidsbookseries/p/DfhjbUhMHqi/">Details on Instagram</a></p>
+ </div>
+</section>
+
+<section class="about dark">
+ <div class="in">
+  <h2>Belinda Booth</h2>
+  <p>Belinda was born in Bulawayo, Zimbabwe. As a teenager she presented the children’s TV show Teen Scene, and she wrote her first book at 21, while living in Botswana. After time in France and London, she moved to Sheffield.</p>
+  <p>The idea for Valentina came from a real trip to Crystal Peaks with her husband John and their granddaughter. Every character in the book is a real person, and there’s a nod to Sheffield’s Supertram in there too.</p>
+  <p>She’s also a poet, writes for the online magazine Fusion, and has finished What Georgie Did, a book for teenagers about the environment and British culture.</p>
+  <p class="next">Next in the series: Valentina Gets a Dog!</p>
+  <a href="https://www.instagram.com/valentinaskidsbookseries/">Follow Belinda on Instagram</a>
+ </div>
+</section>
+</main>
+<footer class="colophon">A preview made by Lamplit Studio for Belinda Booth. Not affiliated, not live.</footer>
+<script>
+(function(){
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ reduce.addEventListener('change',function(){location.reload()});
+ if(reduce.matches)return;
+ var $=function(i){return document.getElementById(i)};
+ var day=$('day'),stage=$('stage'),book=$('book'),svg=$('balloons'),shelf=$('shelf');
+ var NS='http://www.w3.org/2000/svg';
+ // balloons drawn in the cover's crayon hand: [x share, colour, size, delay, sway]
+ var bunch=[[.18,'#dd6a79',1.05,0,1],[.36,'#4f978e',.9,.04,-1],[.62,'#e88549',1.1,.02,1],[.8,'#e69bad',.95,.07,-1],[.5,'#82c9df',.85,.1,1],[.08,'#e88549',.8,.12,-1],[.92,'#dd6a79',.85,.09,1]];
+ var gs=bunch.map(function(b){
+  var g=document.createElementNS(NS,'g');
+  g.innerHTML='<path d="M0 46c-6 10 6 16-1 26s5 14-2 24" fill="none" stroke="#fbf1c4" stroke-width="2.4" stroke-linecap="round"/>'+
+   '<path d="M-5 47l5-7 5 7z" fill="'+b[1]+'" stroke="#3f2a22" stroke-width="2" stroke-linejoin="round"/>'+
+   '<path d="M1-42C22-41 34-22 31 0 28 22 13 40 0 41-14 40-29 22-31 1-33-21-21-43 1-42Z" fill="'+b[1]+'" stroke="#3f2a22" stroke-width="2.6" stroke-linejoin="round"/>'+
+   '<path d="M-18-16c2-9 7-15 14-18" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/>'+
+   '<path d="M-20-4c0-2 0-4 1-6" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/>';
+  svg.appendChild(g);return g});
+ var top=0,run=1,W,H,endW,bookH,s0,fx=.45,fy=.72,ticking=false,last=-1;
+ function clamp(v){return Math.max(0,Math.min(1,v))}
+ function span(p,a,b){return clamp((p-a)/(b-a))}
+ function ease(t){return t*t*(3-2*t)}
+ function fade(el,p,a,b,c,d){var i=ease(span(p,a,b)),o=ease(span(p,c,d));el.style.opacity=Math.min(i,1-o);el.style.transform=(W>=1100?'translateY(-50%) ':'')+'translate3d(0,'+((1-i)*16-o*16)+'px,0)'}
+ function size(){
+  W=stage.clientWidth;H=stage.clientHeight;
+  var wide=W>=1100;
+  endW=wide?Math.min(H*.72,560):Math.min(W*.9,(H-(H<561?90:170))*1200/1267);
+  book.style.setProperty('--w',endW+'px');
+  bookH=endW*1267/1200;
+  s0=wide?Math.max(W/endW,H/bookH)*1.04:Math.max(W/endW*1.3,H/bookH*1.3);
+  top=day.offsetTop;run=day.offsetHeight-H;
+  last=-1;draw();
+ }
+ function draw(){
+  ticking=false;
+  var p=clamp((scrollY-top)/run);
+  if(p===last)return;last=p;
+  var wide=W>=1100,pull=ease(span(p,.4,.82)),s=s0+(1-s0)*pull;
+  // start: Valentina's face and the ice cream at the upper middle; end: whole cover in place
+  var sx=Math.min(0,Math.max(W+6-endW*s0,W/2-fx*endW*s0)),sy=Math.min(0,Math.max(H+6-bookH*s0,H*.45-fy*bookH*s0));
+  var ex=wide?W*.94-endW:W/2-endW/2,ey=wide?H/2-bookH/2:Math.max(10,(H-(H<561?70:150)-bookH)/2);
+  var drift=(1-pull)*span(p,0,.4)*endW*.08;
+  book.style.transform='translate3d('+(sx+(ex-sx)*pull)+'px,'+(sy+(ey-sy)*pull-drift)+'px,0) scale('+s+')';
+  bunch.forEach(function(b,i){
+   var t=span(p,.46+b[3],.9+b[3]*.5),x=(wide?W*.35+W*.6*b[0]:W*b[0]),y=H*1.15-t*(H*1.45),k=b[2]*(W<500?.85:W<1100?1.15:1.6);
+   gs[i].style.opacity=t>0&&t<1?Math.min(1,t*8):0;
+   gs[i].style.transform='translate('+(x+Math.sin(t*6+i)*14*b[4])+'px,'+y+'px) rotate('+(Math.sin(t*5+i)*7*b[4])+'deg) scale('+k+')';
+  });
+  fade($('b1'),p,-1,-.5,.1,.16);
+  fade($('b2'),p,.16,.21,.3,.35);
+  fade($('b3'),p,.35,.4,.5,.55);
+  var sh=ease(span(p,.84,.94));
+  shelf.style.opacity=sh;shelf.style.visibility=sh>.35?'visible':'hidden';
+ }
+ function ask(){if(!ticking){ticking=true;requestAnimationFrame(draw)}}
+ addEventListener('scroll',ask,{passive:true});
+ addEventListener('resize',size);
+ size();
+})();
+</script>
+</body>
+</html>
