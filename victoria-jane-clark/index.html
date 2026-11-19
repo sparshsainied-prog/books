@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Tale of Sally the Sleepless Squirrel by Victoria Jane Clark</title>
+<meta name="description" content="A website idea for The Tale of Sally the Sleepless Squirrel, written and illustrated by Victoria Jane Clark. Poor little Sally is unable to hibernate. Will she find somewhere safe over Winter?">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="The Tale of Sally the Sleepless Squirrel by Victoria Jane Clark">
+<meta property="og:description" content="Poor little Sally the Sleepless Squirrel is unable to hibernate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/victoria-jane-clark/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/victoria-jane-clark/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23596e83'/%3E%3Crect y='20' width='32' height='12' fill='%23ded8cf'/%3E%3Cpath d='M0 20h32' stroke='%23393735'/%3E%3Crect x='6' y='14' width='9' height='7' fill='%235f4a33'/%3E%3Crect x='8' y='16' width='2' height='2' fill='%23edc755'/%3E%3Crect x='11' y='16' width='2' height='2' fill='%23edc755'/%3E%3Cpath d='M18 27c3-4 7-3 11-2' stroke='%23dd5d2e' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#596e83;--skydeep:#46586a;--snow:#ded8cf;--snowlit:#ebe7e0;--paper:#c8c6c4;--ink:#393735;--sally:#dd5d2e;--sallydeep:#b8461d;--gold:#edc755;--brown:#5f4a33;
+--display:"Annie Use Your Telescope","Comic Sans MS",cursive;--text:"Andika",system-ui,sans-serif;
+--torn:polygon(0% .9%,4.5% .4%,9.1% 1.6%,13.6% .6%,18.2% .3%,22.7% 1.6%,27.3% 3.7%,31.8% 3.2%,36.4% 3.1%,40.9% .9%,45.5% 2.1%,50% 1.1%,54.5% .7%,59.1% .4%,63.6% .9%,68.2% 3.7%,72.7% 3.3%,77.3% 3.2%,81.8% 3.2%,86.4% .8%,90.9% 1.2%,95.5% 2.5%,100% 2.9%,97.9% 11.1%,97.8% 22.2%,99.8% 33.3%,98.5% 44.4%,98.3% 55.6%,98.7% 66.7%,99.6% 77.8%,98.8% 88.9%,100% 99.6%,95.5% 95.3%,90.9% 95.7%,86.4% 97.3%,81.8% 98.5%,77.3% 95.5%,72.7% 97.1%,68.2% 95.6%,63.6% 95.8%,59.1% 97.5%,54.5% 97.9%,50% 97%,45.5% 97.8%,40.9% 99.2%,36.4% 98.5%,31.8% 95.9%,27.3% 99.8%,22.7% 99.8%,18.2% 96.9%,13.6% 98.6%,9.1% 97.3%,4.5% 97.6%,0% 98.3%,2.5% 88.9%,.5% 77.8%,1% 66.7%,.5% 55.6%,1.6% 44.4%,.7% 33.3%,.9% 22.2%,1.9% 11.1%);
+--edge:14px 5px 11px 4px/5px 12px 4px 10px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--snow);color:var(--ink);font:400 1.0625rem/1.6 var(--text)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--snowlit)}
+.skip{position:absolute;left:12px;top:-60px;z-index:30;background:var(--snowlit);padding:10px 14px}
+.skip:focus{top:44px}
+.strip{position:relative;z-index:20;margin:0;background:var(--ink);color:var(--snowlit);font-size:.8125rem;line-height:1.35;padding:9px 16px;text-align:center}
+
+.winter{position:relative;height:420svh;background:var(--sky)}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;background:var(--sky)}
+.layer{position:absolute;left:0;top:0;max-width:none;will-change:transform}
+#sky{inset:-6% 0 auto 0;height:80%;background:url(img/sky.jpg) center top/max(100%,1000px) auto repeat-y}
+#flakes{left:0;right:0;top:-100%;height:200%;background:url(img/flakes.webp) 0 0/max(110%,820px) auto repeat;opacity:.5}
+#ground,#cottage,#glow,#sally{width:var(--w)}
+#glow{opacity:.2}
+.still{display:none}
+.panel{position:absolute;left:16px;right:16px;top:clamp(18px,5svh,48px);margin:0 auto;max-width:31rem;padding:26px 30px 28px;background:rgba(200,198,196,.9);clip-path:var(--torn);text-align:center;opacity:0;overflow-wrap:break-word;hyphens:auto;will-change:transform,opacity}
+.panel.first{opacity:1}
+h1,.line{font:400 clamp(2.2rem,9.4vw,3.6rem)/1.08 var(--display);margin:0;text-wrap:balance}
+.by{font:400 clamp(1.3rem,5vw,1.7rem)/1.2 var(--display);margin:.5em 0 0}
+.by span{display:block;font-size:1.35em}
+.shelf{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 18px);padding:0 16px;opacity:0;visibility:hidden;text-align:center}
+.tag{font:400 clamp(1.7rem,7vw,2.3rem)/1.1 var(--display);margin:0 auto 14px;max-width:24rem;text-wrap:balance}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:8px 24px 6px;font:400 1.6rem/1 var(--display);text-decoration:none;border:2px solid var(--ink);border-radius:var(--edge);background:var(--sallydeep);color:#fff}
+.btn.alt{background:var(--snowlit);color:var(--ink)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 9px var(--snowlit)}
+.btn:hover{background:#9c3a17}
+.btn.alt:hover{background:var(--paper)}
+
+.tale{background:var(--skydeep);color:var(--snowlit);padding:72px 20px 80px}
+.in{max-width:40rem;margin:0 auto}
+h2{font:400 clamp(2.4rem,9vw,3.6rem)/1.05 var(--display);margin:0 0 1.1rem;text-wrap:balance}
+.tale .in{max-width:62rem;display:grid;gap:36px}
+.tale figure{margin:0;max-width:340px}
+.tale figure img{border:2px solid var(--ink)}
+.blurb{font:400 clamp(1.7rem,6.4vw,2.2rem)/1.2 var(--display);margin:0 0 1.2rem}
+.facts{list-style:none;margin:0 0 26px;padding:0;border-top:1.5px solid rgba(235,231,224,.55)}
+.facts li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 16px;padding:9px 0;border-bottom:1.5px solid rgba(235,231,224,.55);font-variant-numeric:tabular-nums}
+.facts span:first-child{font-weight:700}
+.tale .btn.alt{background:var(--snowlit)}
+
+.sketch{background:var(--snow);padding:72px 20px 84px}
+.sketch .in{max-width:66rem}
+.sketch .intro{max-width:34rem;margin:0 0 2rem}
+.plates{display:grid;gap:40px}
+.plate{margin:0}
+.plate img{box-shadow:0 2px 0 var(--ink)}
+.plate figcaption{margin-top:12px;max-width:28rem}
+.plate .t{display:block;font:400 1.9rem/1.1 var(--display)}
+.plate a{display:inline-block;padding:8px 0;min-height:44px;text-underline-offset:3px}
+
+.about{background:var(--ink);color:var(--snowlit);padding:72px 20px}
+.about p{margin:0 0 1.1em;text-wrap:pretty}
+.shelf2{margin:2.2rem 0 0;padding:0;list-style:none;border-top:1.5px solid rgba(235,231,224,.35)}
+.shelf2 li{padding:18px 0;border-bottom:1.5px solid rgba(235,231,224,.35)}
+.shelf2 b{display:block;font:400 1.9rem/1.1 var(--display);color:var(--gold);margin-bottom:4px}
+.about a{display:inline-block;padding:10px 0;min-height:44px;text-underline-offset:3px}
+.colophon{background:var(--ink);color:var(--snowlit);border-top:1.5px solid rgba(235,231,224,.3);font-size:.875rem;padding:22px 20px calc(env(safe-area-inset-bottom) + 22px);text-align:center;margin:0}
+
+@media (min-width:760px){
+ .plates{grid-template-columns:1.15fr 1fr;align-items:start;gap:56px}
+ .plate.two{margin-top:120px}
+}
+@media (min-width:900px){
+ .tale .in{grid-template-columns:340px 1fr;gap:64px;align-items:start}
+ .tale,.sketch,.about{padding-top:112px;padding-bottom:112px}
+}
+@media (min-width:1100px){
+ .panel{left:auto;right:6vw;margin:0;width:34rem;max-width:none}
+ .shelf{left:auto;right:6vw;bottom:auto;top:clamp(18px,5svh,48px);width:34rem;padding:0}
+ .shelf .tag{background:rgba(200,198,196,.9);clip-path:var(--torn);padding:26px 30px 28px;max-width:none}
+}
+@media (max-height:560px){
+ .panel{padding:14px 22px 16px;top:10px}
+ h1,.line{font-size:clamp(1.6rem,7vh,2.2rem)}
+ .by{font-size:1.1rem}
+ .tag{font-size:1.4rem;margin-bottom:8px}
+ .shelf{bottom:calc(env(safe-area-inset-bottom) + 8px)}
+ .btn{min-height:44px;padding:6px 16px 4px;font-size:1.35rem}
+}
+html:not(.js) .winter{height:auto}
+html:not(.js) .stage{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column;align-items:center;gap:22px;padding:28px 20px 32px}
+html:not(.js) .layer{display:none}
+html:not(.js) .still{display:block;width:min(86vw,460px);border:2px solid var(--ink)}
+html:not(.js) .panel.first{position:relative;inset:auto;margin:0;width:auto;max-width:31rem;opacity:1!important;transform:none!important}
+html:not(.js) .panel.mid{display:none}
+html:not(.js) .shelf{position:relative;inset:auto;margin:0;opacity:1!important;visibility:visible!important;width:auto}
+html:not(.js) .shelf .tag{background:none;clip-path:none;padding:0;color:var(--snowlit)}
+</style>
+</head>
+<body>
+<a class="skip" href="#tale">Skip to the book</a>
+<p class="strip">A website idea made by Lamplit Studio for Victoria Jane Clark. Not their official site.</p>
+<main>
+<section class="winter" id="winter" aria-label="Sally crosses the snow">
+ <div class="stage" id="stage">
+  <div class="layer" id="sky" aria-hidden="true"></div>
+  <img class="layer" id="glow" src="img/glow.webp" alt="" width="200" height="200">
+  <img class="layer" id="ground" src="img/ground.webp" alt="" width="1360" height="510">
+  <img class="layer" id="cottage" src="img/cottage.webp" alt="" width="150" height="130">
+  <div class="layer" id="flakes" aria-hidden="true"></div>
+  <img class="layer" id="sally" src="img/sally.webp" alt="" width="506" height="233">
+  <img class="still" src="img/cover.jpg" alt="The cover of The Tale of Sally the Sleepless Squirrel: a red squirrel runs across deep snow under falling snowflakes, with a cottage lit up on the horizon." width="800" height="800">
+  <div class="panel first" id="b1">
+   <h1>The Tale of Sally the Sleepless Squirrel</h1>
+   <p class="by">Written and illustrated by <span>Victoria Jane Clark</span></p>
+  </div>
+  <p class="panel mid line" id="b2">Poor little Sally the Sleepless Squirrel is unable to hibernate.</p>
+  <p class="panel mid line" id="b3">Will she be able to find somewhere safe over Winter?</p>
+  <div class="shelf" id="shelf">
+   <p class="tag">A tale of hope and love, of new families and joy.</p>
+   <div class="btns">
+    <a class="btn" href="https://www.amazon.co.uk/dp/1923020064">Buy the book</a>
+    <a class="btn alt" href="#tale">About the book</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="tale dark" id="tale">
+ <div class="in">
+  <figure><img src="img/cover.jpg" alt="The Tale of Sally the Sleepless Squirrel, front cover." width="800" height="800" loading="lazy"></figure>
+  <div>
+   <h2>The Tale of Sally the Sleepless Squirrel</h2>
+   <p class="blurb">Poor little Sally the Sleepless Squirrel is unable to hibernate. Will she be able to find somewhere safe over Winter?</p>
+   <p>A picture book about hope and love, new families and joy. Victoria wrote every word and drew every picture.</p>
+   <ul class="facts">
+    <li><span>Format</span><span>Paperback, 24 pages</span></li>
+    <li><span>Reading age</span><span>4 to 12</span></li>
+    <li><span>Publisher</span><span>Leschenault Press, 2023</span></li>
+    <li><span>ISBN</span><span>978-1923020061</span></li>
+   </ul>
+   <div class="btns" style="justify-content:flex-start">
+    <a class="btn" href="https://www.amazon.co.uk/dp/1923020064">Buy on Amazon</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sketch" id="sketchbook">
+ <div class="in">
+  <h2>From the sketchbook</h2>
+  <p class="intro">Two of Victoria’s newest drawings, both posted on Instagram this November.</p>
+  <div class="plates">
+   <figure class="plate">
+    <img src="img/heron.jpg" alt="Pencil and fine liner drawing in a spiral sketchbook: a tortoise looks up at a heron preening among bulrushes beside a pond." width="900" height="1200" loading="lazy">
+    <figcaption><span class="t">The Tortoise and the Heron</span>Pencil and fine liner, 14 November 2026. <a href="https://www.instagram.com/p/DfuMgK3MiZ0/">See it on Instagram</a></figcaption>
+   </figure>
+   <figure class="plate two">
+    <img src="img/wolf.jpg" alt="Fine liner and watercolour drawing of a smiling grey wolf with amber eyes and a dandelion seed resting on his nose." width="640" height="640" loading="lazy">
+    <figcaption><span class="t">The Wolf and the Dandelion Seed</span>Fine liner and watercolour, 5 November 2026. <a href="https://www.instagram.com/p/DfWmEtaMVoS/">See it on Instagram</a></figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<section class="about dark">
+ <div class="in">
+  <h2>Victoria Jane Clark</h2>
+  <p>Vicki grew up in Cambridgeshire and has loved art since she was small. She studied for a degree in Illustration, then a Master’s in Children’s Book Illustration, and she also holds a PGCE in Secondary English.</p>
+  <p>Her first book came after she volunteered on the Galapagos Islands, at an ecological park called Jatun Sacha. Back in the UK she ran her own creative arts business, and today she works full time as a graphic designer.</p>
+  <ul class="shelf2">
+   <li><b>The Fuzzy Monster</b>Maddox was bright and boisterous, until a mysterious illness threatened to take that away. Only his little sister, Tilda, knew the truth. A book about epilepsy for children and young teenagers, drawn from Victoria’s own experience.</li>
+   <li><b>The Forgotten Treasure of the Galapagos</b>Isabela discovers a world full of treasure worth more than rubies, diamonds or a pirate’s chest of gold. Her first book, from 2010.</li>
+  </ul>
+  <a href="https://www.instagram.com/vjclarkauthorandillustrator/">Follow Victoria on Instagram</a>
+ </div>
+</section>
+</main>
+<footer class="colophon">A preview made by Lamplit Studio for Victoria Jane Clark. Not affiliated, not live.</footer>
+<script>
+(function(){
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ reduce.addEventListener('change',function(){location.reload()});
+ if(reduce.matches)return;
+ var $=function(i){return document.getElementById(i)};
+ var win=$('winter'),stage=$('stage'),sky=$('sky'),fl=$('flakes'),gr=$('ground'),co=$('cottage'),gl=$('glow'),sa=$('sally'),shelf=$('shelf');
+ var top=0,run=1,W,H,hz,cw,cx,cy,gw,gx,gy,sw0,sx0,sy0,ticking=false,last=-1;
+ function clamp(v){return Math.max(0,Math.min(1,v))}
+ function span(p,a,b){return clamp((p-a)/(b-a))}
+ function ease(t){return t*t*(3-2*t)}
+ function fade(el,p,a,b,c,d){var i=ease(span(p,a,b)),o=ease(span(p,c,d));el.style.opacity=Math.min(i,1-o);el.style.transform='translate3d(0,'+((1-i)*14-o*14)+'px,0)'}
+ function size(){
+  W=stage.clientWidth;H=stage.clientHeight;
+  var wide=W>=1100,phone=W<700;
+  hz=H*(phone?.6:.63);
+  // ground: its fine liner horizon sits about 30px down the 510px plate
+  gw=Math.max(W*1.1,(H-hz+40)*1360/480);gx=(W-gw)/2;gy=hz-30*gw/1360;
+  gr.style.setProperty('--w',gw+'px');gr.style.transform='translate3d('+gx+'px,'+gy+'px,0)';
+  cw=Math.max(92,Math.min(W*(phone?.25:.15),190));
+  cx=W*(wide?.14:phone?.08:.1);cy=hz-cw*.72;
+  co.style.setProperty('--w',cw+'px');gl.style.setProperty('--w',cw*2.2+'px');
+  sw0=Math.min(W*(phone?.82:.4),600);sx0=W-sw0*(phone?.92:1.05);sy0=H-sw0*233/506-H*(phone?.07:.06);
+  sa.style.setProperty('--w',sw0+'px');
+  top=win.offsetTop;run=win.offsetHeight-H;
+  last=-1;draw();
+ }
+ function draw(){
+  ticking=false;
+  var p=clamp((scrollY-top)/run);
+  if(p===last)return;last=p;
+  sky.style.transform='translate3d(0,'+(p*H*.05)+'px,0)';
+  fl.style.transform='translate3d(0,'+(p*H*.9)+'px,0)';
+  // the cottage draws nearer as Sally runs
+  var near=ease(span(p,.05,.85)),cs=1+near*.35;
+  co.style.transform='translate3d('+cx+'px,'+(cy-(cs-1)*cw*.6)+'px,0) scale('+cs+')';
+  co.style.transformOrigin='0 0';
+  gl.style.transform='translate3d('+(cx+cw*cs*.5-cw*1.1)+'px,'+(cy+cw*cs*.4-cw*1.1-(cs-1)*cw*.6)+'px,0)';
+  gl.style.opacity=.2+.8*ease(span(p,.62,.92));
+  // Sally runs from the bottom corner to the cottage door, bounding as she goes
+  var t=ease(span(p,.08,.86)),endS=cw*cs*.5/sw0,s=1+(endS-1)*t;
+  var ex=cx+cw*cs*1.02,ey=cy+cw*cs*.86-sw0*s*233/506;
+  var x=sx0+(ex-sx0)*t,y=sy0+(ey-sy0)*t;
+  var hop=Math.abs(Math.sin(p*Math.PI*9))*sw0*s*.12*(1-span(p,.84,.9));
+  sa.style.transform='translate3d('+x+'px,'+(y-hop)+'px,0) rotate('+(Math.sin(p*Math.PI*18)*3)+'deg) scale('+s+')';
+  sa.style.transformOrigin='0 0';
+  fade($('b1'),p,-1,-.5,.08,.14);
+  fade($('b2'),p,.16,.21,.36,.41);
+  fade($('b3'),p,.43,.48,.64,.69);
+  var sh=ease(span(p,.82,.94));
+  var held=shelf.contains(document.activeElement);
+  shelf.style.opacity=held?1:sh;shelf.style.visibility=(held||sh>.35)?'visible':'hidden';
+ }
+ function ask(){if(!ticking){ticking=true;requestAnimationFrame(draw)}}
+ addEventListener('scroll',ask,{passive:true});
+ shelf.addEventListener('focusout',function(){setTimeout(function(){last=-1;draw()},0)});
+ addEventListener('resize',size);
+ addEventListener('load',size);
+ size();
+})();
+</script>
+</body>
+</html>
