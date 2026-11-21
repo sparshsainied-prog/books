@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Forgotten Journal by Tanya Curran</title>
+<meta name="description" content="A homepage idea for Tanya Curran's novels, The Forgotten Journal and His Last Letter.">
+<meta property="og:title" content="The Forgotten Journal by Tanya Curran">
+<meta property="og:description" content="His secret lay in the forgotten journal, waiting for her all along to stumble upon.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/tanya-curran/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/tanya-curran/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Jost:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dusk:#1f2333; --dusk-2:#2a2f44; --paper:#efe6d6; --ink:#2b2420;
+  --honey:#e7c35a; --olive:#6b5a3a; --letter:#c9d8e6; --poppy:#c4532f;
+  --display:"Jost",system-ui,sans-serif; --text:"Crimson Pro",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--dusk);color:var(--paper);font:400 1.18rem/1.55 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--paper);color:var(--ink);padding:8px 12px}
+.strip{position:relative;z-index:20;background:var(--paper);color:var(--ink);font:500 .82rem/1.35 var(--display);padding:8px 16px;text-align:center}
+
+/* hero: end state is the default, so no-JS and reduced motion get the finished cover */
+.hero{position:relative}
+.pin{position:relative;min-height:100svh;overflow:hidden;display:grid;align-content:center;padding:28px 20px 40px}
+.bg{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;opacity:.9}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,35,51,.25),rgba(31,35,51,.75))}
+.stage{position:relative;display:grid;gap:22px;justify-items:center;max-width:1100px;margin:0 auto;width:100%}
+.cover{margin:0;width:min(56vw,300px,calc(44svh * .667));transform-origin:0 0;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.copy{text-align:center;max-width:30rem}
+.by{font:500 .95rem/1 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--honey);margin:0 0 10px} /* slop-ok: her name in spaced caps, as on both covers */
+h1{font:700 clamp(2.3rem,9vw,4.4rem)/.98 var(--display);text-transform:uppercase;margin:0;letter-spacing:.01em} /* slop-ok: title caps match the cover */
+.tag{font-style:italic;font-size:1.25rem;margin:14px 0 20px;color:#f3ead9}
+.buy{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 20px;font:500 1rem/1 var(--display);text-decoration:none;border:2px solid var(--honey)}
+.btn.main{background:var(--honey);color:var(--ink)}
+.btn.ghost{color:var(--paper)}
+.opening{position:absolute;z-index:4;left:16px;right:16px;top:5svh;margin:0;padding:14px 16px;background:rgba(31,35,51,.82);font:italic 400 1.3rem/1.35 var(--text);text-align:center;opacity:0;pointer-events:none}
+.letters{position:absolute;inset:0;pointer-events:none;z-index:3}
+.stage{z-index:2}
+.letter{position:absolute;width:min(62vw,280px);padding:16px 18px 18px;background:var(--letter);color:#26303f;font:italic 400 1.05rem/1.4 var(--text);
+  background-image:repeating-linear-gradient(180deg,transparent 0 23px,rgba(38,48,63,.12) 23px 24px);box-shadow:0 10px 24px rgba(0,0,0,.35);opacity:0}
+.letter p{margin:0}
+.l1{left:4%;top:62%}.l2{right:3%;top:70%}.l3{left:10%;top:84%}.l4{right:8%;top:92%}
+
+.js .pin{position:sticky;top:0;height:100svh}
+.js .hero{height:330svh}
+.js .copy{opacity:0}
+.js .copy:focus-within{opacity:1!important;transform:none!important}
+.paper a:focus-visible{outline-color:var(--dusk)}
+@media (max-height:560px) and (orientation:landscape){.stage{grid-template-columns:auto 1fr;gap:28px;justify-items:start;align-items:center}.cover{width:calc(78svh * .667)}.copy{text-align:left}.buy{justify-content:flex-start}h1{font-size:2rem}.tag{font-size:1.05rem;margin:8px 0 12px}}
+.js .opening{opacity:1}
+
+@media (min-width:860px){
+  .stage{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:56px;justify-items:start}
+  .cover{width:min(30vw,360px);justify-self:end}
+  .copy{text-align:left}
+  .buy{justify-content:flex-start}
+  .opening{left:auto;right:6vw;width:28rem;top:auto;bottom:12svh;text-align:left;font-size:1.45rem}
+  .letter{width:360px;font-size:1.25rem;padding:20px 24px}
+  .l1{left:6%;top:58%}.l2{right:10%;top:66%}.l3{left:22%;top:86%}.l4{right:24%;top:94%}
+}
+
+/* sections */
+section{padding:72px 20px}
+.wrap{max-width:68rem;margin:0 auto}
+h2{font:700 clamp(1.7rem,5.5vw,2.6rem)/1.08 var(--display);margin:0 0 18px;text-transform:uppercase}
+.paper{background:var(--paper);color:var(--ink)}
+.paper a{color:#5b3d12}
+.irene p{max-width:38rem}
+.irene .lead{font-size:1.45rem;line-height:1.35;font-style:italic;max-width:34rem}
+.hll{display:grid;gap:28px}
+.hll img{width:min(62vw,300px);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.hll blockquote{margin:22px 0;padding:0;font-style:italic;font-size:1.3rem;line-height:1.4;max-width:32rem}
+.hll blockquote cite{display:block;font:500 .9rem/1.3 var(--display);font-style:normal;margin-top:8px;color:var(--honey)}
+.shops{background:var(--olive);color:#f6efe2}
+.shops ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.shops li{font-size:1.2rem}
+.earlier ul{list-style:none;padding:0;margin:0;display:grid;gap:16px;max-width:40rem}
+.earlier li span{display:block;font-style:italic}
+.about p{max-width:36rem}
+footer{padding:28px 20px 40px;font:500 .85rem/1.4 var(--display);color:#c8c3b8;text-align:center;border-top:1px solid rgba(239,230,214,.18)}
+@media (min-width:860px){
+  section{padding:110px 40px}
+  .hll{grid-template-columns:auto 1fr;gap:64px;align-items:center}
+  .irene .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .hero{height:auto}.js .pin{position:relative;height:auto;min-height:100svh}
+  .js .copy{opacity:1}.js .opening,.letter{display:none}
+  .cover,.bg,.copy{transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#irene">Skip to the book</a>
+<div class="strip">A website idea made by Lampbound Studio for Tanya Curran. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="pin">
+    <img class="bg" src="img/field-blur.jpg" alt="" width="1600" height="1200" fetchpriority="high">
+    <div class="scrim"></div>
+    <div class="letters" aria-hidden="true">
+      <div class="letter l1"><p>In a time where the only communication was hand written letters</p></div>
+      <div class="letter l2"><p>What will their letters tell them? What will they write in return?</p></div>
+      <div class="letter l3"><p>Or will the last letter posted be his last letter ever?</p></div>
+      <div class="letter l4"><p>Irene tells the story of their journey, in her hand written journal entries.</p></div>
+    </div>
+    <div class="stage">
+      <figure class="cover" id="cover"><img src="img/forgotten-journal.webp" alt="Cover of The Forgotten Journal: a young woman in an army coat holds a leather journal, a white weatherboard house behind her" width="1000" height="1499" fetchpriority="high"></figure>
+      <div class="copy" id="copy">
+        <p class="by">Tanya Curran</p>
+        <h1>The Forgotten Journal</h1>
+        <p class="tag">His secret lay in the forgotten journal, waiting for her all along to stumble upon.</p>
+        <div class="buy">
+          <a class="btn main" href="https://www.amazon.com.au/dp/1923680897" rel="noopener" target="_blank">Paperback</a>
+          <a class="btn ghost" href="https://www.amazon.com.au/dp/B0HQ5Z531C" rel="noopener" target="_blank">Kindle</a>
+        </div>
+      </div>
+    </div>
+    <p class="opening" id="opening" aria-hidden="true">With her love of writing, Irene tells the story of their journey, in her hand written journal entries.</p>
+  </div>
+</header>
+
+<main>
+<section class="paper irene" id="irene">
+  <div class="wrap">
+    <p class="lead">You caught a glimpse of Irene Taylor in His Last Letter, now read her story in The Forgotten Journal.</p>
+    <div>
+      <p>Irene grows up with her mother in a small flat in the heart of Sydney, escaping into romance novels and writing in her journal. When her only friend Tommy enlists, she is left behind.</p>
+      <p>With her nursing degree in hand and only a small suitcase, she boards the ship to the South Pacific to care for soldiers on the frontlines. There is the quiet medic, Eddie Montacute, and Lieutenant Hugh Simmonds, who leads his men into the fight. Each with their own secrets.</p>
+      <p>It is only when the journal is rediscovered that she learns the truth.</p>
+      <p><a href="https://www.amazon.com.au/dp/1923680897" rel="noopener" target="_blank">Get The Forgotten Journal in paperback</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="letters-sec" aria-labelledby="hll-h">
+  <div class="wrap hll">
+    <img src="img/his-last-letter.webp" alt="Cover of His Last Letter: a woman walks through a field of grass and poppies as letters blow across the sky" width="700" height="1050" loading="lazy">
+    <div>
+      <h2 id="hll-h">His Last Letter</h2>
+      <p class="tag">In the face of war, will their love and letters be enough to bring them home?</p>
+      <p>It is 1939. Jack Sullivan leaves his wife and young son to fight beside his brothers. Lizzie Lewis, a nurse, hears her brother Donald is enlisting. Bert Miller heads overseas to tell the stories from the front lines as a war reporter. Then they wait for letters.</p>
+      <blockquote>“In ‘His Last Letter’ handwritten letters feature predominantly. Lizzie’s letters to Jack, Bert’s letters back home to his editor and a last letter from a fallen soldier.”<cite>Tanya, on Instagram</cite></blockquote>
+      <div class="buy">
+        <a class="btn main" href="https://www.amazon.com.au/dp/1923386891" rel="noopener" target="_blank">Paperback</a>
+        <a class="btn ghost" href="https://www.amazon.com.au/dp/B0FJQ7GGQH" rel="noopener" target="_blank">Kindle</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shops" aria-labelledby="shops-h">
+  <div class="wrap">
+    <h2 id="shops-h">Pick up a paperback in person</h2>
+    <ul>
+      <li>His Last Letter and The Forgotten Journal at <a href="https://www.instagram.com/dulwitches_gifts/" rel="noopener" target="_blank">@dulwitches_gifts</a></li>
+      <li>His Last Letter at <a href="https://www.instagram.com/a.little.retail.therapy/" rel="noopener" target="_blank">@a.little.retail.therapy</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="earlier" aria-labelledby="earlier-h">
+  <div class="wrap">
+    <h2 id="earlier-h">Earlier novels</h2>
+    <ul>
+      <li><a href="https://www.amazon.com.au/dp/192295795X" rel="noopener" target="_blank">Truffles, Jazz, and Butterflies</a><span>When you follow your dreams… anything can happen</span></li>
+      <li><a href="https://www.amazon.com.au/dp/1923156624" rel="noopener" target="_blank">Our Sacrifices</a><span>What would you sacrifice for love?</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="paper about" aria-labelledby="about-h">
+  <div class="wrap">
+    <h2 id="about-h">About Tanya</h2>
+    <p>Tanya Curran lives in Adelaide and works in healthcare, with a Bachelor of Nursing behind her. Lizzie in His Last Letter and Irene in The Forgotten Journal are nurses too.</p>
+    <p>She was a panellist at the 2025 Indie Author Book Festival.</p>
+    <p><a href="https://www.instagram.com/tanya_curran_author/" rel="noopener" target="_blank">Follow Tanya on Instagram</a></p>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Tanya Curran. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(reduce.matches) return;
+  document.documentElement.classList.add('js');
+  var hero=document.getElementById('hero'),cover=document.getElementById('cover'),copy=document.getElementById('copy'),
+      opening=document.getElementById('opening'),bg=document.querySelector('.bg'),letters=[].slice.call(document.querySelectorAll('.letter'));
+  var R,vw,vh,ticking=false;
+  var lspec=[[0.06,0.46,-4],[0.16,0.56,3],[0.26,0.66,-2],[0.36,0.78,4]];
+  function clamp(x){return x<0?0:x>1?1:x}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function measure(){
+    cover.style.transform='none';
+    R=cover.getBoundingClientRect();
+    var pr=cover.closest('.pin').getBoundingClientRect(); R={l:R.left-pr.left,t:R.top-pr.top,w:R.width,h:R.height};
+    vw=window.innerWidth;vh=window.innerHeight;
+    update();
+  }
+  function update(){
+    ticking=false;
+    var span=hero.offsetHeight-vh, p=clamp((window.scrollY-hero.offsetTop)/span);
+    var e=ease(clamp(p/0.8));
+    var S0=2.4*Math.max(vw/R.w,vh/R.h);
+    var tx0=vw*0.5-R.l-S0*0.2*R.w, ty0=vh*0.5-R.t-S0*0.57*R.h;
+    var s=S0+(1-S0)*e, tx=tx0*(1-e), ty=ty0*(1-e);
+    cover.style.transform='translate3d('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px,0) scale('+s.toFixed(4)+')';
+    bg.style.transform='scale('+(1.12-0.12*e).toFixed(4)+')';
+    opening.style.opacity=(1-clamp(p/0.14)).toFixed(3);
+    var c=clamp((p-0.76)/0.16);
+    copy.style.opacity=c.toFixed(3);
+    copy.style.transform='translate3d(0,'+((1-c)*24).toFixed(1)+'px,0)';
+    letters.forEach(function(el,i){
+      var a=lspec[i][0],b=lspec[i][1],t=clamp((p-a)/(b-a));
+      var o=t<=0||t>=1?0:Math.min(1,Math.sin(t*Math.PI)*1.6);
+      var y=(0.25-t*1.05)*vh;
+      el.style.opacity=o.toFixed(3);
+      el.style.transform='translate3d(0,'+y.toFixed(1)+'px,0) rotate('+(lspec[i][2]*(1-t*0.6)).toFixed(2)+'deg)';
+    });
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  window.addEventListener('resize',measure);
+  if(document.readyState==='complete')measure();else window.addEventListener('load',measure);
+  measure();
+  reduce.addEventListener&&reduce.addEventListener('change',function(){location.reload()});
+})();
+</script>
+</body>
+</html>
