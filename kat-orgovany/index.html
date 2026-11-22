@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Georgie by Kat Orgovany</title>
+<meta name="description" content="A homepage idea for Kat Orgovany's novels, Georgie and Georgie: The Plot Solidifies.">
+<meta property="og:title" content="Georgie by Kat Orgovany">
+<meta property="og:description" content="Georgie doesn't seek out trouble. It just finds her on its own.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/kat-orgovany/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/kat-orgovany/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0c0d'/%3E%3Cpath d='M5 22 C12 19 20 18 28 17' stroke='%23e8bf1e' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mustard:#e8bf1e; --ink:#0e0c0d; --plum:#5b1a36; --blue:#3f8ed3; --bone:#eee7da;
+  --marker:"Caveat","Comic Sans MS",cursive; --type:"Courier Prime","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 1.08rem/1.6 var(--type)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:0}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--bone);color:var(--ink);padding:8px 12px}
+.strip{position:relative;z-index:20;background:var(--bone);color:var(--ink);font:400 .85rem/1.35 var(--type);padding:8px 16px;text-align:center}
+
+/* hero: default is the finished state (book two showing) */
+.hero{position:relative}
+.pin{position:relative;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.ground{position:absolute;inset:0}
+.g-y{background:var(--mustard)}
+.g-p{background:var(--plum)}
+.stage{position:relative;display:grid;justify-items:center;padding:24px 20px 0}
+.covers{position:relative;width:min(64vw,calc(46svh * .667),330px);box-shadow:8px 10px 0 var(--ink)}
+.covers img{width:100%}
+.covers .c2{position:absolute;inset:0}
+.panel{position:relative;background:var(--ink);padding:22px 20px 30px;margin-top:22px}
+.name{font:700 .95rem/1 var(--type);letter-spacing:.32em;text-transform:uppercase;margin:0 0 4px;color:var(--bone)} /* slop-ok: her name in wide spaced caps, as on both covers */
+h1{font:700 clamp(4rem,20vw,8rem)/.9 var(--marker);color:var(--mustard);margin:0;position:relative;display:inline-block}
+h1 svg{position:absolute;left:-2%;bottom:-.06em;width:104%;height:.22em;overflow:visible}
+h1 path{fill:none;stroke:var(--mustard);stroke-width:5px;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.sub{display:flex;flex-wrap:wrap;gap:2px;margin:20px 0 0;font:700 .86rem/1 var(--type)}
+.sub span{display:inline-block;padding:3px 3px;background:var(--bone);color:var(--ink)}
+.sub span:nth-child(3n){background:var(--plum);color:var(--bone);transform:rotate(-4deg)}
+.sub span:nth-child(4n){transform:rotate(3deg)}
+.sub .gap{background:none;width:6px;padding:0}
+.panel h1{align-self:flex-start}
+@media (max-width:359px){.sub{font-size:.74rem;gap:1px}.sub .gap{width:4px}}
+.lines{display:grid;margin:16px 0 18px;max-width:30rem}
+.lines p{grid-area:1/1;margin:0;font-size:1.12rem}
+.l1{opacity:0}
+.buy{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;font:700 1rem/1.1 var(--type);text-decoration:none;border:2px solid var(--mustard)}
+.btn.main{background:var(--mustard);color:var(--ink)}
+.btn.ghost{color:var(--bone)}
+
+.js .hero{height:300svh}
+.js .pin{position:sticky;top:0;height:100svh}
+.js .g-p{opacity:0}
+.js .covers .c2{opacity:0}
+.js .l1{opacity:1}
+.js .l2{opacity:0}
+.js .sub{opacity:0}
+.js h1 svg{transform:scaleX(0);transform-origin:0 50%}
+.js .buy{opacity:0}
+.js .buy:focus-within{opacity:1!important}
+
+@media (min-width:860px){
+  .pin{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .stage{padding:0;align-items:center;justify-items:end;padding-right:5vw}
+  .covers{width:min(30vw,calc(76svh * .667),440px)}
+  .sub{font-size:1.05rem}
+  .lines p{font-size:1.3rem}
+  .panel{margin:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:40px 6vw}
+}
+
+/* sections */
+section{padding:70px 20px}
+.wrap{max-width:66rem;margin:0 auto}
+h2{font:700 clamp(2.6rem,10vw,4.4rem)/1 var(--marker);margin:0 0 18px}
+.one{background:var(--mustard);color:var(--ink)}
+.one a{color:var(--ink)}
+.one .btn{border-color:var(--ink)}
+.one .btn.main{background:var(--ink);color:var(--mustard)}
+.one .btn.ghost{color:var(--ink)}
+.one a:focus-visible{outline-color:var(--ink)}
+.cols{display:grid;gap:34px}
+.big{font-size:1.25rem;font-weight:700;max-width:34rem;margin:0 0 14px}
+.one p{max-width:36rem}
+.cast{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.cast li{border-top:3px solid var(--ink);padding-top:10px}
+.cast b{display:block;font:700 2.2rem/1.05 var(--marker)}
+.cast .no{text-decoration:line-through;text-decoration-thickness:4px;text-decoration-color:var(--plum)}
+.two{background:var(--plum)}
+.two .pair{display:grid;gap:30px}
+.two img{width:min(62vw,300px);box-shadow:8px 10px 0 var(--ink)}
+.two h2{color:var(--mustard)}
+.two p{max-width:36rem}
+.kat .pair{display:grid;gap:28px}
+.kat img{width:min(52vw,240px);filter:grayscale(1) contrast(1.05)}
+.kat h2{color:var(--mustard)}
+.kat p{max-width:38rem}
+footer{padding:28px 20px 40px;font-size:.88rem;color:#b9b1a4;text-align:center;border-top:1px solid rgba(238,231,218,.16)}
+@media (min-width:860px){
+  section{padding:104px 6vw}
+  .cols{grid-template-columns:1.3fr 1fr;gap:72px}
+  .two .pair{grid-template-columns:auto 1fr;gap:64px;align-items:center}
+  .kat .pair{grid-template-columns:auto 1fr;gap:56px;align-items:start}
+}
+@media (max-height:700px) and (max-width:859px) and (orientation:portrait){
+  .covers{width:min(64vw,calc(36svh * .667))}
+  .panel{padding:14px 20px 18px;margin-top:14px}
+  h1{font-size:3.4rem}
+  .lines{margin:10px 0 12px}
+  .lines p{font-size:1rem}
+  .btn{min-height:44px;padding:8px 14px}
+}
+@media (max-height:560px) and (orientation:landscape){
+  .pin{grid-template-rows:none;grid-template-columns:auto 1fr}
+  .stage{padding:0 4vw;align-items:center}
+  .covers{width:calc(82svh * .667)}
+  .panel{margin:0;padding:14px 5vw;display:flex;flex-direction:column;justify-content:center}
+  h1{font-size:3.2rem}
+  .sub{margin-top:12px}
+  .lines{margin:10px 0 12px}
+  .btn{min-height:44px;padding:8px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .hero{height:auto}.js .pin{position:relative;height:auto;min-height:100svh}
+  .js .g-p,.js .covers .c2,.js .l2,.js .sub,.js .buy{opacity:1}
+  .js .l1{opacity:0}
+  .js h1 svg{transform:none}
+  .sub span{transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#one">Skip to the books</a>
+<div class="strip">A website idea made by Lampbound Studio for Kat Orgovany. Not her official site.</div>
+
+<header class="hero" id="hero">
+  <div class="pin">
+    <div class="ground g-y" aria-hidden="true"></div>
+    <div class="ground g-p" id="gp" aria-hidden="true"></div>
+    <div class="stage">
+      <div class="covers">
+        <img class="c1" src="img/georgie.webp" width="907" height="1360" fetchpriority="high" alt="Cover of Georgie: an ink-sketched girl with long black hair and blue eyes on a mustard yellow ground, the title in yellow marker">
+        <img class="c2" id="c2" src="img/plot.webp" width="907" height="1360" alt="Cover of Georgie: The Plot Solidifies: the same face on a plum ground, the subtitle in cut-out letters">
+      </div>
+    </div>
+    <div class="panel">
+      <p class="name">Kat Orgovany</p>
+      <h1>Georgie<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C30 4 62 3 98 2"/></svg></h1>
+      <p class="vh" id="subtxt">Book two: The Plot Solidifies</p><p class="sub" id="sub" aria-hidden="true"><span>T</span><span>H</span><span>E</span><span class="gap"></span><span>P</span><span>L</span><span>O</span><span>T</span><span class="gap"></span><span>S</span><span>O</span><span>L</span><span>I</span><span>D</span><span>I</span><span>F</span><span>I</span><span>E</span><span>S</span></p>
+      <div class="lines">
+        <p class="l1" id="l1" aria-hidden="true">Georgie doesn't seek out trouble. It just finds her on its own.</p>
+        <p class="l2" id="l2">This time she is a little older and a little wiser.</p>
+      </div>
+      <div class="buy" id="buy">
+        <a class="btn main" href="https://www.amazon.com.au/dp/1923101250" rel="noopener" target="_blank">Start with Georgie</a>
+        <a class="btn ghost" href="#two">Book two is out</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="one" id="one">
+  <div class="wrap cols">
+    <div>
+      <h2>Georgie</h2>
+      <p class="big">Georgie doesn't seek out trouble. It just finds her on its own.</p>
+      <p>She's at war with her pompous family, and with her Catholic upbringing, so there's no choice except rebellion. Georgie wields her sarcasm like a weapon in her battles as a young misfit in the upper-class suburbs of Melbourne.</p>
+      <p>Where Georgie goes, mischief is never far.</p>
+      <div class="buy" style="opacity:1">
+        <a class="btn main" href="https://www.amazon.com.au/dp/1923101250" rel="noopener" target="_blank">Paperback</a>
+        <a class="btn ghost" href="https://www.booktopia.com.au/georgie-kat-orgovany/book/9781923101753.html" rel="noopener" target="_blank">Hardcover</a>
+      </div>
+    </div>
+    <ul class="cast" aria-label="Georgie's people">
+      <li><b>Troy</b>Her BFF, and one of her only two allies.</li>
+      <li><b>Chocky</b>Her loyal pooch, and the other ally.</li>
+      <li><b class="no">Sister Catherine</b>Her nun-nemesis.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="two" id="two">
+  <div class="wrap pair">
+    <img src="img/plot-s.webp" width="560" height="840" alt="Cover of Georgie: The Plot Solidifies" loading="lazy">
+    <div>
+      <h2>The Plot Solidifies</h2>
+      <p>Georgie, along with her trademark sarcasm and wit, is back.</p>
+      <p>This time she is a little older and a little wiser. Then her whole world falls apart, and so does she, until she has to learn the lessons that will set her on her path.</p>
+      <div class="buy" style="opacity:1"><a class="btn main" href="https://www.amazon.com.au/dp/176434930X" rel="noopener" target="_blank">Get The Plot Solidifies</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="kat" id="kat">
+  <div class="wrap pair">
+    <img src="img/kat.webp" width="600" height="600" alt="Kat Orgovany in a black hat, black hair over her shoulders" loading="lazy">
+    <div>
+      <h2>Kat Orgovany</h2>
+      <p>Kat came of age a long time ago, and grew up on John Hughes films. She still can't get enough of stories about growing up and not fitting in.</p>
+      <p>She has been a freelance writer, and fan-girled while interviewing Suzi Quatro and Kate Moennig for magazines. She's a musician and storytelling songwriter too.</p>
+      <p>She started Georgie while finishing her Advanced Diploma in Professional Writing and Editing. It took an unfathomable number of years. Like a lot of her favourite films, it got a sequel.</p>
+      <p>Kat lives in Melbourne, and she is on the author list for All Booked Out, Ballarat's indie book fest.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Kat Orgovany. Not affiliated, not live. Covers and blurbs are from Kat's published books.</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  document.documentElement.classList.add('js');
+  var hero = document.getElementById('hero'), gp = document.getElementById('gp'), c2 = document.getElementById('c2'),
+      l1 = document.getElementById('l1'), l2 = document.getElementById('l2'), ul = document.querySelector('h1 svg'),
+      buy = document.getElementById('buy'), letters = document.getElementById('sub').children, sub = document.getElementById('sub');
+  var top = 0, span = 1, ticking = false;
+  function clamp(x){ return Math.min(1, Math.max(0, x)); }
+  function measure(){ top = hero.getBoundingClientRect().top + window.scrollY; span = Math.max(1, hero.offsetHeight - window.innerHeight); frame(); }
+  function frame(){
+    ticking = false;
+    var p = clamp((window.scrollY - top) / span);
+    ul.style.transform = 'scaleX(' + clamp(p / .2).toFixed(3) + ')';
+    gp.style.opacity = clamp((p - .25) / .3).toFixed(3);
+    c2.style.opacity = clamp((p - .33) / .1).toFixed(3);
+    l1.style.opacity = (1 - clamp((p - .3) / .12)).toFixed(3);
+    l2.style.opacity = clamp((p - .45) / .12).toFixed(3);
+    l2.setAttribute('aria-hidden', p < .45 ? 'true' : 'false');
+    l1.setAttribute('aria-hidden', p < .45 ? 'false' : 'true');
+    var s = clamp((p - .5) / .25);
+    sub.style.opacity = s > 0 ? 1 : 0;
+    for (var i = 0; i < letters.length; i++){
+      var k = clamp(s * 1.6 - i / letters.length * .6);
+      letters[i].style.opacity = k.toFixed(3);
+      letters[i].style.transform = 'translateY(' + ((1 - k) * -26).toFixed(1) + 'px)' + (i % 3 === 2 ? ' rotate(-4deg)' : i % 4 === 3 ? ' rotate(3deg)' : '');
+    }
+    buy.style.opacity = clamp((p - .8) / .12).toFixed(3);
+  }
+  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  var lastW = window.innerWidth, lastH = window.innerHeight;
+  window.addEventListener('resize', function(){ if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 120){ lastW = window.innerWidth; lastH = window.innerHeight; measure(); } });
+  reduce.addEventListener && reduce.addEventListener('change', function(){ location.reload(); });
+  window.addEventListener('load', measure);
+  measure();
+})();
+</script>
+</body>
+</html>

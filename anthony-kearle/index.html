@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>An Echo of the Ashes by Anthony Kearle</title>
+<meta name="description" content="A homepage idea for Anthony Kearle's fantasy series, An Echo of the Ashes.">
+<meta property="og:title" content="An Echo of the Ashes by Anthony Kearle">
+<meta property="og:description" content="Whatever they fight for, they pay the price in blood.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/anthony-kearle/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/anthony-kearle/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c1017'/%3E%3Cpath d='M2 20 C10 8 20 26 30 12' stroke='%23c3121c' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0c1017; --storm:#1c3149; --storm-2:#152538; --ember:#c4561e; --ribbon:#c3121c;
+  --silver:#d8dce1; --page:#e9e4da; --soft:#a9b1bc;
+  --display:"Cinzel",Georgia,serif; --text:"EB Garamond",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--page);font:400 1.2rem/1.55 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--silver);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--page);color:var(--night);padding:8px 12px}
+.strip{position:relative;z-index:20;background:var(--page);color:var(--night);font:500 .85rem/1.35 var(--text);padding:8px 16px;text-align:center}
+
+/* hero. Default (no JS, reduced motion): a swipeable row of the five covers */
+.hero{position:relative}
+.pin{position:relative;overflow:hidden;padding:26px 0 34px;display:flex;flex-direction:column;gap:18px}
+.haze{position:absolute;top:0;bottom:0;left:0;height:100%;width:auto;max-width:none;opacity:.9;pointer-events:none}
+.head{position:relative;z-index:2;padding:0 20px}
+.series{font:500 .8rem/1.2 var(--display);letter-spacing:.16em;color:#e5484f;margin:0 0 6px} /* slop-ok: series line in spaced red caps, as on every cover */
+h1{font:700 clamp(2.1rem,8.6vw,4.6rem)/1 var(--display);margin:0;color:var(--silver)}
+.by{font:500 1rem/1.2 var(--display);letter-spacing:.12em;margin:10px 0 0;color:var(--soft)} /* slop-ok: author name in spaced caps as on the covers */
+.reel{position:relative;z-index:1;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.reel img{height:min(62svh,560px);width:auto;max-width:none}
+.js .reel img{height:min(50svh,560px)}
+.cap{position:relative;z-index:2;padding:0 20px;min-height:4.6em}
+.cap p{margin:0}
+.cap .which{font:700 1.05rem/1.25 var(--display);color:var(--silver)}
+.cap .meta{color:var(--soft);font-size:1.05rem}
+.caps{display:grid}
+.caps > div{grid-area:1/1}
+.js .caps > div{opacity:0}
+.js .caps > div.on{opacity:1}
+.end{position:relative;z-index:2;padding:0 20px}
+.lead{font-style:italic;font-size:1.3rem;margin:0 0 16px;max-width:30rem}
+.buy{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;font:700 .92rem/1.1 var(--display);text-decoration:none;border:2px solid var(--ribbon)}
+.btn.main{background:var(--ribbon);color:#fff}
+.btn.ghost{color:var(--page)}
+
+.js .hero{height:440svh}
+.js .pin{position:sticky;top:0;height:100svh;padding:22px 0 26px;justify-content:space-between;gap:10px}
+.js .reel{overflow:visible}
+.js .reel img{will-change:transform}
+.js .haze{will-change:transform}
+.js .end{opacity:0}
+html:not(.js) .cap{display:none}
+.js .foot:focus-within .cap{opacity:0!important}
+.js .foot{display:grid;align-items:end}
+.js .foot > *{grid-area:1/1}
+.js .cap{min-height:0;align-self:start}
+.js .end:focus-within{opacity:1!important}
+.js .head{padding-top:0}
+
+@media (min-width:860px){
+  .head,.cap,.end{padding-left:6vw;padding-right:6vw}
+  .reel img{height:min(60svh,620px)}
+  .js .pin{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto;align-content:stretch}
+  .js .head{grid-column:1/3}
+  .js .reel{grid-column:1/3;align-self:center}
+  .js .foot{grid-column:1/3;grid-template-columns:1fr auto}
+  .js .foot > .cap{grid-area:1/1;align-self:end}
+  .js .foot > .end{grid-area:1/2;text-align:right}
+  .js .end .buy{justify-content:flex-end}
+  .js .lead{margin-left:auto}
+}
+
+/* sections */
+section{padding:72px 20px}
+.wrap{max-width:70rem;margin:0 auto}
+h2{font:700 clamp(1.6rem,5.5vw,2.7rem)/1.1 var(--display);margin:0 0 18px;color:var(--silver)}
+.storm{background:var(--storm)}
+.eagle .pair{display:grid;gap:30px}
+.eagle .pair img{width:min(64vw,300px);box-shadow:0 16px 34px rgba(0,0,0,.5)}
+.eagle .open{font-size:1.3rem;max-width:36rem}
+.four{margin:28px 0 0;display:grid;gap:22px;max-width:40rem}
+.four dt{font:700 1.15rem/1.2 var(--display);color:var(--silver)}
+.four dd{margin:4px 0 0}
+.heron{background:var(--night);border-top:4px solid var(--ribbon)}
+.heron .pair{display:grid;gap:30px}
+.heron .big{font:700 clamp(2rem,8vw,4.2rem)/1.05 var(--display);color:var(--ribbon);margin:0 0 18px}
+.heron img{width:min(64vw,300px);box-shadow:0 16px 34px rgba(0,0,0,.5)}
+.heron p{max-width:36rem}
+.order{background:var(--storm-2)}
+.order ol{list-style:none;padding:0;margin:0;display:grid;gap:18px;max-width:46rem}
+.order li{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center}
+.order li img{width:72px}
+.order .t{font:700 1.05rem/1.25 var(--display);color:var(--silver);display:block}
+.order .d{color:var(--soft);font-size:1.05rem}
+.order li a{display:inline-block;margin-top:4px;padding:8px 0;min-height:44px}
+.about .pair{display:grid;gap:28px}
+.about img{width:min(56vw,260px)}
+.about p{max-width:38rem}
+.about blockquote{margin:24px 0;padding:0 0 0 18px;border-left:2px solid var(--ribbon);font-style:italic;font-size:1.35rem;max-width:34rem}
+.about cite{display:block;font:500 .85rem/1.3 var(--display);font-style:normal;color:var(--soft);margin-top:6px}
+footer{padding:28px 20px 40px;font-size:.95rem;color:var(--soft);text-align:center;border-top:1px solid rgba(216,220,225,.16)}
+@media (min-width:860px){
+  section{padding:110px 6vw}
+  .eagle .pair,.heron .pair{grid-template-columns:auto 1fr;gap:64px;align-items:start}
+  .heron .pair{grid-template-columns:1fr auto}
+  .about .pair{grid-template-columns:auto 1fr;gap:56px;align-items:start}
+}
+@media (max-width:859px){
+  .js .reel img{height:max(150px,min(50svh,calc(100svh - 360px)))}
+}
+@media (max-height:560px) and (orientation:landscape){
+  .js .pin{padding:12px 0 14px;gap:6px}
+  h1{font-size:1.7rem}
+  .by{margin-top:4px;font-size:.85rem}
+  .series{display:none}
+  .js .reel img{height:46svh}
+  .js .foot{grid-template-columns:1fr auto}
+  .js .foot > .end{grid-area:1/2}
+  .js .end .lead{display:none}
+  .js .end .btn.ghost{display:none}
+  .js .foot > .cap .meta{display:none}
+  .btn{min-height:44px;padding:8px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .cap{display:none}
+  .js .hero{height:auto}
+  .js .pin{position:relative;height:auto;display:flex}
+  .js .reel{overflow-x:auto}
+  .js .end{opacity:1}
+  .js .caps > div{opacity:1}
+  .js .caps > div:not(:first-child){display:none}
+  .reel img,.haze{transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#eagle">Skip to Book I</a>
+<div class="strip">A website idea made by Lampbound Studio for Anthony Kearle. Not his official site.</div>
+
+<header class="hero" id="hero">
+  <div class="pin">
+    <img class="haze" id="haze" src="img/ribbon-blur.webp" alt="" width="793" height="250">
+    <div class="head">
+      <p class="series">A fantasy saga in five books</p>
+      <h1>An Echo of the Ashes</h1>
+      <p class="by">Anthony Kearle</p>
+    </div>
+    <div class="reel" id="reel" tabindex="0" aria-label="The five covers, in reading order">
+      <img id="strip" src="img/ribbon.webp" width="3175" height="1000" fetchpriority="high" alt="The five covers side by side, joined by one red ribbon: Keeper of the Flame (a sun and moon pendant over a burning village), Blood of the Eagle (an eagle sword hilt over riders on a plain), Shadow of the Nightingale (a feather over a moonlit city), Song of the Raven (a raven skull over two ships at sea) and Rise of the Heron (a serpent ring over dark mountains).">
+    </div>
+    <div class="foot">
+    <div class="cap" aria-live="off">
+      <div class="caps" id="caps">
+        <div class="on"><p class="which">Prequel: Keeper of the Flame</p><p class="meta">340 pages. July 2025.</p></div>
+        <div><p class="which">Book I: Blood of the Eagle</p><p class="meta">The first book, set in a civil war in the forest of Salvaar.</p></div>
+        <div><p class="which">Book II: Shadow of the Nightingale</p><p class="meta">690 pages. October 2023.</p></div>
+        <div><p class="which">Book III: Song of the Raven</p><p class="meta">771 pages. November 2024.</p></div>
+        <div><p class="which">Book IV: Rise of the Heron</p><p class="meta">The newest book, out March 2026.</p></div>
+      </div>
+    </div>
+    <div class="end" id="end">
+      <p class="lead">Whatever they fight for...they pay the price in blood.</p>
+      <div class="buy">
+        <a class="btn main" href="https://www.amazon.com.au/dp/B0DR9HCJH6" rel="noopener" target="_blank">Start with Blood of the Eagle</a>
+        <a class="btn ghost" href="#heron">Read about Book IV</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="storm eagle" id="eagle">
+  <div class="wrap pair">
+    <img src="img/eagle.webp" width="600" height="957" alt="Cover of Blood of the Eagle: a bronze eagle forms the hilt of a sword, three riders and a red banner on a grey plain below" loading="lazy">
+    <div>
+      <h2>Book I: Blood of the Eagle</h2>
+      <p class="open">Evalio Delrovira, southern grand master of the Order of Kil'kara, is dead. His final words speak of something forever hidden that must be found.</p>
+      <dl class="four">
+        <div><dt>Kyler Landrey</dt><dd>The son of a lowly tavern keeper, who leaves Adrestia to seek his destiny among the order.</dd></div>
+        <div><dt>Lukas Raynor</dt><dd>The reckless son of a great king, sent across the dreaded Steppe of Miera.</dd></div>
+        <div><dt>Kitara</dt><dd>Daughter to none and outcast by all. She has survived with her wit and her steel.</dd></div>
+        <div><dt>Astrid Farrin</dt><dd>Her father, a jarl of the Valkir, lies murdered. She has sworn to find the killer.</dd></div>
+      </dl>
+      <p><a class="btn main" href="https://www.amazon.com.au/dp/B0DR9HCJH6" rel="noopener" target="_blank">Get Blood of the Eagle</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="heron" id="heron">
+  <div class="wrap pair">
+    <div>
+      <p class="big">A red summer has come.</p>
+      <h2>Book IV: Rise of the Heron</h2>
+      <p>Peace flourishes beneath the Treaty of Kilgareth. The young Princess Kassandra Raynor is crowned regent of Annora, and her rule rests on the edge of a knife. Whispers spread through the sacred trees of Salvaar. Kitara leads her rabble of old soldiers south to see Annora one last time.</p>
+      <p>The Whisperer rises. Monsters hunt in the night. Peace is shattered.</p>
+      <p><a class="btn main" href="https://www.amazon.com.au/dp/B0GHPDHM97" rel="noopener" target="_blank">Get Rise of the Heron</a></p>
+    </div>
+    <img src="img/heron.webp" width="600" height="900" alt="Cover of Rise of the Heron: a silver ring of two serpent heads over snow-dark mountains" loading="lazy">
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <h2>The reading order</h2>
+    <ol>
+      <li><img src="img/keeper.webp" width="600" height="957" alt="" loading="lazy"><div><span class="t">Keeper of the Flame</span><span class="d">The prequel. 340 pages.</span><br><a href="https://www.amazon.com.au/dp/B0FGGNK7QT" rel="noopener" target="_blank">Kindle and paperback</a></div></li>
+      <li><img src="img/eagle.webp" width="600" height="957" alt="" loading="lazy"><div><span class="t">Blood of the Eagle</span><span class="d">Book I. 667 pages.</span><br><a href="https://www.amazon.com.au/dp/B0DR9HCJH6" rel="noopener" target="_blank">Kindle and paperback</a></div></li>
+      <li><img src="img/nightingale.webp" width="600" height="957" alt="" loading="lazy"><div><span class="t">Shadow of the Nightingale</span><span class="d">Book II. 690 pages.</span><br><a href="https://www.amazon.com.au/dp/B0DPLJWKT6" rel="noopener" target="_blank">Kindle and paperback</a></div></li>
+      <li><img src="img/raven.webp" width="600" height="957" alt="" loading="lazy"><div><span class="t">Song of the Raven</span><span class="d">Book III. 771 pages.</span><br><a href="https://www.amazon.com.au/dp/B0DMKZFQ1F" rel="noopener" target="_blank">Kindle and paperback</a></div></li>
+      <li><img src="img/heron.webp" width="600" height="900" alt="" loading="lazy"><div><span class="t">Rise of the Heron</span><span class="d">Book IV. 652 pages.</span><br><a href="https://www.amazon.com.au/dp/B0GHPDHM97" rel="noopener" target="_blank">Kindle and paperback</a></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap pair">
+    <img src="img/anthony.webp" width="600" height="600" alt="Anthony Kearle in a tan jacket in front of a bookshelf" loading="lazy">
+    <div>
+      <h2>Anthony Kearle</h2>
+      <p>Anthony found writing while he was studying graphic design at Federation University. A map he drew in class started him down the rabbit hole of world-building, and a story followed. He kept writing while working full time and doing freelance design on the side.</p>
+      <blockquote>I spent probably eight months just creating this place.<cite>Anthony, to the Ballarat Times, 2021</cite></blockquote>
+      <p>He read up on mythology, folklore and fairy tales, and on medieval sword fighting and strategy, to build Annora, Salvaar and the lands around them. When he isn't writing, he goes hiking and spends time on sport and esports.</p>
+      <p>He was billed on the Fantasy in a Fractured World panel at All Booked Out, Ballarat's indie book fest, in 2025.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Anthony Kearle. Not affiliated, not live. Covers and blurbs are from Anthony's published books.</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  document.documentElement.classList.add('js');
+  var hero = document.getElementById('hero'), strip = document.getElementById('strip'),
+      haze = document.getElementById('haze'), end = document.getElementById('end'),
+      caps = document.getElementById('caps').children, cap = document.querySelector('.cap'), reel = document.getElementById('reel');
+  var top = 0, span = 1, travel = 0, hazeTravel = 0, vw = 0, last = -1, ticking = false;
+  function measure(){
+    vw = document.documentElement.clientWidth;
+    var r = hero.getBoundingClientRect();
+    top = r.top + window.scrollY;
+    span = Math.max(1, hero.offsetHeight - window.innerHeight);
+    var w = strip.getBoundingClientRect().width;
+    var cover = w * 627 / 3175;
+    var start = (vw - cover) / 2;
+    strip._start = start;
+    travel = w - cover;
+    if (vw >= 860) travel = Math.min(travel, Math.max(0, start - (vw - w - vw * .06)));
+    hazeTravel = Math.max(0, haze.offsetWidth - vw);
+    frame();
+  }
+  function frame(){
+    ticking = false;
+    var p = Math.min(1, Math.max(0, (window.scrollY - top) / span));
+    var q = Math.min(1, p / .84);
+    var e = q < .5 ? 2*q*q : 1 - Math.pow(-2*q + 2, 2) / 2;
+    strip.style.transform = 'translate3d(' + (strip._start - travel * e).toFixed(1) + 'px,0,0)';
+    haze.style.transform = 'translate3d(' + (-hazeTravel * e).toFixed(1) + 'px,0,0)';
+    var i = Math.min(4, Math.round(e * 4));
+    if (i !== last){ for (var k = 0; k < caps.length; k++){ caps[k].classList.toggle('on', k === i); caps[k].setAttribute('aria-hidden', k === i ? 'false' : 'true'); } last = i; }
+    var o = Math.min(1, Math.max(0, (p - .8) / .12));
+    end.style.opacity = o.toFixed(3);
+    cap.style.opacity = (vw < 860 && !(innerHeight < 561 && vw > innerHeight) ? 1 - o : 1).toFixed(3);
+  }
+  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  var lastW = window.innerWidth, lastH = window.innerHeight;
+  window.addEventListener('resize', function(){ if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 120){ lastW = window.innerWidth; lastH = window.innerHeight; measure(); } });
+  reduce.addEventListener && reduce.addEventListener('change', function(){ location.reload(); });
+  if (strip.complete) measure(); else strip.addEventListener('load', measure);
+  window.addEventListener('load', measure);
+  measure();
+})();
+</script>
+</body>
+</html>
