@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Walk a War in My Shoes by Murray Ernest Hall</title>
+<meta name="description" content="A homepage idea for Murray Ernest Hall's Walk a War in My Shoes, the story of his great-uncle Ernest Alfred Hall in the First World War.">
+<meta property="og:title" content="Walk a War in My Shoes by Murray Ernest Hall">
+<meta property="og:description" content="Like so many, Ernest Hall embarked for the war to end all wars. Unlike so many, his letters and records survived.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/murray-hall/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/murray-hall/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0c0a09; --night-2:#171310; --stone:#cfb898; --stone-dim:#a8957a; --cross:#aa8a63;
+  --poppy:#c8231c; --poppy-ink:#e0574d; --ember:#c98a3a; --ink:#1b1511;
+  --display:"Marcellus",Georgia,serif; --text:"Spectral",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:#e9dfd0;font:400 1.14rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--ember);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--stone);color:var(--ink);padding:8px 12px}
+.strip{position:relative;z-index:20;background:var(--stone);color:var(--ink);font:400 .86rem/1.35 var(--text);padding:8px 16px;text-align:center}
+
+/* hero: the finished state is the default, so no-JS and reduced motion see the whole cover */
+.pin{position:relative;min-height:100svh;overflow:hidden;display:grid;align-content:center;padding:32px 20px 48px}
+.glow{position:absolute;left:0;right:0;top:48%;height:40%;background:radial-gradient(60% 50% at 50% 55%,rgba(201,138,58,.28),rgba(97,76,31,.12) 55%,transparent 80%)}
+.near{position:absolute;left:-4%;bottom:-2%;width:108%;max-width:none;height:24svh;object-fit:cover;object-position:50% 30%;z-index:3;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 45%);mask-image:linear-gradient(180deg,transparent,#000 45%)}
+.stage{position:relative;z-index:2;display:grid;gap:24px;justify-items:center;max-width:1100px;margin:0 auto;width:100%}
+.cover{margin:0;width:min(58vw,300px,calc(46svh * .667));transform-origin:0 0;box-shadow:0 22px 44px rgba(0,0,0,.6)}
+.copy{text-align:center;max-width:31rem;position:relative;z-index:4}
+.by{font:400 1.05rem/1 var(--display);color:var(--stone);margin:0 0 12px}
+h1{font:400 clamp(2.4rem,10vw,4.6rem)/1 var(--display);color:var(--stone);margin:0;text-transform:uppercase} /* slop-ok: title caps exactly as on the cover */
+.tag{font-size:1.16rem;margin:16px 0 22px;color:#e9dfd0}
+.buy{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 20px;font:400 1rem/1.1 var(--display);text-decoration:none;border:1px solid var(--stone)}
+.btn.main{background:var(--stone);color:var(--ink)}
+.btn.ghost{color:var(--stone)}
+.opening{position:absolute;z-index:5;left:16px;right:16px;top:6svh;margin:0;padding:14px 18px;background:rgba(12,10,9,.84);font:italic 400 1.3rem/1.35 var(--text);color:#efe5d6;text-align:center;opacity:0;pointer-events:none}
+
+.js .hero{height:300svh}
+.js .pin{position:sticky;top:0;height:100svh}
+.js .copy{opacity:0}
+.js .copy:focus-within{opacity:1!important;transform:none!important}
+.js .opening{opacity:1}
+
+@media (min-width:860px){
+  .stage{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:64px;justify-items:start}
+  .cover{width:min(29vw,360px,calc(70svh * .667));justify-self:end}
+  .copy{text-align:left}.buy{justify-content:flex-start}
+  .opening{left:auto;right:7vw;width:27rem;top:auto;bottom:30svh;text-align:left;font-size:1.45rem}
+  .near{height:30svh}
+}
+@media (max-height:680px) and (max-width:600px){.cover{width:min(50vw,calc(34svh * .667))}.tag{display:none}.stage{gap:16px}h1{font-size:2.2rem}}
+@media (max-height:560px) and (orientation:landscape){
+  .stage{grid-template-columns:auto 1fr;gap:28px;justify-items:start;align-items:center}
+  .cover{width:calc(76svh * .667)}.copy{text-align:left}.buy{justify-content:flex-start}
+  h1{font-size:2rem}.tag{font-size:1rem;margin:8px 0 12px}
+}
+
+/* sections */
+section{padding:76px 20px}
+.wrap{max-width:66rem;margin:0 auto}
+h2{font:400 clamp(1.8rem,6vw,2.7rem)/1.1 var(--display);margin:0 0 20px;color:var(--stone)}
+.stone{background:var(--stone);color:var(--ink)}
+.stone h2{color:var(--ink)}
+.stone a{color:#5a1410}
+.stone a:focus-visible{outline-color:var(--ink)}
+.born .lead{font-size:1.4rem;line-height:1.4;max-width:34rem;margin-top:0}
+.born p{max-width:37rem}
+.dog{margin:34px 0;padding:0;max-width:34rem}
+.dog p{font:400 clamp(1.5rem,5vw,2.1rem)/1.25 var(--display);margin:0}
+.dog cite{display:block;font:italic 400 1rem/1.3 var(--text);margin-top:10px}
+
+/* the walk */
+.walk{background:var(--night-2)}
+.walk .intro{max-width:34rem;color:#d9cdbb}
+.road{position:relative;margin-top:44px}
+.lane{position:absolute;left:0;top:0;bottom:0;width:46px}
+.print{position:absolute;width:14px;height:30px;color:var(--stone);opacity:0;transition:opacity .35s ease-out}
+.print.on{opacity:.85}
+.print svg{display:block;width:14px;height:30px}
+.tyre{position:absolute;left:21px;width:4px;transform-origin:50% 0;transform:scaleY(0);
+  background:repeating-linear-gradient(180deg,var(--stone) 0 5px,transparent 5px 8px)}
+.stops{list-style:none;margin:0;padding:0 0 0 66px;display:grid;gap:46px}
+.stops li{max-width:31rem}
+.when{display:block;font:400 1.02rem/1.2 var(--display);color:var(--ember);margin-bottom:4px}
+.stops p{margin:0}
+.who{font:400 1.25rem/1.2 var(--display);color:var(--stone);margin:8px 0 -18px}
+.meet{border-top:1px solid rgba(207,184,152,.35);padding-top:26px}
+.meet .when{color:var(--poppy-ink)}
+.meet a{color:var(--stone)}
+@media (min-width:860px){
+  section{padding:120px 40px}
+  .walk .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:64px;align-items:start}
+  .walk .head{position:sticky;top:60px}
+  .road{margin-top:0}
+  .born .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:start}
+}
+
+/* book and buy */
+.book .wrap{display:grid;gap:30px}
+.book img{width:min(60vw,280px);box-shadow:0 16px 34px rgba(0,0,0,.5)}
+.book dl{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);overflow-wrap:anywhere;gap:4px 18px;margin:0 0 24px;color:#d9cdbb}
+.book dt{font:400 1rem/1.5 var(--display);color:var(--stone-dim)}
+.book dd{margin:0}
+.book .buy{justify-content:flex-start}
+.awm{margin:0 0 22px;max-width:30rem}
+@media (min-width:860px){.book .wrap{grid-template-columns:auto 1fr;gap:72px;align-items:center}}
+
+.about p{max-width:38rem}
+.barons .wrap{display:grid;gap:26px}
+.barons img{width:min(42vw,190px);box-shadow:0 12px 26px rgba(0,0,0,.45)}
+.barons p{max-width:34rem}
+@media (min-width:700px){.barons .wrap{grid-template-columns:auto 1fr;gap:48px;align-items:center}}
+
+.close{position:relative;overflow:hidden;text-align:center;padding-bottom:120px}
+.close p{font:400 clamp(1.5rem,5vw,2.2rem)/1.25 var(--display);color:var(--stone);max-width:30rem;margin:0 auto 26px}
+.close .buy{position:relative;z-index:2}
+.close .near{position:absolute;height:110px;bottom:0;opacity:.8;z-index:1}
+
+footer{padding:28px 20px 40px;font:400 .88rem/1.4 var(--text);color:#b9ad9c;text-align:center;border-top:1px solid rgba(207,184,152,.18)}
+
+@media (prefers-reduced-motion:reduce){
+  .js .hero{height:auto}.js .pin{position:relative;height:auto;min-height:100svh}
+  .js .copy{opacity:1}.js .opening{display:none}
+  .cover,.near,.copy{transform:none!important}
+  .print{opacity:.85;transition:none}.tyre{transform:none}
+  .pin .near{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#born">Skip to the story</a>
+<div class="strip">A website idea made by Lampbound Studio for Murray Ernest Hall. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="pin">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="stage">
+      <figure class="cover" id="cover"><img src="img/walk-a-war.webp" alt="Cover of Walk a War in My Shoes: a weathered stone cross carved with E A Hall stands in a field of red poppies at sunset under a black sky" width="667" height="1000" fetchpriority="high"></figure>
+      <div class="copy" id="copy">
+        <p class="by">Murray Ernest Hall</p>
+        <h1>Walk a War in My Shoes</h1>
+        <p class="tag">The story of his great-uncle, Ernest Alfred Hall, who enlisted in the Australian Imperial Force one month short of his 20th birthday.</p>
+        <div class="buy">
+          <a class="btn main" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-soft-cover" rel="noopener" target="_blank">Paperback, A$20</a>
+          <a class="btn ghost" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-hard-cover" rel="noopener" target="_blank">Hardcover, A$33</a>
+        </div>
+      </div>
+    </div>
+    <img class="near" id="near" src="img/poppies-near.webp" alt="" width="1334" height="500">
+    <p class="opening" id="opening" aria-hidden="true">Unlike so many, his letters and records survived.</p>
+  </div>
+</header>
+
+<main>
+<section class="stone born" id="born" aria-labelledby="born-h">
+  <div class="wrap">
+    <div>
+      <h2 id="born-h">Cloverdale, 1895</h2>
+      <p class="lead">Ernest Alfred Hall was born on 25 August 1895 at Cloverdale, a 313-acre property near the hamlet of Beech Forest, south of the Otway Ranges.</p>
+    </div>
+    <div>
+      <p>As a child it seemed he would be a farmer. Then war came to Europe and the British Empire, and one month short of his 20th birthday Ernest caught the train to Melbourne and enlisted in the Australian Imperial Force.</p>
+      <p>He stood five foot three. His father had a line for that.</p>
+      <blockquote class="dog">
+        <p>“It’s not the size of the dog in the fight, son, but the size of the fight in the dog.”</p>
+        <cite>His father’s words to him</cite>
+      </blockquote>
+      <p>Like so many, Ernest embarked for the war to end all wars. Unlike so many, his letters and records survived. Murray tells his story from them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="walk" id="walk" aria-labelledby="walk-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="walk-h">In his shoes</h2>
+      <p class="intro">Ernest enlisted and embarked for the war. Decades later his great-nephew Murray took his bike to Europe and came to live among the battlefields of the First World War.</p>
+    </div>
+    <div class="road" id="road">
+      <div class="lane" aria-hidden="true"><div id="prints"></div><div class="tyre" id="tyre"></div></div>
+      <ol class="stops">
+        <li class="e"><p class="who">Ernest</p></li>
+        <li class="e" id="first"><span class="when">25 August 1895</span><p>Born at Cloverdale, near Beech Forest, Victoria, into a pioneering family.</p></li>
+        <li class="e"><span class="when">One month short of 20</span><p>Takes the train to Melbourne and enlists in the Australian Imperial Force.</p></li>
+        <li class="e"><span class="when">Overseas</span><p>Embarks for the war to end all wars.</p></li>
+        <li class="e"><span class="when">Afterwards</span><p>Unlike so many, his letters and records survive.</p></li>
+        <li class="m" id="turn"><p class="who">Murray</p></li>
+        <li class="m"><span class="when">The 1950s and 60s</span><p>Grows up in Mentone, on Melbourne’s bayside. An average student, by his own account, whose real passion is riding a push bike.</p></li>
+        <li class="m"><span class="when">Eighteen</span><p>Packs a bag and his bike for Europe, where “all the best bike riders were”.</p></li>
+        <li class="m"><span class="when">Sixteen years a professional</span><p>Twice British National Champion, a championship of Berlin, and two Commonwealth Games silver medals in 1974. Based in Belgium and Denmark for long stretches.</p></li>
+        <li class="m"><span class="when">Belgium</span><p>Living in and around the major battlefields of the First World War, he starts looking into the life of Ernest Alfred.</p></li>
+        <li class="meet" id="meet"><span class="when">2018</span><p><a href="#book">Walk a War in My Shoes</a> is published.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <div class="wrap">
+    <img src="img/walk-a-war.webp" alt="Cover of Walk a War in My Shoes" width="667" height="1000" loading="lazy">
+    <div>
+      <h2 id="book-h">The book</h2>
+      <dl>
+        <dt>Paperback</dt><dd>226 pages, 9 August 2018</dd>
+        <dt>Hardcover</dt><dd>180 pages, with illustrations</dd>
+        <dt>ISBN</dt><dd>9780648222293 (paperback)</dd>
+      </dl>
+      <p class="awm">Both editions are sold in the Australian War Memorial shop.</p>
+      <div class="buy">
+        <a class="btn main" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-soft-cover" rel="noopener" target="_blank">Paperback at the AWM shop</a>
+        <a class="btn ghost" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-hard-cover" rel="noopener" target="_blank">Hardcover at the AWM shop</a>
+        <a class="btn ghost" href="https://www.readings.com.au/product/9780648222293/walk-a-war-in-my-shoes--murray-ernest-hall--2018--9780648222293" rel="noopener" target="_blank">Paperback at Readings</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stone about" aria-labelledby="about-h">
+  <div class="wrap">
+    <h2 id="about-h">About Murray</h2>
+    <p>Murray Ernest Hall grew up in Mentone in the 1950s and 60s and left for Europe at eighteen with his bike. He rode professionally for sixteen years, was twice British National Champion and a multiple Australian Champion, and won two silver medals at the 1974 Commonwealth Games.</p>
+    <p>Back home he chaired the sport in Western Australia for more than a decade and served Cycling Australia as a national track selector and track commissioner. He later worked in manufacturing, building construction and mining, and now lives on a semi-rural property south-east of Perth.</p>
+  </div>
+</section>
+
+<section class="barons" aria-labelledby="barons-h">
+  <div class="wrap">
+    <img src="img/unlikely-barons.webp" alt="Cover of Unlikely Barons by Murray Hall" width="520" height="803" loading="lazy">
+    <div>
+      <h2 id="barons-h">Also by Murray Hall</h2>
+      <p><em>Unlikely Barons</em> is his first novel: two mates building houses in 1990s Broome, told as dark humour.</p>
+      <p>Both books were nominated for the WA Premier’s award.</p>
+      <div class="buy"><a class="btn ghost" href="https://www.amazon.com.au/dp/1922670901" rel="noopener" target="_blank">Unlikely Barons on Amazon</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Get the book">
+  <p>Unlike so many, his letters and records survived. This is his story.</p>
+  <div class="buy">
+    <a class="btn main" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-soft-cover" rel="noopener" target="_blank">Paperback, A$20</a>
+    <a class="btn ghost" href="https://shop.awm.gov.au/products/walk-a-war-in-my-shoes-hard-cover" rel="noopener" target="_blank">Hardcover, A$33</a>
+  </div>
+  <img class="near" src="img/poppies-near.webp" alt="" width="1334" height="500" loading="lazy">
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Murray Ernest Hall. Not affiliated, not live.</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="boot" viewBox="0 0 14 30">
+    <path fill="currentColor" d="M7 0C11 0 14 3 14 8.5C14 13 12.4 16 11.4 19.5L2.6 19.5C1.6 16 0 13 0 8.5C0 3 3 0 7 0Z"/>
+    <rect fill="currentColor" x="2.4" y="22" width="9.2" height="8" rx="3"/>
+    <g fill="#171310"><circle cx="4" cy="6" r=".9"/><circle cx="7" cy="4" r=".9"/><circle cx="10" cy="6" r=".9"/><circle cx="4.5" cy="10" r=".9"/><circle cx="7" cy="9" r=".9"/><circle cx="9.5" cy="10" r=".9"/><circle cx="5" cy="14" r=".9"/><circle cx="9" cy="14" r=".9"/><circle cx="5" cy="25" r=".8"/><circle cx="9" cy="25" r=".8"/></g>
+  </symbol>
+</svg>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var still=reduce.matches;
+  if(!still) document.documentElement.classList.add('js');
+  reduce.addEventListener&&reduce.addEventListener('change',function(){location.reload()});
+
+  /* the walk: hobnail prints for Ernest's years, a tyre track for Murray's */
+  var road=document.getElementById('road'),host=document.getElementById('prints'),tyre=document.getElementById('tyre'),
+      first=document.getElementById('first'),turn=document.getElementById('turn'),meet=document.getElementById('meet');
+  var prints=[],tyreTop=0,tyreH=1;
+  function layWalk(){
+    host.innerHTML='';prints=[];
+    var r=road.getBoundingClientRect(),top=first.getBoundingClientRect().top-r.top+4,
+        end=turn.getBoundingClientRect().top-r.top-10, m=meet.getBoundingClientRect().top-r.top+8;
+    for(var y=top,i=0;y<end;y+=38,i++){
+      var d=document.createElement('div');d.className='print'+(still?' on':'');
+      var left=i%2===0;
+      d.style.left=(left?8:24)+'px';d.style.top=y+'px';
+      d.style.transform='rotate('+(left?-6:5)+'deg)'+(left?' scaleX(-1)':'');
+      d.innerHTML='<svg aria-hidden="true"><use href="#boot"/></svg>';
+      host.appendChild(d);prints.push(d);
+    }
+    tyreTop=end+6;tyreH=Math.max(1,m-tyreTop);
+    tyre.style.top=tyreTop+'px';tyre.style.height=tyreH+'px';
+    walk();
+  }
+  function walk(){
+    var line=window.innerHeight*0.72,rt=road.getBoundingClientRect().top;
+    if(still){tyre.style.transform='none';return}
+    for(var i=0;i<prints.length;i++){
+      var on=rt+parseFloat(prints[i].style.top)<line;
+      if(on!==prints[i].classList.contains('on'))prints[i].classList.toggle('on',on);
+    }
+    var t=(line-(rt+tyreTop))/tyreH;t=t<0?0:t>1?1:t;
+    tyre.style.transform='scaleY('+t.toFixed(4)+')';
+  }
+
+  /* the hero: from the cross on the cover out to the whole book */
+  var hero=document.getElementById('hero'),cover=document.getElementById('cover'),copy=document.getElementById('copy'),
+      opening=document.getElementById('opening'),near=document.getElementById('near');
+  var R,vw,vh;
+  function clamp(x){return x<0?0:x>1?1:x}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function measure(){
+    if(still)return;
+    cover.style.transform='none';
+    var cr=cover.getBoundingClientRect(),pr=cover.closest('.pin').getBoundingClientRect();
+    R={l:cr.left-pr.left,t:cr.top-pr.top,w:cr.width,h:cr.height};
+    vw=window.innerWidth;vh=window.innerHeight;
+    heroFrame();
+  }
+  function heroFrame(){
+    var span=hero.offsetHeight-vh;if(span<1)span=1;
+    var p=clamp((window.scrollY-hero.offsetTop)/span),e=ease(clamp(p/0.8));
+    var S0=2.3*Math.max(vw/R.w,vh/R.h);
+    var tx0=vw*0.5-R.l-S0*0.34*R.w, ty0=vh*0.55-R.t-S0*0.655*R.h;
+    var s=S0+(1-S0)*e;
+    cover.style.transform='translate3d('+(tx0*(1-e)).toFixed(1)+'px,'+(ty0*(1-e)).toFixed(1)+'px,0) scale('+s.toFixed(4)+')';
+    near.style.transform='translate3d(0,'+(e*14).toFixed(2)+'svh,0) scale('+(1.25-0.25*e).toFixed(4)+')';
+    opening.style.opacity=(1-clamp(p/0.16)).toFixed(3);
+    var c=clamp((p-0.74)/0.18);
+    copy.style.opacity=c.toFixed(3);
+    copy.style.pointerEvents=c<0.6?'none':'';
+    copy.style.transform='translate3d(0,'+((1-c)*22).toFixed(1)+'px,0)';
+  }
+  var ticking=false;
+  function frame(){ticking=false;if(!still)heroFrame();walk()}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+  window.addEventListener('resize',function(){measure();layWalk()});
+  window.addEventListener('load',function(){measure();layWalk()});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layWalk);
+  measure();layWalk();
+})();
+</script>
+</body>
+</html>

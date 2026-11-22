@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Pink Bubble by Brett Cole</title>
+<meta name="description" content="A homepage idea for Brett Cole's The Pink Bubble: part philosophical musing, part travel journal.">
+<meta property="og:title" content="The Pink Bubble by Brett Cole">
+<meta property="og:description" content="Part philosophical musing, part travel journal, part piecing together the broken to create something new, meaningful and whole.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/brett-cole/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/brett-cole/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0b3640; --deep-2:#0f4552; --teal:#0e93a2; --green:#23ad7a; --blue:#2f6f9a;
+  --pink:#f2a6a4; --blush:#f9e1dc; --yellow:#f3ea8c; --white:#ffffff; --ink:#0b3640;
+  --display:"Lexend",system-ui,sans-serif; --text:"Newsreader",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--deep);color:#eaf4f2;font:400 1.17rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--yellow);color:var(--ink);padding:8px 12px}
+.strip{position:relative;z-index:20;background:var(--blush);color:var(--ink);font:400 .82rem/1.35 var(--display);padding:8px 16px;text-align:center}
+
+/* hero. Default is the finished frame: the book inside its bubble */
+.pin{position:relative;min-height:100svh;overflow:hidden;display:grid;align-content:center;padding:36px 20px 48px}
+.disc{position:absolute;border-radius:50%;background:url(img/wash-teal.webp) center/cover;opacity:.8}
+.d1{width:120vmax;height:120vmax;left:-70vmax;top:-62vmax}
+.d2{width:90vmax;height:90vmax;right:-52vmax;top:-30vmax;filter:hue-rotate(-28deg) saturate(1.1)}
+.d3{width:110vmax;height:110vmax;left:-30vmax;bottom:-86vmax;filter:hue-rotate(22deg) saturate(.9) brightness(.85)}
+.stage{position:relative;z-index:2;display:grid;gap:26px;justify-items:center;max-width:1100px;margin:0 auto;width:100%}
+.book{position:relative;width:min(46vw,240px,calc(40svh * .625))}
+.orb{position:absolute;left:-40%;width:180%;max-width:none;top:50%;margin-top:-90%;z-index:0;pointer-events:none}
+.cover{position:relative;z-index:1;margin:0;box-shadow:0 20px 40px rgba(4,26,31,.55)}
+.copy{text-align:center;max-width:30rem;position:relative;z-index:3}
+.by{font:400 .95rem/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin:0 0 12px} /* slop-ok: the cover sets his name in spaced yellow caps */
+h1{font:700 clamp(2.5rem,11vw,4.8rem)/.98 var(--display);text-transform:uppercase;margin:0;color:var(--white)} /* slop-ok: title caps as on the cover */
+.tag{font:400 clamp(1.05rem,3.6vw,1.3rem)/1.3 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin:14px 0 22px} /* slop-ok: the cover's own tagline treatment */
+.buy{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 22px;border-radius:999px;font:400 .98rem/1.1 var(--display);text-decoration:none;border:2px solid var(--pink)}
+.btn.main{background:var(--pink);color:var(--ink)}
+.btn.ghost{color:var(--white)}
+.frags{position:absolute;inset:0;z-index:2;pointer-events:none}
+.frag{position:absolute;left:50%;top:50%;width:min(80vw,26rem);margin-left:calc(min(80vw,26rem) / -2);text-align:center;font:italic 400 clamp(1.5rem,6vw,2.2rem)/1.2 var(--text);color:var(--ink);opacity:0}
+.opening{position:absolute;z-index:4;left:20px;right:20px;top:calc(50% + 70px);margin:0;text-align:center;font:italic 400 1.3rem/1.35 var(--text);color:var(--blush);opacity:0;pointer-events:none}
+
+.js .hero{height:340svh}
+.js .pin{position:sticky;top:0;height:100svh}
+.js .copy{opacity:0}
+.js .copy:focus-within{opacity:1!important;transform:none!important}
+.js .cover{opacity:0}
+.js .opening{opacity:1}
+
+@media (min-width:860px){
+  .stage{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:80px;justify-items:start}
+  .book{width:min(24vw,300px,calc(62svh * .625));justify-self:end;margin-right:100px}
+  .copy{text-align:left}.buy{justify-content:flex-start}
+}
+@media (max-height:680px) and (max-width:600px){.book{width:min(42vw,calc(30svh * .625))}.tag{margin:8px 0 12px}.stage{gap:18px}h1{font-size:2.2rem}}
+@media (max-height:560px) and (orientation:landscape){
+  .stage{grid-template-columns:auto 1fr;gap:56px;justify-items:start;align-items:center}
+  .book{width:calc(70svh * .625);margin-left:40px}.copy{text-align:left}.buy{justify-content:flex-start}
+  h1{font-size:2.1rem}.tag{margin:8px 0 12px}
+}
+
+/* sections */
+section{padding:76px 20px}
+.wrap{max-width:66rem;margin:0 auto}
+h2{font:700 clamp(1.7rem,6vw,2.6rem)/1.1 var(--display);margin:0 0 20px}
+.blush{background:var(--blush);color:var(--ink)}
+.blush a{color:#0a5866}
+.blush a:focus-visible{outline-color:var(--ink)}
+.voice blockquote{margin:0 0 40px;padding:0;max-width:36rem}
+.voice blockquote p{font:italic 400 clamp(1.45rem,5vw,2rem)/1.3 var(--text);margin:0 0 12px}
+.voice cite{font:400 .95rem/1.3 var(--display);font-style:normal}
+.voice .parts{font:400 1.3rem/1.45 var(--text);max-width:34rem}
+.voice p{max-width:37rem}
+.voice dl{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);overflow-wrap:anywhere;gap:4px 18px;margin:26px 0 26px}
+.voice dt{font:400 .95rem/1.6 var(--display);color:#30616b}
+.voice dd{margin:0}
+.voice .buy{justify-content:flex-start}
+.voice .btn{border-color:var(--ink)}
+.voice .btn.main{background:var(--ink);color:var(--blush)}
+.voice .btn.ghost{color:var(--ink)}
+.voice .btn:focus-visible{outline-color:var(--ink)}
+@media (min-width:860px){
+  section{padding:120px 40px}
+  .voice .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:start}
+}
+
+.title p{max-width:36rem}
+.title .meditation{font:400 clamp(1.3rem,4.4vw,1.7rem)/1.35 var(--text);color:var(--white);max-width:32rem;margin:0 0 28px}
+.shelf{margin-top:44px;max-width:38rem}
+.shelf h3{font:700 1.2rem/1.2 var(--display);color:var(--yellow);margin:0 0 10px}
+@media (min-width:860px){.title .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px}}
+
+.about .wrap{display:grid;gap:28px}
+.about img{width:150px;border-radius:50%}
+.about p{max-width:36rem}
+@media (min-width:700px){.about .wrap{grid-template-columns:auto 1fr;gap:56px;align-items:start}}
+
+.more ul{list-style:none;margin:0;padding:0;display:grid;gap:18px;max-width:40rem}
+.more li span{display:block;font:400 .92rem/1.3 var(--display);color:#a9cfd0}
+
+.close{position:relative;overflow:hidden;text-align:center;padding:60px 20px;min-height:calc(min(94vw,560px) + 80px);display:grid;align-content:center}
+.close .ring{position:absolute;left:50%;top:50%;width:min(94vw,560px);height:auto;max-width:none;margin:calc(min(94vw,560px) / -2) 0 0 calc(min(94vw,560px) / -2)}
+.close p{position:relative;font:italic 400 clamp(1.6rem,6vw,2.5rem)/1.25 var(--text);color:var(--ink);margin:0 auto 22px;max-width:min(70vw,24rem)}
+.close .buy{position:relative}
+.close .btn{border-color:var(--ink)}
+.close .btn.main{background:var(--ink);color:var(--blush)}
+.close .btn.ghost{color:var(--ink);background:rgba(249,225,220,.6)}
+.close .btn:focus-visible{outline-color:var(--ink)}
+
+footer{padding:28px 20px 40px;font:400 .84rem/1.4 var(--display);color:#bcd6d6;text-align:center;border-top:1px solid rgba(249,225,220,.18)}
+
+@media (prefers-reduced-motion:reduce){
+  .js .hero{height:auto}.js .pin{position:relative;height:auto;min-height:100svh}
+  .js .copy,.js .cover{opacity:1}.js .opening,.frags{display:none}
+  .orb,.cover,.copy,.disc{transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#voice">Skip to the book</a>
+<div class="strip">A website idea made by Lampbound Studio for Brett Cole. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="pin">
+    <div class="disc d1" id="d1" aria-hidden="true"></div>
+    <div class="disc d2" id="d2" aria-hidden="true"></div>
+    <div class="disc d3" id="d3" aria-hidden="true"></div>
+    <div class="stage">
+      <div class="book" id="book">
+        <img class="orb" id="orb" src="img/bubble.webp" alt="" width="700" height="700" fetchpriority="high">
+        <figure class="cover" id="cover"><img src="img/the-pink-bubble.webp" alt="Cover of The Pink Bubble by Brett Cole: a soft pink circle over overlapping teal, green and blue watercolour shapes, with the line Become who you are" width="700" height="1120" fetchpriority="high"></figure>
+      </div>
+      <div class="copy" id="copy">
+        <p class="by">Brett Cole</p>
+        <h1>The Pink Bubble</h1>
+        <p class="tag">Become who you are</p>
+        <div class="buy">
+          <a class="btn main" href="https://www.readings.com.au/product/9781923020504/the-pink-bubble--brett-cole--2024--9781923020504" rel="noopener" target="_blank">Paperback at Readings</a>
+          <a class="btn ghost" href="https://www.amazon.com.au/dp/1923020501" rel="noopener" target="_blank">Amazon</a>
+        </div>
+      </div>
+    </div>
+    <div class="frags" aria-hidden="true">
+      <p class="frag">part philosophical musing</p>
+      <p class="frag">part travel journal</p>
+      <p class="frag">part piecing together the broken</p>
+    </div>
+    <p class="opening" id="opening" aria-hidden="true">It has just been the Pink Bubble at work over and over.</p>
+  </div>
+</header>
+
+<main>
+<section class="blush voice" id="voice" aria-labelledby="voice-h">
+  <div class="wrap">
+    <div>
+      <h2 id="voice-h">The book</h2>
+      <blockquote>
+        <p>“I have always thought a lot about writing. I have often felt compelled to do it.”</p>
+        <cite>The Pink Bubble</cite>
+      </blockquote>
+      <p class="parts">Part philosophical musing, part travel journal, part piecing together the broken to create something new, meaningful and whole.</p>
+      <p>Brett wrote it over some two decades, coming back to it at different times as a kind of journal.</p>
+    </div>
+    <div>
+      <dl>
+        <dt>Published</dt><dd>8 March 2024, Leschenault Press</dd>
+        <dt>Paperback</dt><dd>210 pages, A$25.99</dd>
+        <dt>ISBN</dt><dd>9781923020504</dd>
+      </dl>
+      <div class="buy">
+        <a class="btn main" href="https://www.readings.com.au/product/9781923020504/the-pink-bubble--brett-cole--2024--9781923020504" rel="noopener" target="_blank">Readings</a>
+        <a class="btn ghost" href="https://www.amazon.com.au/dp/1923020501" rel="noopener" target="_blank">Amazon</a>
+        <a class="btn ghost" href="https://shop.ingramspark.com/b/084?params=acZLOduzIgIsp3VZW9RIGOnwWRWlDyPTQwsINiCXgPa" rel="noopener" target="_blank">IngramSpark shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="title" aria-labelledby="title-h">
+  <div class="wrap">
+    <h2 id="title-h">Where the title comes from</h2>
+    <div>
+      <p class="meditation">The pink bubble is a meditation from Shakti Gawain’s <em>Creative Visualisation</em>, one where “affirmations are made while visualisations are being created”.</p>
+      <p>Brett adapted the book’s title from it.</p>
+      <div class="shelf">
+        <h3>Anton’s shelf</h3>
+        <p>Anton is based on the narrator of Sartre’s <em>Nausea</em>. Brett also names <em>Crime and Punishment</em> and <em>The Catcher in the Rye</em> as influences, for the way their characters work through inner turmoil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blush about" aria-labelledby="about-h">
+  <div class="wrap">
+    <img src="img/brett-cole.webp" alt="Brett Cole, smiling, in glasses" width="350" height="350" loading="lazy">
+    <div>
+      <h2 id="about-h">About Brett</h2>
+      <p>Brett Cole was born in Nambour, Queensland, and lives in the south west of Western Australia.</p>
+      <p>He was a printer, then took a Bachelor of Arts in English and Comparative Literature and Philosophy and became a teacher. He now works as a disability support worker. <em>The Pink Bubble</em> is his first book, and he was one of the authors at the 2025 Indie Author Book Fair in Bunbury.</p>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="more-h">
+  <div class="wrap">
+    <h2 id="more-h">Hear Brett and read about the book</h2>
+    <ul>
+      <li><a href="https://open.spotify.com/episode/5fbPIjdCHMlegQmk0HBHa6" rel="noopener" target="_blank">Brett Cole and The Pink Bubble</a><span>Colourful Local Identities podcast</span></li>
+      <li><a href="https://xpressmag.com.au/south-west-author-brett-coles-book-of-life/" rel="noopener" target="_blank">South West author Brett Cole’s ‘Book of Life’</a><span>X-Press Magazine interview, April 2024</span></li>
+      <li><a href="https://bluewolf-reviews.com/non-fiction/the-pink-bubble-become-who-you-are/" rel="noopener" target="_blank">The Pink Bubble: Become Who You Are</a><span>Blue Wolf Reviews</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="close" aria-label="Get the book">
+  <img class="ring" src="img/bubble.webp" alt="" width="700" height="700" loading="lazy">
+  <p>“Anton... become who you are.”</p>
+  <div class="buy">
+    <a class="btn main" href="https://www.readings.com.au/product/9781923020504/the-pink-bubble--brett-cole--2024--9781923020504" rel="noopener" target="_blank">Paperback at Readings</a>
+    <a class="btn ghost" href="https://www.amazon.com.au/dp/1923020501" rel="noopener" target="_blank">Amazon</a>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Brett Cole. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  reduce.addEventListener&&reduce.addEventListener('change',function(){location.reload()});
+  if(reduce.matches) return;
+  document.documentElement.classList.add('js');
+  var hero=document.getElementById('hero'),book=document.getElementById('book'),orb=document.getElementById('orb'),
+      cover=document.getElementById('cover'),copy=document.getElementById('copy'),opening=document.getElementById('opening'),
+      discs=[document.getElementById('d1'),document.getElementById('d2'),document.getElementById('d3')],
+      frags=[].slice.call(document.querySelectorAll('.frag'));
+  var B,vw,vh,ticking=false;
+  var dmove=[[-6,-5],[16,-4],[-2,8]];
+  function clamp(x){return x<0?0:x>1?1:x}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function measure(){
+    orb.style.transform='none';
+    var r=book.getBoundingClientRect(),pr=book.closest('.pin').getBoundingClientRect();
+    B={cx:r.left-pr.left+r.width/2,cy:r.top-pr.top+r.height/2,w:r.width};
+    vw=window.innerWidth;vh=window.innerHeight;
+    update();
+  }
+  function update(){
+    ticking=false;
+    var span=hero.offsetHeight-vh;if(span<1)span=1;
+    var p=clamp((window.scrollY-hero.offsetTop)/span);
+    /* the bubble: a dot at the centre, swells past the screen, then settles round the book */
+    var orbD=B.w*1.8, big=Math.max(vw,vh)*1.15/orbD, s, k;
+    if(p<0.45){var a=ease(clamp(p/0.45));s=0.05+(big-0.05)*a;k=0}
+    else{var b=ease(clamp((p-0.45)/0.35));s=big+(1-big)*b;k=b}
+    var tx=(vw/2-B.cx)*(1-k), ty=(vh/2-B.cy)*(1-k);
+    orb.style.transform='translate3d('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px,0) scale('+s.toFixed(4)+')';
+    discs.forEach(function(d,i){d.style.transform='translate3d('+(dmove[i][0]*p).toFixed(2)+'vmax,'+(dmove[i][1]*p).toFixed(2)+'vmax,0)'});
+    opening.style.opacity=(1-clamp(p/0.1)).toFixed(3);
+    frags.forEach(function(f,i){
+      var a=0.12+i*0.13,t=clamp((p-a)/0.2);
+      var o=t<=0||t>=1?0:Math.min(1,Math.sin(t*Math.PI)*1.7);
+      f.style.opacity=o.toFixed(3);
+      f.style.transform='translate3d(0,'+((0.5-t)*0.3*vh).toFixed(1)+'px,0)';
+    });
+    var c=clamp((p-0.62)/0.2);
+    cover.style.opacity=c.toFixed(3);
+    cover.style.transform='translate3d(0,'+((1-ease(c))*0.35*vh).toFixed(1)+'px,0)';
+    var t2=clamp((p-0.8)/0.14);
+    copy.style.opacity=t2.toFixed(3);
+    copy.style.pointerEvents=t2<0.6?'none':'';
+    copy.style.transform='translate3d(0,'+((1-t2)*20).toFixed(1)+'px,0)';
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  window.addEventListener('resize',measure);
+  window.addEventListener('load',measure);
+  measure();
+})();
+</script>
+</body>
+</html>
