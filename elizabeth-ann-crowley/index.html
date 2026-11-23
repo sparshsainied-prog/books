@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A Silence in the Forest by Elizabeth Ann Crowley</title>
+<meta name="description" content="A homepage idea for A Silence in the Forest, a fairy picture book set in the Australian bush, written by Elizabeth Ann Crowley and illustrated by Christina Miesen.">
+<meta property="og:title" content="A Silence in the Forest by Elizabeth Ann Crowley">
+<meta property="og:description" content="Lily the Fairy, Sally the sprite and the Rosebush Forest. A homepage idea made by Lamplit Studio.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/elizabeth-ann-crowley/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/elizabeth-ann-crowley/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23D93A55'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23FFD65C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Delius&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pond:#26315F;      /* deep blue of the cover lettering, darkened */
+  --title:#4F5FB0;     /* the cover's periwinkle title */
+  --sky:#E6ECF8;       /* pale sky behind the hills */
+  --leaf:#3F8F68;      /* fern green */
+  --rose:#D93A55;      /* the red roses */
+  --sun:#FFD65C;       /* yellow roses and fairy dust */
+  --ink:#1F2547;
+  --display:"Dancing Script", cursive;
+  --text:"Delius", "Comic Sans MS", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:4px}
+.strip{background:var(--pond);color:#fff;font-size:14px;line-height:1.4;padding:10px 16px;text-align:center}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:#fff;padding:8px 12px;z-index:20}
+
+/* Hero: pinned, three planes */
+.hero{position:relative;height:280vh;background:var(--pond)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.bg{inset:-8%;background:url(img/roses-soft.jpg) center/cover no-repeat}
+.veil{background:var(--pond);opacity:.6}
+.coverwrap{display:flex;align-items:center;justify-content:center}
+.cover{width:min(78vw,620px);border-radius:6px;box-shadow:0 18px 40px rgba(15,20,50,.45);transform-origin:72% 78%}
+.dust{inset:-10% -5%;background:url(img/dust.png) center/cover no-repeat;pointer-events:none}
+.line{position:absolute;left:0;right:0;top:12%;padding:0 20px;text-align:center;color:#fff}
+.line p{margin:0 auto;max-width:22ch;font-family:var(--display);font-weight:700;font-size:clamp(30px,6.4vw,58px);line-height:1.15;text-shadow:0 2px 14px rgba(15,20,50,.6)}
+.line small{display:block;margin-top:12px;font-family:var(--text);font-size:15px;opacity:.9}
+.end{position:absolute;left:0;right:0;bottom:5%;text-align:center;color:#fff;padding:0 16px}
+.end h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,46px);line-height:1.1}
+.end p{margin:4px 0 0;font-size:15px}
+.end,.end h1{text-shadow:0 2px 12px rgba(15,20,50,.7)}
+
+/* Content */
+main section{padding:72px 20px}
+.wrap{max-width:1040px;margin:0 auto}
+h2{font-family:var(--display);font-weight:700;color:var(--title);font-size:clamp(34px,5vw,50px);line-height:1.1;margin:0 0 18px}
+.book{display:grid;gap:36px;align-items:start}
+.blurb p{margin:0 0 14px;max-width:58ch}
+.facts{list-style:none;padding:0;margin:20px 0 0;font-size:15px}
+.facts li{padding:6px 0;border-top:1px dashed rgba(31,37,71,.25)}
+.buy{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px 999px 999px 999px;text-decoration:none;font-weight:700}
+.btn-main{background:var(--rose);color:#fff}
+.btn-main:hover{background:#B92C45}
+.btn-alt{border:2px solid var(--title);color:var(--title)}
+.btn-alt:hover{background:#fff}
+.note{font-size:14px;margin-top:10px;max-width:52ch}
+
+.inside{background:#fff}
+.spreads{display:grid;gap:18px;margin-top:8px}
+.spreads figure{margin:0}
+.spreads img{border-radius:6px}
+.spreads figcaption{font-size:15px;margin-top:8px;max-width:46ch}
+.quote{margin:40px 0 0;padding:0;font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.25;color:var(--pond);max-width:30ch}
+.quote cite{display:block;font-family:var(--text);font-style:normal;font-size:15px;margin-top:6px;color:var(--ink)}
+
+.about{background:var(--leaf);color:#fff}
+.about h2{color:#fff}
+.aboutgrid{display:grid;gap:30px;align-items:center}
+.about img{border-radius:6px;max-width:340px}
+.about p{max-width:58ch}
+.about blockquote{margin:18px 0;font-family:var(--display);font-size:26px;line-height:1.3}
+.next{background:var(--sky)}
+.next p{max-width:58ch}
+
+footer{background:var(--pond);color:#fff;padding:28px 16px 36px;text-align:center;font-size:14px}
+
+@media (min-width:820px){
+  .book{grid-template-columns:5fr 6fr}
+  .spreads{grid-template-columns:7fr 5fr}
+  .spreads figure:first-child{grid-row:span 2}
+  .aboutgrid{grid-template-columns:auto 1fr}
+  .line{top:9%}
+}
+@media (max-width:819px){
+  .cover{width:88vw}
+  .end{bottom:4%}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:auto;min-height:100svh;padding:28px 0 32px;display:flex;flex-direction:column;gap:22px}
+  .coverwrap,.line,.end{position:relative;inset:auto;top:auto;bottom:auto}
+  .coverwrap{order:2;padding:0 16px}
+  .line{order:1}.end{order:3}
+  .cover{transform:none!important}
+  .line,.end{opacity:1!important;transform:none!important}
+  .dust{opacity:.7!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+<div class="strip">A website idea made by Lamplit Studio for Elizabeth Ann Crowley. Not her official site.</div>
+
+<header class="hero" id="hero" aria-label="A Silence in the Forest">
+  <div class="stage">
+    <div class="plane bg" id="bg" aria-hidden="true"></div>
+    <div class="plane veil" id="veil" aria-hidden="true"></div>
+    <div class="plane coverwrap"><img class="cover" id="cover" src="img/cover.jpg" width="1400" height="1082" fetchpriority="high" alt="The cover of A Silence in the Forest: Lily the Fairy and Sally the sprite above red and yellow roses, with dragonflies and a magpie."></div>
+    <div class="plane dust" id="dust" aria-hidden="true"></div>
+    <div class="line" id="line">
+      <p>Lily the fairy lived in a purple waterlily, in the middle of a pond, amongst a beautiful rosebush forest.</p>
+      <small>From A Silence in the Forest</small>
+    </div>
+    <div class="end" id="end">
+      <h1>A Silence in the Forest</h1>
+      <p>Written by Elizabeth Ann Crowley. Illustrated by Christina Miesen.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="book">
+    <div class="wrap book">
+      <img src="img/roses.jpg" width="798" height="600" loading="lazy" alt="A page from the book: fairies flying over a garden of red, yellow and pink roses.">
+      <div class="blurb">
+        <h2>Lily, Sally and the Rosebush Forest</h2>
+        <p>Lily the Fairy spends her days tending to the needs of the peaceful forest folk. She loves her role of protecting the beautiful Rosebush Forest.</p>
+        <p>Then Sally the sprite turns up. She's an old fairy school rival who never finished fairy school, and she's jealous. Lily and her friends have to act quickly to bring peace back to the forest. Can Sally's naughty spell be broken, or will the forest be forever changed?</p>
+        <p>It's set in the Australian bush, with native animals in the main roles, and it's about friendship, jealousy, forgiveness and kindness.</p>
+        <ul class="facts">
+          <li>Picture book for ages 3 to 8</li>
+          <li>58 pages, paperback</li>
+          <li>Illustrated by Christina Miesen</li>
+        </ul>
+        <div class="buy">
+          <a class="btn btn-main" href="https://www.anandaorganicaustralia.com/product-page/a-silence-in-the-forest">Buy a signed copy</a>
+          <a class="btn btn-alt" href="https://www.amazon.com.au/Silence-Forest-Elizabeth-Ann-Crowley/dp/1922851388">Amazon</a>
+        </div>
+        <p class="note">Signed copies come with a personal dedication and a matching bookmark. Write the child's name when you order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <h2>Inside the book</h2>
+      <div class="spreads">
+        <figure>
+          <img src="img/waterlily.jpg" width="800" height="603" loading="lazy" alt="Lily the Fairy sitting on her purple waterlily in a pond, with frogs, fish and a lizard around her.">
+          <figcaption>Lily's waterlily, with the frogs and the fish she loves.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/potion.jpg" width="796" height="599" loading="lazy" alt="Lily stirring a cauldron next to a handwritten recipe for rose petal potion.">
+          <figcaption>Rose petal potion: fresh rose petals, essence of vanilla and a sprinkling of fairy dust, stirred in a big cauldron.</figcaption>
+        </figure>
+      </div>
+      <p class="quote">“It now has to be read every night.”<cite>Liz, review on Amazon</cite></p>
+      <p class="quote">“Beautiful and fantastical!”<cite>Alison, Indie Book reviewer</cite></p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap aboutgrid">
+      <img src="img/elizabeth.jpg" width="800" height="1163" loading="lazy" alt="Elizabeth Ann Crowley holding A Silence in the Forest and High High High Up in the Sky.">
+      <div>
+        <h2>About Elizabeth</h2>
+        <p>Elizabeth lives on the Limestone Coast in regional South Australia. She and her husband Rob run a small boutique caper farm with their dog Boy, and she spends her days tilling the soil, planting seeds and growing vegetables.</p>
+        <blockquote>“I just want to bring some joy and magic into children’s lives through my stories.”</blockquote>
+        <p>A Silence in the Forest is her first children's book.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="wrap">
+      <h2>Also by Elizabeth</h2>
+      <p>High High High Up in the Sky is about Billy the red-tailed black cockatoo and his best friend Oz the wedge-tailed eagle. When Billy strays far from home, Oz has to find him. Christina Miesen illustrated this one too.</p>
+      <p>For school visits, events and trade orders, <a href="https://www.instagram.com/elizabethanncrowley/">message Elizabeth on Instagram</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>A preview made by Lamplit Studio for Elizabeth Ann Crowley. Not affiliated, not live.<br>Cover and inside pages illustrated by Christina Miesen.</footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (rm.matches) return;
+  var hero=document.getElementById('hero'), bg=document.getElementById('bg'), veil=document.getElementById('veil'),
+      cover=document.getElementById('cover'), dust=document.getElementById('dust'),
+      line=document.getElementById('line'), end=document.getElementById('end'), ticking=false;
+  function clamp(v){return v<0?0:v>1?1:v}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function draw(){
+    ticking=false;
+    var r=hero.getBoundingClientRect(), span=hero.offsetHeight-window.innerHeight;
+    var p=clamp(-r.top/span);
+    var z=ease(clamp(p/0.75));                       // pull back out of the cover
+    cover.style.transform='scale('+(2.6-1.6*z)+')';
+    cover.style.opacity=(0.12+0.88*clamp((p-0.06)/0.3)).toFixed(3);   // dim while the line is read
+    bg.style.transform='translate3d(0,'+(-p*6)+'%,0) scale(1.08)';
+    veil.style.opacity=(0.55-0.2*z).toFixed(3);
+    dust.style.transform='translate3d(0,'+(30-p*70)+'%,0)';
+    dust.style.opacity=(p<0.85?1:1-(p-0.85)/0.15).toFixed(3);
+    var lo=p<0.08?1:1-clamp((p-0.08)/0.25);          // the line reads first, then gives way
+    line.style.opacity=lo.toFixed(3);
+    line.style.transform='translate3d(0,'+(-p*40)+'px,0)';
+    var eo=clamp((p-0.6)/0.25);
+    end.style.opacity=eo.toFixed(3);
+    end.style.transform='translate3d(0,'+((1-eo)*20)+'px,0)';
+  }
+  function on(){ if(!ticking){ticking=true;requestAnimationFrame(draw);} }
+  window.addEventListener('scroll',on,{passive:true});
+  window.addEventListener('resize',on);
+  draw();
+})();
+</script>
+</body>
+</html>

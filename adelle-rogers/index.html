@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Waiting for the Sun by Adelle Woods</title>
+<meta name="description" content="A homepage idea for Waiting for the Sun by Adelle Woods. Made by Lamplit Studio, not her official site.">
+<meta property="og:title" content="Waiting for the Sun by Adelle Woods">
+<meta property="og:description" content="A homepage idea made by Lamplit Studio. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/adelle-rogers/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/adelle-rogers/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2213%22 fill=%22%23c3680b%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#f0eff3; --white:#fbfbfc; --night:#4a5c78; --navy:#1b2436; --navy-soft:#46506a;
+  --orange:#c3680b; --orange-deep:#a3530a; --sand:#ddc1a9; --skin:#f2d8c7;
+  --display:"League Spartan", "Arial Black", sans-serif; --text:"Nunito Sans", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--navy);font:400 1.125rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--orange-deep);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.strip{position:relative;z-index:6;margin:0;background:var(--navy);color:#d6dbe6;font-size:.95rem;line-height:1.4;padding:.55rem 16px;text-align:center}
+.strip strong{color:#fff;font-weight:700}
+
+/* hero: the finished cover by default (no JS, reduced motion) */
+.hero{position:relative}
+.stage{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--sky)}
+.anim .hero{height:330vh}
+.anim .stage{position:sticky;top:0;min-height:0}
+.nightbg{position:absolute;inset:0;background:var(--night);opacity:0;will-change:opacity}
+.box{position:absolute;left:0;top:0;width:3500px;height:1700px;transform-origin:0 0;pointer-events:none}
+.box.fade{-webkit-mask-image:linear-gradient(90deg,transparent 1210px,#000 1360px);mask-image:linear-gradient(90deg,transparent 1210px,#000 1360px)}
+.box img{position:absolute;left:0;top:0;width:100%;max-width:none;height:100%}
+.night{opacity:0;will-change:opacity}
+.sun{position:absolute;left:1457px;top:557px;width:520px;height:520px;border-radius:50%;opacity:0;will-change:transform,opacity;
+  background:radial-gradient(circle,#fffaf2 0%,#fff3dc 12%,rgba(255,222,170,.8) 22%,rgba(246,190,120,.36) 38%,rgba(236,160,85,.12) 55%,rgba(236,160,85,0) 70%)}
+.title{position:absolute;z-index:4;margin:0;will-change:transform,opacity}
+.title img{width:100%}
+.first{position:absolute;z-index:4;left:16px;right:16px;top:clamp(20px,4svh,40px);margin:0;max-width:24ch;font:400 clamp(1.35rem,5.6vw,2rem)/1.3 var(--text);font-style:italic;color:#f6efe8;display:none}
+.anim .first{display:block}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+section{padding:clamp(56px,10vw,120px) 16px}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font:800 clamp(2rem,7vw,3.2rem)/1 var(--display);color:var(--navy);margin:0 0 1.1rem}
+.quote{font:700 clamp(1.7rem,6vw,3rem)/1.12 var(--display);color:var(--orange-deep);margin:0 0 3rem;max-width:24ch;text-wrap:balance}
+.book .grid{display:grid;gap:2rem;align-items:start}
+.book .cover{width:min(300px,72vw);box-shadow:0 2px 0 rgba(27,36,54,.06),0 18px 34px rgba(27,36,54,.2)}
+.book p{max-width:58ch;margin:0 0 1rem}
+.meta{color:var(--navy-soft);font-size:1rem}
+.buy{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.65rem 1.25rem .5rem;font:700 .95rem/1 var(--display);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--orange-deep);border:2px solid var(--orange-deep)}/* slop-ok unslop-ignore: tracked caps copy the cover lettering ADELLE WOODS */
+.btn.line{background:transparent;color:var(--navy);border-color:var(--navy)}
+
+.about{background:var(--white)}
+.about .grid{display:grid;gap:1.8rem;align-items:start}
+.about img{width:min(280px,68vw)}
+.about p{max-width:58ch;margin:0 0 1rem}
+
+.close{background:var(--sand)}
+.close p{max-width:52ch;margin:0 0 1.3rem}
+.close .links{display:flex;flex-wrap:wrap;gap:.7rem}
+.close .btn.line{border-color:var(--navy)}
+footer{background:var(--navy);color:#cfd5e1;font-size:.95rem;padding:1.3rem 16px 6rem;text-align:center}
+.bar{position:fixed;z-index:8;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 16px calc(.6rem + env(safe-area-inset-bottom));background:var(--navy);color:#fff;transform:translate3d(0,110%,0);transition:transform .25s ease-out}
+.bar.on{transform:none}
+.bar span{font:800 1rem/1.1 var(--display);white-space:nowrap}
+.bar .btn{min-height:44px;white-space:nowrap;padding:.6rem 1rem .5rem}
+@media (min-width:820px){.bar{left:auto;right:24px;bottom:24px;padding:.6rem .6rem .6rem 1.2rem}}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+
+@media (min-width:820px){
+  .first{left:6vw;right:auto;top:auto;bottom:16vh;max-width:22ch}
+  .book .grid{grid-template-columns:300px 1fr;gap:3.5rem}
+  .about .grid{grid-template-columns:280px 1fr;gap:3.5rem}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .first{left:4vw;right:auto;top:auto;bottom:8vh;max-width:30ch;font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<p class="strip"><strong>A website idea made by Lamplit Studio for Adelle Woods.</strong> Not her official site.</p>
+
+<main>
+<div class="hero" id="hero">
+  <div class="stage" id="stage">
+    <div class="nightbg" id="nightbg" aria-hidden="true"></div>
+    <div class="box" id="box" aria-hidden="true">
+      <img src="img/sky-day.webp" width="3500" height="1700" alt="" fetchpriority="high">
+      <img class="night" id="skyN" src="img/sky-night.webp" width="3500" height="1700" alt="">
+      <div class="sun" id="sun"></div>
+      <img id="fgD" src="img/fg-day.webp" width="3500" height="1700" alt="">
+      <img class="night" id="fgN" src="img/fg-night.webp" width="3500" height="1700" alt="">
+    </div>
+    <p class="first" id="first">For as long as Lacey can remember, her world has felt unsteady beneath her feet.</p>
+    <h1 class="title" id="title"><img src="img/title.png" width="755" height="722" alt=""><span class="vh">Waiting for the Sun, by Adelle Woods</span></h1>
+  </div>
+</div>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <p class="quote">“He made me feel like having hope wasn’t such a bad thing but rather a brave thing.”</p>
+    <div class="grid">
+      <img class="cover" src="img/cover.jpg" width="700" height="1082" alt="Cover of Waiting for the Sun by Adelle Woods: a girl in a white dress kicks through shallow water on a beach, lit from behind by the sun.">
+      <div>
+        <h2>Waiting for the Sun</h2>
+        <p>Between the bullying at school and her unloving father at home, Lacey has forgotten what true safety feels like.</p>
+        <p>Then she meets kind and protective Alex, and parts of her world seem slightly brighter. As they grow closer, her scepticism about friendship lingers, making it harder for her to trust than she anticipated.</p>
+        <p class="meta">Young adult. Typewriter Pub, January 2024. 175 pages in paperback.</p><!-- slop-ok: Typewriter Pub is the publisher -->
+        <div class="buy">
+          <a class="btn" href="https://www.amazon.com.au/Waiting-Sun-Adelle-Woods/dp/1644343134">Paperback on Amazon</a>
+          <a class="btn line" href="https://www.amazon.com.au/dp/B0CTF5B3CR">Kindle edition</a>
+          <a class="btn line" href="https://www.goodreads.com/book/show/206035824-waiting-for-the-sun">Goodreads</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <img src="img/adelle.jpg" width="600" height="689" alt="Adelle Woods smiling, in a black and white photo.">
+    <div>
+      <h2>Adelle Woods</h2>
+      <p>Adelle is a young adult contemporary writer from Adelaide, South Australia. Waiting for the Sun is her first novel.</p>
+      <p>When she’s not dreaming up stories, she’s reading copious amounts of books or writing poetry. She writes poems about love, hope and Jesus, and posts them as Adelle Rogers on <a href="https://www.instagram.com/poetrybyadelle/">@poetrybyadelle</a>.</p>
+      <p>In October 2026 she shared the book with readers at the Adelaide Indie Book Festival.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close" id="next">
+  <div class="wrap">
+    <h2>The next one</h2>
+    <p>Adelle is working on her next novel. Follow along on Instagram or Substack.</p>
+    <div class="links">
+      <a class="btn" href="https://www.instagram.com/byadellerogers/">@byadellerogers</a>
+      <a class="btn line" href="https://www.instagram.com/poetrybyadelle/">@poetrybyadelle</a>
+      <a class="btn line" href="https://substack.com/@adellerogers">Substack</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="bar" id="bar"><span>Waiting for the Sun</span><a class="btn" href="https://www.amazon.com.au/Waiting-Sun-Adelle-Woods/dp/1644343134" tabindex="-1" id="barlink">Buy on Amazon</a></div>
+
+<footer>A preview made by Lamplit Studio for Adelle Woods. Not affiliated, not live.</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  reduce.addEventListener('change', () => location.reload());
+  const $ = id => document.getElementById(id);
+  const hero = $('hero'), stage = $('stage'), box = $('box'), sun = $('sun'), fgD = $('fgD'), title = $('title'), first = $('first');
+  const nights = [$('skyN'), $('fgN'), $('nightbg')];
+  // art coordinates (px of the 3500x1700 planes): the cover sits at x 1200..2300
+  const ART = { x: 1200, w: 1100, h: 1700 }, TITLE = { x: 1381, y: 77, w: 755, h: 722 };
+  const SUN_RISE = 430; // the sun starts this far below its place by her hair, behind the sand
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const out = t => 1 - Math.pow(1 - t, 3);
+  let L;
+  function layout() {
+    const W = innerWidth, H = stage.clientHeight, wide = W >= 820 && W > H * 1.05;
+    let k, left, top;
+    if (wide) {
+      // the cover photo sits on the right, its left edge fading into the sky behind the title
+      k = Math.max(H * 0.98 / 1700, W * 0.6 / ART.w);
+      left = W - (ART.x + ART.w) * k; top = H - 1700 * k;
+      const tw = Math.min(W * 0.36, 520, (H * 0.62) * TITLE.w / TITLE.h);
+      title.style.width = tw + 'px'; title.style.left = W * 0.06 + 'px'; title.style.top = H * 0.1 + 'px';
+    } else {
+      k = Math.min(W * 1.15 / ART.w, H * 0.9 / ART.h);
+      left = W / 2 - 1750 * k; top = H - 1700 * k;
+      title.style.width = TITLE.w * k + 'px';
+      title.style.left = left + TITLE.x * k + 'px';
+      title.style.top = Math.max(12, top + TITLE.y * k) + 'px';
+    }
+    box.classList.toggle('fade', wide);
+    box.style.transform = `translate3d(${Math.round(left)}px,${Math.round(top)}px,0) scale(${k})`;
+    L = { W, H, k };
+  }
+  function frame() {
+    const r = hero.getBoundingClientRect(), travel = hero.offsetHeight - L.H;
+    const p = clamp(-r.top / travel);
+    const dawn = out(seg(p, .1, .74));
+    const n = (1 - dawn).toFixed(3);
+    for (const el of nights) el.style.opacity = n;
+    // the day figure only comes in once dawn starts, so its soft edges never glow through the night
+    fgD.style.opacity = clamp(dawn * 4).toFixed(3);
+    const rise = out(seg(p, .04, .72));
+    sun.style.transform = `translate3d(0,${((1 - rise) * SUN_RISE).toFixed(1)}px,0) scale(${(.8 + .2 * rise).toFixed(3)})`;
+    sun.style.opacity = (seg(p, 0, .06) * (1 - .8 * seg(p, .66, .9))).toFixed(3);
+    first.style.opacity = (1 - seg(p, .1, .24)).toFixed(3);
+    const t = seg(p, .6, .8);
+    title.style.opacity = t.toFixed(3);
+    title.style.transform = `translate3d(0,${((1 - out(t)) * 18).toFixed(1)}px,0)`;
+  }
+  // after the sunrise, a buy bar comes up within thumb reach
+  const bar = $('bar'), barlink = $('barlink');
+  function barState() { const on = hero.getBoundingClientRect().bottom < innerHeight * .4; bar.classList.toggle('on', on); barlink.tabIndex = on ? 0 : -1; }
+  addEventListener('scroll', barState, { passive: true }); barState();
+  layout();
+  if (reduce.matches) { addEventListener('resize', layout); return; }
+  document.documentElement.classList.add('anim');
+  layout(); frame();
+  let busy = false;
+  addEventListener('scroll', () => { if (!busy) { busy = true; requestAnimationFrame(() => { busy = false; frame(); }); } }, { passive: true });
+  addEventListener('resize', () => { layout(); frame(); });
+})();
+</script>
+</body>
+</html>

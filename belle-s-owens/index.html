@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Lies We Loved by Belle S. Owens</title>
+<meta name="description" content="A homepage idea for The Lies We Loved, the romance novel by Belle S. Owens. Made by Lamplit Studio, not her official site.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Lies We Loved by Belle S. Owens">
+<meta property="og:description" content="They promised forever. But forever doesn't survive a lie. A homepage idea made by Lamplit Studio.">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/belle-s-owens/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/belle-s-owens/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')</script>
+<link rel="icon" href="img/sun.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#060b0a;      /* the marble's black-green, sampled from her cover */
+  --marble:#0e1e16;      /* green in the marble */
+  --gold:#cfa56b;        /* foil, sampled */
+  --gold-deep:#c1934e;
+  --ink:#fbfbf8;         /* the cover's title white */
+  --ink-soft:#b9c2b8;
+  --display:"Cinzel", "Times New Roman", serif;
+  --text:"Lora", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:44px;z-index:30;background:var(--ink);color:var(--ground);padding:8px 12px}
+
+.strip{position:relative;z-index:20;background:#000;color:var(--ink-soft);font-size:.8125rem;line-height:1.4;padding:9px 16px;text-align:center}
+
+/* ---------- hero: her cover, taken apart ---------- */
+.hero{position:relative;height:100svh}
+.js .hero{height:340svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--ground)}
+.plate{position:absolute;inset:-4%;will-change:transform}
+.plate img{width:100%;height:100%;object-fit:cover}
+.topbar{position:absolute;z-index:6;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font-family:var(--display);font-size:.875rem;letter-spacing:.06em}
+.topbar a{text-decoration:none;padding:10px 4px;min-height:44px;display:inline-flex;align-items:center}
+.topbar .buy{color:var(--gold);border-bottom:1px solid currentColor;padding:6px 0;min-height:auto}
+
+.cover{position:absolute;left:50%;top:calc(50% + 22px);width:min(100vw,calc((100svh - 64px) * .6758));aspect-ratio:938/1388;transform:translate(-50%,-50%);container-type:inline-size}
+.cover > *{position:absolute;margin:0}
+.frame{inset:0;width:100%;will-change:transform,opacity}
+.title{left:13.11%;top:15.49%;width:74.95%;will-change:transform,opacity}
+.title img{width:100%}
+.tag{left:0;right:0;top:47.4%;text-align:center;font-size:max(3.35cqw,.8rem);line-height:1.45;will-change:opacity}
+.byline{left:0;right:0;top:82.6%;text-align:center;font-family:var(--display);font-weight:600;font-size:max(5cqw,.95rem);letter-spacing:.05em;will-change:opacity}
+.hands{left:7.57%;top:59.15%;width:86.14%;aspect-ratio:808/322;will-change:transform}
+.hand{position:absolute;will-change:transform}
+.hand-l{left:0;top:1.24%;width:50%}
+.hand-r{left:49.38%;top:0;width:50.62%}
+
+.lines{position:absolute;z-index:4;left:16px;right:16px;top:25svh;text-align:center;pointer-events:none}
+.lines p{position:absolute;left:0;right:0;margin:0 auto;max-width:22ch;font-size:clamp(1.3rem,5.6vw,2.1rem);line-height:1.35;opacity:0;will-change:opacity,transform}
+.lines .l3{font-family:var(--display);font-size:clamp(1.3rem,5.6vw,2.3rem);max-width:24ch;line-height:1.3;text-wrap:balance}
+.lines .l3 span{display:block;color:var(--gold)}
+
+/* ---------- the book ---------- */
+.book{background:var(--marble);padding:72px 16px 80px}
+.book-in{max-width:1080px;margin:0 auto;display:grid;gap:40px}
+.book-cover{max-width:min(300px,100%);margin:0 auto;box-shadow:0 18px 40px rgba(0,0,0,.55)}
+.book h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,6vw,2.4rem);line-height:1.25;margin:0 0 22px;max-width:20ch;text-wrap:balance}
+.book p{max-width:58ch;margin:0 0 16px;color:var(--ink)}
+.facts{margin:24px 0 28px;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;color:var(--ink-soft);font-size:.9375rem}
+.facts dt{font-family:var(--display);color:var(--gold)}
+.facts dd{margin:0}
+.buys{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-family:var(--display);font-weight:600;font-size:.9375rem;letter-spacing:.04em;text-decoration:none;border:1px solid var(--gold);color:var(--gold);background:transparent}
+.btn.main{background:var(--gold);color:var(--ground)}
+.btn:hover{background:var(--gold-deep);color:var(--ground);border-color:var(--gold-deep)}
+
+/* ---------- three ways out ---------- */
+.ways{padding:88px 16px 96px;max-width:1080px;margin:0 auto}
+.ways .sun{width:48px;margin:0 0 36px}
+.ways h2{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.08em;color:var(--ink-soft);margin:0 0 28px}
+.ways ol{list-style:none;margin:0;padding:0;display:grid;gap:44px}
+.ways li{font-style:italic;font-size:clamp(1.5rem,6.4vw,2.9rem);line-height:1.25;max-width:17ch}
+.ways li:nth-child(2){justify-self:end;text-align:right}
+.ways li:nth-child(3){color:var(--gold);max-width:20ch}
+
+/* ---------- about ---------- */
+.about{border-top:1px solid rgba(207,165,107,.35);max-width:1080px;margin:0 auto;padding:72px 16px 88px;display:grid;gap:24px}
+.about h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,6vw,2.4rem);margin:0}
+.about blockquote{margin:0;font-size:clamp(1.25rem,4.8vw,1.75rem);line-height:1.4;font-style:italic;max-width:24ch}
+.about blockquote footer{margin-top:10px;font-style:normal;font-size:.875rem;color:var(--ink-soft)}
+.about p{margin:0 0 14px;max-width:56ch}
+.about .ig{color:var(--gold)}
+
+/* ---------- close: the hands come back ---------- */
+.close{position:relative;overflow:hidden;padding:96px 16px 104px;text-align:center;background:url(img/plate.jpg) center/cover var(--ground)}
+.close-hands{position:relative;width:min(92vw,760px);aspect-ratio:808/322;margin:0 auto 34px}
+.close-hands img{position:absolute;top:0;will-change:transform}
+.close-hands .hl{left:0;width:50%;top:1.24%}
+.close-hands .hr{left:49.38%;width:50.62%}
+.close h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,7vw,3rem);margin:0 auto 26px;max-width:16ch;line-height:1.2}
+.close .buys{justify-content:center}
+
+.foot{background:#000;color:var(--ink-soft);font-size:.8125rem;padding:22px 16px 28px;text-align:center}
+.foot p{margin:4px 0}
+
+@media (min-width:860px){
+  .lines{top:14svh}
+  .lines p{max-width:26ch}
+  .book{padding:110px 32px 120px}
+  .book-in{grid-template-columns:340px 1fr;gap:72px;align-items:start}
+  .book-cover{max-width:340px;margin:0;position:sticky;top:40px}
+  .ways{padding:130px 32px 140px}
+  .ways ol{gap:60px}
+  .about{grid-template-columns:1fr 1.3fr;gap:24px 72px;padding:110px 32px 120px}
+  .about h2{grid-column:1/-1}
+  .close{padding:130px 32px 140px}
+  .topbar{padding:18px 28px}
+}
+
+/* reduced motion: the end state, still */
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:100svh}
+  .lines{display:none}
+  .hand-l{transform:translateX(-5%) rotate(-3deg)}
+  .hand-r{transform:translateX(5%) rotate(3deg)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+<p class="strip">A website idea made by Lamplit Studio for Belle S Owens. Not their official site.</p>
+
+<header class="hero" id="top">
+  <div class="stage">
+    <picture class="plate" aria-hidden="true">
+      <source media="(min-aspect-ratio: 4/5)" srcset="img/plate-wide.jpg">
+      <img src="img/plate.jpg" alt="" width="938" height="1388" fetchpriority="high">
+    </picture>
+    <nav class="topbar" aria-label="Page">
+      <a href="#about">Belle S. Owens</a>
+      <a class="buy" href="#buy">Buy the book</a>
+    </nav>
+    <div class="cover">
+      <img class="frame" src="img/frame.webp" alt="" width="938" height="1388">
+      <h1 class="title"><img src="img/title.webp" alt="The Lies We Loved" width="703" height="413"></h1>
+      <p class="tag">They promised forever.<br>But forever doesn&rsquo;t survive a lie.</p>
+      <div class="hands" aria-hidden="true">
+        <img class="hand hand-l" src="img/hand-l.webp" alt="" width="404" height="302">
+        <img class="hand hand-r" src="img/hand-r.webp" alt="" width="409" height="322">
+      </div>
+      <p class="byline">Belle S. Owens</p>
+    </div>
+    <div class="lines" aria-hidden="true">
+      <p class="l1">On the night Paige Lawson planned to tell Elliot she was pregnant,</p>
+      <p class="l2">he told her he&rsquo;d fallen for someone else.</p>
+      <p class="l3">They promised forever. <span>But forever doesn&rsquo;t survive a lie.</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="book" id="book" aria-labelledby="book-h">
+    <div class="book-in">
+      <img class="book-cover" src="img/cover.jpg" alt="The cover of The Lies We Loved: two gold hands reaching for each other on green marble, inside a gold frame" width="938" height="1388" loading="lazy">
+      <div>
+        <h2 id="book-h">The end of their story was never truly theirs to write.</h2>
+        <p>On the night Paige Lawson planned to tell Elliot she was pregnant, he told her he&rsquo;d fallen for someone else.</p>
+        <p>Paige is left torn between the man who broke her heart and the dangerously charming doctor who offers her comfort she shouldn&rsquo;t want. Elliot, manipulated by his so-called best friend, makes mistake after mistake, including a drunken Vegas wedding.</p>
+        <dl class="facts">
+          <dt>Out</dt><dd>16 December 2025</dd>
+          <dt>Paperback</dt><dd>244 pages</dd>
+          <dt>Ebook</dt><dd>Kindle</dd>
+        </dl>
+        <div class="buys" id="buy">
+          <a class="btn main" href="https://www.booktopia.com.au/the-lies-we-loved-belle-s-owens/book/9781764209915.html">Paperback at Booktopia</a>
+          <a class="btn" href="https://www.amazon.com.au/dp/1764209915">Paperback on Amazon</a>
+          <a class="btn" href="https://www.amazon.com.au/dp/B0FHLR3Q67">Kindle</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ways" aria-labelledby="ways-h">
+    <img class="sun" src="img/sun.webp" alt="" width="97" height="90" loading="lazy">
+    <h2 id="ways-h">Paige has three ways out</h2>
+    <ol role="list">
+      <li>Will she forgive the man who broke her?</li>
+      <li>Trust the one who shouldn&rsquo;t want her?</li>
+      <li>Or finally choose herself and walk away?</li>
+    </ol>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">Belle S. Owens</h2>
+    <blockquote>
+      <p>Healing hearts in real life, shattering them on the page.</p>
+      <footer>Belle, on her Instagram</footer>
+    </blockquote>
+    <div>
+      <p>Belle is an Australian romance author. <em>The Lies We Loved</em> came out in December 2025 under her own imprint, Belle Owens Writes.</p>
+      <p>In November 2026 she was an attending author at Book Fair Australia in Sydney.</p>
+      <p><a class="ig" href="https://www.instagram.com/bellesowensauthor/">Follow @bellesowensauthor on Instagram</a></p>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <div class="close-hands" aria-hidden="true">
+      <img class="hl" src="img/hand-l.webp" alt="" width="404" height="302" loading="lazy">
+      <img class="hr" src="img/hand-r.webp" alt="" width="409" height="322" loading="lazy">
+    </div>
+    <h2 id="close-h">Rewrite your own ending.</h2>
+    <div class="buys">
+      <a class="btn main" href="https://www.booktopia.com.au/the-lies-we-loved-belle-s-owens/book/9781764209915.html">Buy the paperback</a>
+      <a class="btn" href="https://www.amazon.com.au/dp/B0FHLR3Q67">Read it on Kindle</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>A preview made by Lamplit Studio for Belle S Owens. Not affiliated, not live.</p>
+  <p>Cover image and blurb taken from the book&rsquo;s own listings.</p>
+</footer>
+
+<script>
+(function(){
+  var mq=matchMedia('(prefers-reduced-motion: reduce)');
+  if (mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  if (mq.matches) return;
+  var hero=document.querySelector('.hero'), q=function(s){return document.querySelector(s)};
+  var plate=q('.plate'), frame=q('.frame'), title=q('.title'), tag=q('.tag'), by=q('.byline'),
+      hands=q('.hands'), hl=q('.hand-l'), hr=q('.hand-r'), cover=q('.cover'),
+      l1=q('.l1'), l2=q('.l2'), l3=q('.l3');
+  var chl=q('.close-hands .hl'), chr=q('.close-hands .hr'), close=q('.close');
+  var cl=function(v){return v<0?0:v>1?1:v}, ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  var win=function(p,a,b,c,d){return p<a||p>d?0:p<b?(p-a)/(b-a):p<c?1:1-(p-c)/(d-c)};
+  var ticking=false;
+  function frameHero(){
+    ticking=false;
+    var r=hero.getBoundingClientRect(), travel=hero.offsetHeight-innerHeight;
+    var p=cl(-r.top/travel);
+    var vw=innerWidth, vh=innerHeight, wide=vw>=860;
+    var a=ease(cl(p/.28)), b=ease(cl((p-.3)/.42));
+    plate.style.transform='translate3d(0,'+(-2*p)+'%,0) scale('+(1.06-.06*p)+')';
+    frame.style.transform='scale('+(1+.4*a)+')'; frame.style.opacity=1-a;
+    title.style.transform='translate3d(0,'+(-28*a)+'%,0)'; title.style.opacity=1-a;
+    tag.style.opacity=1-cl(a*2); by.style.opacity=1-cl(a*2);
+    // hands: from their place on the cover to the lower middle of the screen
+    var cb=cover.getBoundingClientRect(), hb=hands.offsetWidth;
+    var S=wide?Math.min(1.5,(vw*.62)/hb):Math.min(1.12,(vw*.98)/hb);
+    var hy=cb.top+cb.height*.5915+hands.offsetHeight/2, target=vh*(wide?.64:.58);
+    var s=1+(S-1)*a;
+    hands.style.transform='translate3d(0,'+((target-hy)*a)+'px,0) scale('+s+')';
+    var d=(wide?16:13)*b;
+    hl.style.transform='translate3d('+(-d)+'%,'+(3*b)+'%,0) rotate('+(-3*b)+'deg)';
+    hr.style.transform='translate3d('+d+'%,'+(3*b)+'%,0) rotate('+(3*b)+'deg)';
+    var o1=win(p,.28,.36,.46,.52), o2=win(p,.5,.57,.66,.71), o3=cl((p-.72)/.1);
+    l1.style.opacity=o1; l1.style.transform='translate3d(0,'+(8*(1-o1))+'px,0)';
+    l2.style.opacity=o2; l2.style.transform='translate3d(0,'+(8*(1-o2))+'px,0)';
+    l3.style.opacity=o3; l3.style.transform='translate3d(0,'+(10*(1-o3))+'px,0)';
+    // close: the hands come back, nearly touching, as it arrives
+    var cr=close.getBoundingClientRect();
+    var c=ease(cl((vh-cr.top)/(vh*.85)));
+    var g=(1-c)*22;
+    chl.style.transform='translate3d('+(-g)+'%,0,0)'; chr.style.transform='translate3d('+g+'%,0,0)';
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(frameHero)}}
+  addEventListener('scroll',req,{passive:true}); addEventListener('resize',req);
+  frameHero();
+})();
+</script>
+</body>
+</html>

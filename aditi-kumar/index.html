@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Art of Doing Less and Living More, by Aditi Kumar</title>
+<meta name="description" content="A homepage idea for Aditi Kumar's book The Art of Doing Less and Living More. Made by Lamplit Studio, not her official site.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Art of Doing Less and Living More, by Aditi Kumar">
+<meta property="og:description" content="A homepage idea made by Lamplit Studio for Aditi Kumar. Not her official site.">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/books/aditi-kumar/">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/books/aditi-kumar/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315222f'/%3E%3Cpath d='M16 5l1.6 9.4L27 16l-9.4 1.6L16 27l-1.6-9.4L5 16l9.4-1.6z' fill='%23f4f6fb'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Marcellus matches the cover's roman capitals; Poppins matches the cover's tracked subtitle. slop-ok -->
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"><!-- slop-ok -->
+<style>
+:root{
+  --night:#15222f;
+  --ground:#0e0d12;
+  --teal:#4f7d9f;
+  --pale:#d2e2fb;
+  --dusk:#be7151;
+  --lamp:#e39a6b;
+  --ink:#f1ece6;
+  --ink-soft:#b9c3cf;
+  --display:"Marcellus", Georgia, serif;
+  --text:"Poppins", system-ui, sans-serif; /* slop-ok: matches the cover subtitle */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ground);color:var(--ink);-webkit-text-size-adjust:100%}
+body{font-family:var(--text);font-weight:300;font-size:1.0625rem;line-height:1.65;background:var(--ground)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--ground);padding:.5rem 1rem;z-index:50}
+.skip:focus{left:1rem;top:3rem}
+
+.notice{position:absolute;top:0;left:0;right:0;z-index:30;background:rgba(7,7,10,.82);color:var(--ink-soft);font-size:.78rem;line-height:1.4;padding:.6rem 1rem;text-align:center}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:240svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--night)}
+.scene{
+  --ar:0.8827;               /* phone: the cover's own portrait plate, 971 x 1100 */
+  --fig-x:25.23%;--fig-y:34.9%;--fig-w:49.85%;
+  --star-x:49.43%;--star-y:8.36%;--star-w:41.19%;
+  position:absolute;left:50%;top:0;
+  width:max(100vw, calc(100svh * var(--ar)));
+  aspect-ratio:971/1100;
+  transform:translateX(-50%);
+}
+.plane{position:absolute;will-change:transform,opacity}
+.sky{inset:0;transform-origin:62% 30%;transform:scale(var(--sky-s,1))}
+.sky img{width:100%;height:100%;object-fit:cover}
+.star{left:var(--star-x);top:var(--star-y);width:var(--star-w);mix-blend-mode:screen;opacity:var(--star-o,1);transform:scale(var(--star-s,1.12));transform-origin:50% 50%}
+.figure{left:var(--fig-x);top:var(--fig-y);width:var(--fig-w);transform:translateY(var(--fig-y-off,0%));transform-origin:50% 100%}
+.lights{left:-5%;right:-5%;bottom:-8%;height:70%;transform:translateY(var(--lights-y,0%));opacity:.85}
+.lights img{width:100%;height:100%;object-fit:cover}
+
+.list-wrap{position:absolute;z-index:2;left:1.25rem;top:calc(3.2rem + 2svh);width:min(62vw,24rem)}
+.list-wrap::before{content:"";position:absolute;inset:-2.5rem -3rem -2rem -2rem;background:radial-gradient(closest-side,rgba(10,16,24,.55),rgba(10,16,24,0));z-index:-1}
+.list-label{font-size:.78rem;color:var(--ink-soft);margin-bottom:.4rem}
+.todo{list-style:none}
+.todo li{position:relative;font-family:var(--display);font-size:clamp(1.25rem,5.6vw,1.9rem);line-height:1.35;padding:.08em 0;width:max-content;max-width:100%;
+  opacity:var(--o,.45);transform:translateY(var(--y,0px))}
+.todo li svg{position:absolute;left:-3%;top:52%;width:106%;height:.5em;overflow:visible;transform-origin:0 50%;transform:translateY(-50%) scaleX(var(--k,1))}
+.todo li path{fill:none;stroke:var(--lamp);stroke-width:2.2;stroke-linecap:round}
+.return{position:absolute;z-index:2;left:1.25rem;right:1.25rem;top:44svh;font-family:var(--display);font-size:clamp(1.5rem,6.4vw,2.6rem);line-height:1.25;max-width:15em;
+  opacity:var(--ret-o,1);transform:translateY(var(--ret-y,0px));text-shadow:0 1px 18px rgba(8,10,16,.6)}
+.return::before{content:"";position:absolute;inset:-2.5rem -3rem -2.5rem -2.5rem;background:radial-gradient(closest-side,rgba(10,16,24,.62),rgba(10,16,24,0));z-index:-1}
+.return small{display:block;font-family:var(--text);font-size:.8rem;color:var(--ink);margin-top:.6rem;text-shadow:0 1px 10px rgba(8,10,16,.9)}
+
+.title{position:absolute;z-index:3;left:1.25rem;right:1.25rem;bottom:4.5svh}
+.title::before{content:"";position:absolute;inset:-3rem -4rem -2.5rem -3rem;background:radial-gradient(closest-side,rgba(10,9,14,.6),rgba(10,9,14,0));z-index:-1}
+.title h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(1.55rem,7.2vw,3.3rem);line-height:1.08;letter-spacing:.01em} /* slop-ok: copies the cover's own tracked capitals */
+.title p{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:.7rem} /* slop-ok: copies the cover's own tracked capitals */
+.title .by{font-family:var(--display);font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);margin:0 0 .6rem} /* slop-ok: copies the cover's own tracked capitals */
+
+@media (min-aspect-ratio:1/1){
+  .hero{height:300svh}
+  .scene{
+    --ar:1.8182;             /* desktop: the plate widened from the cover, 2000 x 1100 */
+    --fig-x:61.7%;--fig-y:34.9%;--fig-w:24.2%;
+    --star-x:73.45%;--star-y:8.36%;--star-w:20%;
+    aspect-ratio:2000/1100;
+    width:max(100vw, calc(100svh * var(--ar)));
+  }
+  .list-wrap{left:7vw;top:calc(2.4rem + 8svh);width:30rem}
+  .todo li{font-size:clamp(1.6rem,2.4vw,2.3rem)}
+  .return{left:7vw;top:50svh;max-width:13em;font-size:clamp(2rem,3.4vw,3.2rem)}
+  .title{left:7vw;bottom:7svh;right:auto;max-width:46vw}
+  .title h1{font-size:clamp(2.2rem,3.9vw,3.8rem)}
+}
+
+/* ---------- sections ---------- */
+section{padding:clamp(4.5rem,12vw,8rem) 1.25rem}
+.wrap{max-width:62rem;margin:0 auto}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,6vw,2.7rem);line-height:1.15;margin-bottom:1.1rem}
+p+p{margin-top:1rem}
+.measure{max-width:36rem}
+.quiet{color:var(--ink-soft)}
+
+.book{background:linear-gradient(var(--ground),#121a24)}
+.book .wrap{display:grid;gap:2.5rem}
+.book .cover{width:min(68vw,19rem);box-shadow:0 18px 40px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.4)}
+.facts{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-size:.85rem;color:var(--ink-soft);margin-top:1.3rem}
+.buy{display:inline-flex;align-items:center;min-height:48px;padding:.75rem 1.5rem;margin-top:1.8rem;background:var(--lamp);color:var(--ground);text-decoration:none;font-weight:500;border-radius:2px;transition:background-color .2s ease}
+.buy:hover{background:#efb184}
+@media (min-width:760px){
+  .book .wrap{grid-template-columns:minmax(0,19rem) 1fr;align-items:center;gap:4.5rem}
+}
+
+.inside{background:#121a24}
+.inside ul{list-style:none;max-width:40rem;border-top:1px solid rgba(210,226,251,.18)}
+.inside li{padding:1.05rem 0;border-bottom:1px solid rgba(210,226,251,.18)}
+
+.method{background:var(--night);text-align:left}
+.method blockquote{font-family:var(--display);font-size:clamp(1.45rem,5vw,2.3rem);line-height:1.3;max-width:24em}
+.method cite{display:block;font-style:normal;font-size:.85rem;color:var(--ink-soft);margin-top:1.2rem}
+
+.circle{background:linear-gradient(#15222f,#2b2230 60%,#3c2626)}
+.circle .when{font-family:var(--display);font-size:1.25rem;color:var(--lamp);margin-bottom:.6rem}
+
+.about{background:#0f1118}
+.about a{color:var(--lamp)}
+
+.close{position:relative;background:var(--ground);text-align:center;padding-bottom:5rem;overflow:hidden}
+.close .glint{width:9rem;margin:0 auto 1.5rem;mix-blend-mode:screen}
+.close p.line{font-family:var(--display);font-size:clamp(1.4rem,5vw,2.2rem);line-height:1.3;max-width:20em;margin:0 auto}
+
+footer{padding:2rem 1.25rem 3rem;text-align:center;font-size:.8rem;color:var(--ink-soft);background:#07070a}
+
+@media (max-height:560px){
+  .list-wrap{top:2.8rem}
+  .todo li{font-size:1.1rem}
+  .return{top:4.6rem;font-size:1.4rem}
+  .title{bottom:3svh}
+  .title h1{font-size:1.45rem}
+  .title .by{font-size:.8rem;margin-bottom:.3rem}
+  .title p{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:100svh}
+  .plane{will-change:auto}
+  .buy{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+<header class="hero" id="top">
+  <div class="stage">
+    <div class="notice" role="note">A website idea made by Lamplit Studio for Aditi Kumar. Not their official site.</div>
+    <div class="scene" aria-hidden="true">
+      <div class="plane sky">
+        <picture>
+          <source media="(min-aspect-ratio: 1/1)" srcset="img/sky-wide.jpg">
+          <img src="img/sky.jpg" alt="" width="971" height="1100" fetchpriority="high">
+        </picture>
+      </div>
+      <img class="plane star" src="img/star.jpg" alt="" width="400" height="400">
+      <img class="plane figure" src="img/figure.png" alt="" width="484" height="713">
+      <div class="plane lights"><img src="img/lights.png" alt="" width="1200" height="1400"></div>
+    </div>
+
+    <div class="list-wrap">
+      <p class="list-label">Today, apparently:</p>
+      <ul class="todo" aria-label="A list of things the book asks you to put down">
+        <li>constantly pushing<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6 C 20 3, 35 8, 55 5 S 85 3, 99 6"/></svg></li>
+        <li>overthinking<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 5 C 25 7, 45 2, 65 6 S 90 4, 99 5"/></svg></li>
+        <li>people-pleasing<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6 C 18 4, 40 7, 60 4 S 88 6, 99 4"/></svg></li>
+        <li>hustle culture<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 4 C 22 6, 42 3, 62 6 S 86 4, 99 6"/></svg></li>
+        <li>survival mode<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 5 C 20 3, 44 7, 66 4 S 90 6, 99 5"/></svg></li>
+        <li>doing more<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6 C 24 4, 46 6, 64 4 S 88 7, 99 5"/></svg></li>
+      </ul>
+    </div>
+
+    <p class="return">It begins the moment you return to yourself.<small>From Aditi’s description of the book</small></p>
+
+    <div class="title">
+      <p class="by">Aditi Kumar</p>
+      <h1>The Art of Doing Less and Living More</h1>
+      <p>Guiding you to become who you’re destined to be</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="book" id="book">
+    <div class="wrap">
+      <img class="cover" src="img/cover.jpg" alt="The cover of The Art of Doing Less and Living More: a woman in silhouette at dusk, reaching up to a bright star, with fairy lights trailing over her." width="640" height="989" loading="lazy">
+      <div class="measure">
+        <h2>Modern life tells us that doing more will make us feel fulfilled.</h2>
+        <p>Instead it has left so many of us burnt out, overwhelmed, anxious, and disconnected from who we truly are. If you’re exhausted from constantly pushing, or stuck in cycles of stress and overthinking, this book offers a different path.</p>
+        <p>Aditi draws on neuroscience, psychology, mindfulness and spirituality to show how your nervous system, subconscious beliefs and emotional patterns keep you stuck in survival mode, and how to come back to yourself.</p>
+        <div class="facts"><span>Paperback, 179 pages</span><span>Published 11 April 2026</span></div>
+        <a class="buy" href="https://www.amazon.com.au/dp/B0GWWK94JY" rel="noopener">Buy it on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <h2>Inside, you’ll learn how to</h2>
+      <ul>
+        <li>Regulate your nervous system and feel calm, safe, and grounded</li>
+        <li>Break free from survival mode, overthinking, and people-pleasing patterns</li>
+        <li>Navigate heartbreak, loss, and life transitions with awareness</li>
+        <li>Let go of hustle culture and create a slower, more aligned life</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="wrap">
+      <blockquote>“At the heart of this book is The Return Method, a simple and powerful framework for self healing, personal growth, and lasting transformation.”</blockquote>
+      <cite>From Aditi’s description of The Art of Doing Less and Living More</cite>
+    </div>
+  </section>
+
+  <section class="circle">
+    <div class="wrap measure">
+      <p class="when">13 to 15 November 2026</p>
+      <h2>Return To Self, a women’s circle</h2>
+      <p>At the MindBodySpirit Festival in Melbourne, Aditi invited women to a free circle at 5pm daily in the ceremony space at the Convention and Exhibition Centre, with book signings afterwards.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap measure">
+      <h2>Aditi Kumar</h2>
+      <p>Author, speaker and facilitator. On Instagram she writes about burnout, identity and returning to yourself.</p>
+      <p><a href="https://www.instagram.com/aditikumar_/" rel="noopener">@aditikumar_ on Instagram</a></p>
+    </div>
+  </section>
+
+  <section class="close">
+    <img class="glint" src="img/star.jpg" alt="" width="400" height="400" loading="lazy">
+    <p class="line">The life you are searching for is not found in doing more.</p>
+    <a class="buy" href="https://www.amazon.com.au/dp/B0GWWK94JY" rel="noopener">Buy the book</a>
+  </section>
+</main>
+
+<footer>A preview made by Lamplit Studio for Aditi Kumar. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var hero=document.getElementById('top');
+  var scene=hero.querySelector('.scene');
+  var items=[].slice.call(hero.querySelectorAll('.todo li'));
+  var ret=hero.querySelector('.return');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function clamp(v){return v<0?0:v>1?1:v}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  var ticking=false;
+  function render(){
+    ticking=false;
+    var p;
+    if(reduce.matches){p=1}else{
+      var r=hero.getBoundingClientRect();
+      var span=hero.offsetHeight-window.innerHeight;
+      p=span>0?clamp(-r.top/span):1;
+    }
+    var short=window.innerHeight<560;
+    var e=ease(p);
+    scene.style.setProperty('--sky-s',(1.14-.14*e).toFixed(4));
+    scene.style.setProperty('--fig-y-off',((1-e)*5).toFixed(3)+'%');
+    scene.style.setProperty('--lights-y',(-p*16).toFixed(3)+'%');
+    var s=ease(seg(p,.5,.86));
+    scene.style.setProperty('--star-o',(.3+.7*s).toFixed(3));
+    scene.style.setProperty('--star-s',(.92+.2*s).toFixed(3));
+    for(var i=0;i<items.length;i++){
+      var a=.05+i*.075;
+      var k=ease(seg(p,a,a+.05));
+      var f=ease(seg(p,a+.045,a+.1));
+      items[i].style.setProperty('--k',k.toFixed(3));
+      items[i].style.setProperty('--o',(1-(short?1:.55)*f).toFixed(3));
+      items[i].style.setProperty('--y',(f*10).toFixed(2)+'px');
+    }
+    var q=ease(seg(p,.6,.74));
+    ret.style.setProperty('--ret-o',q.toFixed(3));
+    ret.style.setProperty('--ret-y',((1-q)*14).toFixed(2)+'px');
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(render)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  if(reduce.addEventListener)reduce.addEventListener('change',render);
+  render();
+})();
+</script>
+</body>
+</html>
